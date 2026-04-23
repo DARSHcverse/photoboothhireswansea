@@ -1,0 +1,205 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { href: "/",             label: "Homepage" },
+  { href: "/photobooths",  label: "Photobooths" },
+  { href: "/events",       label: "Events" },
+  { href: "/packages",     label: "Packages" },
+  { href: "/backdrop",     label: "Backdrop" },
+  { href: "/booking",      label: "Booking" },
+  { href: "/quickquote",   label: "Quick Quote" },
+  { href: "/pay",          label: "Pay Here" },
+];
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Lock body scroll when menu open
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", menuOpen);
+    return () => document.body.classList.remove("menu-open");
+  }, [menuOpen]);
+
+  return (
+    <header
+      className="fixed inset-x-0 top-0 z-80 px-4 pt-3"
+      aria-label="Site header"
+    >
+      <nav aria-label="Primary">
+        {/* pill shell */}
+        <div
+          className="flex items-center gap-5 mx-auto px-3 py-[0.7rem] rounded-full transition-all duration-300"
+          style={{
+            maxWidth: "calc(1240px + 2rem)",
+            background: scrolled
+              ? "rgba(10,10,10,0.92)"
+              : "rgba(12,12,12,0.78)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            boxShadow: scrolled
+              ? "inset 0 0 0 1px rgba(255,255,255,0.09), 0 24px 56px rgba(0,0,0,0.5), 0 0 24px rgba(255,145,76,0.06)"
+              : "inset 0 0 0 1px rgba(255,255,255,0.07), 0 20px 48px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.22)",
+          }}
+        >
+          {/* Brand */}
+          <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="The Shan Booth home" onClick={() => setMenuOpen(false)}>
+            <Image
+              src="/assets/logo.png"
+              alt="The Shan Booth logo"
+              width={46}
+              height={46}
+              className="rounded-full object-contain"
+            />
+            <span
+              className="text-[0.96rem] font-extrabold uppercase tracking-tight text-white leading-none whitespace-nowrap"
+              style={{ fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)" }}
+            >
+              The Shan Booth
+            </span>
+          </Link>
+
+          {/* Mobile toggle */}
+          <button
+            className="ml-auto md:hidden flex items-center justify-center w-11 h-11 rounded-full border-0"
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.1)",
+            }}
+            type="button"
+            aria-expanded={menuOpen}
+            aria-controls="site-menu"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span className="flex flex-col gap-[5px]">
+              <span
+                className="block w-5 h-[2px] rounded-full transition-all duration-200"
+                style={{
+                  background: "rgba(255,255,255,0.82)",
+                  transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none",
+                }}
+              />
+              <span
+                className="block w-5 h-[2px] rounded-full transition-all duration-200"
+                style={{
+                  background: "rgba(255,255,255,0.82)",
+                  opacity: menuOpen ? 0 : 1,
+                }}
+              />
+              <span
+                className="block w-5 h-[2px] rounded-full transition-all duration-200"
+                style={{
+                  background: "rgba(255,255,255,0.82)",
+                  transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none",
+                }}
+              />
+            </span>
+          </button>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center justify-end flex-1 gap-[2px]" id="site-menu">
+            {navLinks.map(({ href, label }) => {
+              const active = pathname === href || (href !== "/" && pathname.startsWith(href));
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className="relative px-[0.88rem] py-[0.6rem] rounded-full text-[0.78rem] font-bold uppercase tracking-[0.06em] whitespace-nowrap transition-all duration-200"
+                  style={{
+                    fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)",
+                    color: active ? "var(--color-accent)" : "rgba(255,255,255,0.72)",
+                    background: active ? "rgba(255,145,76,0.1)" : "transparent",
+                    boxShadow: active ? "inset 0 0 0 1px rgba(255,145,76,0.18)" : "none",
+                  }}
+                  onClick={() => setMenuOpen(false)}
+                  onMouseEnter={(e) => {
+                    if (!active) {
+                      (e.currentTarget as HTMLElement).style.color = "#fff";
+                      (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!active) {
+                      (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.72)";
+                      (e.currentTarget as HTMLElement).style.background = "transparent";
+                    }
+                  }}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+
+            {/* Contact icon */}
+            <Link
+              href="/contact"
+              aria-label="Contact The Shan Booth"
+              className="flex items-center justify-center w-[42px] h-[42px] rounded-full ml-1 transition-all duration-200"
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.1)",
+              }}
+              onClick={() => setMenuOpen(false)}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(255,145,76,0.14)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "inset 0 0 0 1px rgba(255,145,76,0.22)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.06)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "inset 0 0 0 1px rgba(255,255,255,0.1)";
+              }}
+            >
+              <Image src="/assets/call-icon.png" alt="" width={22} height={22} className="object-contain" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div
+            className="absolute left-0 right-0 top-[calc(100%+0.5rem)] mx-4 flex flex-col gap-1 p-4 rounded-[var(--radius-xl)] z-50"
+            style={{
+              background: "rgba(10,10,10,0.94)",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
+              boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.07), 0 28px 56px rgba(0,0,0,0.5)",
+            }}
+            id="site-menu"
+          >
+            {navLinks.map(({ href, label }) => {
+              const active = pathname === href || (href !== "/" && pathname.startsWith(href));
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className="w-full text-center px-4 py-3 rounded-full text-[0.82rem] font-bold uppercase tracking-[0.06em] transition-all duration-200"
+                  style={{
+                    fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)",
+                    color: active ? "var(--color-accent)" : "rgba(255,255,255,0.72)",
+                    background: active ? "rgba(255,145,76,0.1)" : "transparent",
+                  }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}

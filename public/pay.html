@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay Here | The Shan Booth London</title>
+    <meta
+      name="description"
+      content="Secure online payment page for The Shan Booth bookings, powered by Stripe."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://photoboothhirelondon.uk/pay.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Shan Booth" />
+    <meta property="og:title" content="Pay Here | The Shan Booth London" />
+    <meta
+      property="og:description"
+      content="Secure online payment page for The Shan Booth bookings, powered by Stripe."
+    />
+    <meta property="og:url" content="https://photoboothhirelondon.uk/pay.html" />
+    <meta property="og:image" content="https://photoboothhirelondon.uk/og-image.svg" />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-page="pay">
+    <header class="site-header"></header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-copy reveal">
+          <span class="eyebrow">Pay Here</span>
+          <h1 class="hero-title">Secure Payment</h1>
+          <p>
+            This page uses a Stripe buy button approach for the UK site, with the public key and button ID loaded
+            from Vercel environment variables.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container pay-shell">
+          <div class="pay-card reveal">
+            <span class="eyebrow">Stripe</span>
+            <h2>Complete your payment securely</h2>
+            <p>
+              If the Stripe public env vars are set in Vercel, the secure pay button will load below
+              automatically.
+            </p>
+            <div data-stripe-buy-button></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking | The Shan Booth London</title>
+    <meta
+      name="description"
+      content="Book your photo booth hire with The Shan Booth. Choose booth type, package length, and event details, then receive a Stripe invoice."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://photoboothhirelondon.uk/booking.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Shan Booth" />
+    <meta property="og:title" content="Booking | The Shan Booth London" />
+    <meta
+      property="og:description"
+      content="Secure your event date with online booking and Stripe invoice delivery from The Shan Booth."
+    />
+    <meta property="og:url" content="https://photoboothhirelondon.uk/booking.html" />
+    <meta property="og:image" content="https://photoboothhirelondon.uk/og-image.svg" />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-page="booking">
+    <header class="site-header"></header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-copy reveal">
+          <span class="eyebrow">Booking</span>
+          <h1 class="hero-title">Secure Your Date</h1>
+          <p>
+            Complete the booking form below and we&rsquo;ll create your invoice. If Stripe is configured in
+            Vercel, you&rsquo;ll be taken straight to secure payment.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container contact-grid">
+          <div class="contact-card reveal">
+            <span class="eyebrow">Booking Form</span>
+            <h2 class="section-title">Confirm your booking</h2>
+            <form data-booking-form>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="booking-fullName">Full Name</label>
+                  <input id="booking-fullName" name="fullName" type="text" required />
+                </div>
+                <div class="field">
+                  <label for="booking-email">Email</label>
+                  <input id="booking-email" name="email" type="email" required />
+                </div>
+                <div class="field">
+                  <label for="booking-phoneNumber">Phone Number</label>
+                  <input id="booking-phoneNumber" name="phoneNumber" type="tel" required />
+                </div>
+                <div class="field">
+                  <label for="booking-eventDate">Event Date</label>
+                  <input id="booking-eventDate" name="eventDate" type="date" required />
+                </div>
+                <div class="field">
+                  <label for="booking-eventLocation">Venue / Location</label>
+                  <input id="booking-eventLocation" name="eventLocation" type="text" required />
+                </div>
+                <div class="field">
+                  <label for="booking-boothType">Booth Type</label>
+                  <select id="booking-boothType" name="boothType" required>
+                    <option value="">Select booth type</option>
+                    <option value="Open Booth / Selfie Pod">Open Booth / Selfie Pod</option>
+                    <option value="Glam Booth / Magic Mirror">Glam Booth / Magic Mirror</option>
+                    <option value="Enclosed / Classic Booth">Enclosed / Classic Booth</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="booking-packageDuration">Package Duration</label>
+                  <select id="booking-packageDuration" name="packageDuration" required>
+                    <option value="">Select package duration</option>
+                    <option>2 Hours</option>
+                    <option>3 Hours</option>
+                    <option>4 Hours</option>
+                    <option>5 Hours</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="booking-service">Service</label>
+                  <select id="booking-service" name="service" required>
+                    <option value="">Select event type</option>
+                    <option>Wedding</option>
+                    <option>Birthday Party</option>
+                    <option>Prom</option>
+                    <option>Graduation</option>
+                    <option>Corporate Event</option>
+                    <option>Private Party</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="booking-price">Price (£)</label>
+                  <input id="booking-price" name="price" type="number" readonly />
+                </div>
+              </div>
+              <div class="field">
+                <label for="booking-message">Message</label>
+                <textarea
+                  id="booking-message"
+                  name="message"
+                  placeholder="Start time, end time, parking, access notes, or anything else we should know."
+                ></textarea>
+              </div>
+              <div class="form-status" data-form-status></div>
+              <button class="button button-primary" type="submit">Confirm Booking</button>
+            </form>
+          </div>
+
+          <div class="info-panel reveal">
+            <span class="eyebrow">Booking Notes</span>
+            <h2 class="section-title">What the booking flow does</h2>
+            <ul class="package-list">
+              <li>Creates a Stripe invoice using your selected booth and duration</li>
+              <li>Sends a booking confirmation email to the client</li>
+              <li>Sends an admin notification with all event details</li>
+              <li>Opens the secure payment invoice after submission when configured</li>
+            </ul>
+            <p>
+              This mirrors the booking flow for the UK site, adapted for Vercel route handlers in this London project.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+  </body>
+</html>
