@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 const navLinks = [
   { href: "/",             label: "Homepage" },
@@ -12,6 +12,12 @@ const navLinks = [
   { href: "/pay",          label: "Pay Here" },
   { href: "/gallery",      label: "Gallery" },
   { href: "/faq",          label: "FAQ" },
+];
+
+const areas = [
+  { href: "/",                            label: "Photo Booth Hire Swansea" },
+  { href: "/photo-booth-hire-cardiff",    label: "Photo Booth Hire Cardiff",      title: "Photo Booth Hire Cardiff — photoboothhirecardiff.co.uk" },
+  { href: "/photo-booth-hire-cardiff",    label: "Photo Booth Hire South Wales" },
 ];
 
 const socials = [
@@ -31,7 +37,7 @@ export default function Footer() {
         className="py-16"
         style={{
           background:
-            "radial-gradient(circle at left top, rgba(49,209,252,0.06), transparent 24%), var(--color-canvas-dim)",
+            "radial-gradient(circle at left top, rgba(26,111,212,0.06), transparent 24%), var(--color-canvas-dim)",
         }}
       >
         <div
@@ -44,31 +50,15 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/assets/logo.png"
-                alt="The Shan Booth logo"
-                width={46}
-                height={46}
-                className="rounded-full object-contain"
-              />
-              <div>
-                <div
-                  className="text-[0.96rem] font-extrabold uppercase tracking-tight text-white"
-                  style={{ fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)" }}
-                >
-                  The Shan Booth
-                </div>
-              </div>
+              <Logo variant="dark" />
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "var(--color-fg-muted)" }}>
-              London photo booth hire with crystal-clear photos, unlimited prints, and professional event support.
-              Friendly, all-inclusive booth hire for weddings, corporate events, school proms, brand activations,
-              and private parties across London and surrounding areas.
+              Swansea&rsquo;s favourite photo booth hire service for weddings, parties and events across South Wales.
             </p>
             <div className="mt-4 grid gap-2 text-sm" style={{ color: "var(--color-fg-muted)" }}>
-              <div className="flex items-center gap-2"><span>📧</span><span>[your UK email]</span></div>
-              <div className="flex items-center gap-2"><span>📱</span><span>[your UK number]</span></div>
-              <div className="flex items-center gap-2"><span>📍</span><span>London, United Kingdom</span></div>
+              <div className="flex items-center gap-2"><span>📧</span><span>photoboothhireinwales@gmail.com</span></div>
+              <div className="flex items-center gap-2"><span>📱</span><span>[SWANSEA_PHONE_NUMBER]</span></div>
+              <div className="flex items-center gap-2"><span>📍</span><span>Swansea, Wales, UK</span></div>
             </div>
           </div>
 
@@ -80,6 +70,24 @@ export default function Footer() {
                 <Link
                   key={href}
                   href={href}
+                  className="text-sm transition-colors duration-200 hover:text-white"
+                  style={{ color: "var(--color-fg-muted)" }}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Areas We Cover column */}
+          <div>
+            <span className="eyebrow">Areas We Cover</span>
+            <div className="grid gap-2 mt-1">
+              {areas.map(({ href, label, title }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  title={title}
                   className="text-sm transition-colors duration-200 hover:text-white"
                   style={{ color: "var(--color-fg-muted)" }}
                 >
@@ -152,8 +160,8 @@ export default function Footer() {
             color: "var(--color-fg-faint)",
           }}
         >
-          <span>© {new Date().getFullYear()} The Shan Booth. All rights reserved.</span>
-          <span>Photo Booth Hire London &amp; Surrounding Areas</span>
+          <span>© 2025 Photo Booth Hire Swansea. All rights reserved.</span>
+          <span>Photo Booth Hire Swansea &amp; South Wales</span>
         </div>
       </div>
     </footer>

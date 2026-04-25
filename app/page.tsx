@@ -18,22 +18,22 @@ const cardImageSizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw
 /* ── Packages data ──────────────────────────────────────────────── */
 const packages = [
   {
-    hours: "2 Hours", name: "Open Booth / Selfie Pod", price: "£200",
+    hours: "2 Hours", name: "Selfie Pod", price: "£220",
     desc: "Unlimited photos, instant prints, event props, photostrip design, USB digital images, a booth attendant, a standard backdrop, and a custom start screen.",
     items: ["Unlimited photos and instant prints", "Event props and photostrip design", "USB digital images and attendant", "Standard backdrop and custom start screen"],
   },
   {
-    hours: "3 Hours", name: "Open Booth / Selfie Pod", price: "£275", popular: true,
+    hours: "3 Hours", name: "Selfie Pod", price: "£295", popular: true,
     desc: "Everything in the 2-hour package, plus extra prints and an online gallery.",
     items: ["3 hours of booth hire", "All 2-hour inclusions", "Extra prints", "Online gallery"],
   },
   {
-    hours: "4 Hours", name: "Open Booth / Selfie Pod", price: "£350",
+    hours: "4 Hours", name: "Selfie Pod", price: "£370",
     desc: "Everything in the 3-hour package, plus your choice of attendant and a traditional guest book.",
     items: ["4 hours of booth hire", "All 3-hour inclusions", "Male or female attendant choice", "Traditional guest book"],
   },
   {
-    hours: "5 Hours", name: "Open Booth / Selfie Pod", price: "£420",
+    hours: "5 Hours", name: "Selfie Pod", price: "£440",
     desc: "The full all-inclusive package for events that want the booth running deep into the party.",
     items: ["5 hours of booth hire", "All 4-hour inclusions", "Full all-inclusive package"],
   },
@@ -42,8 +42,8 @@ const packages = [
 /* ── FAQ data ───────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: "Do you cover all of London?",
-    a: "Yes, we cover all London boroughs and surrounding areas including Essex, Surrey, and Hertfordshire. Travel fees may apply for events outside Greater London and we'll confirm this when you enquire.",
+    q: "Do you cover all of Swansea?",
+    a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, South Wales, and South Wales. Travel fees may apply for events outside South Wales and we'll confirm this when you enquire.",
   },
   {
     q: "Are your attendants DBS checked?",
@@ -61,9 +61,9 @@ const faqs = [
 
 /* ── Testimonials ───────────────────────────────────────────────── */
 const testimonials = [
-  { stars: 5, text: '"The booth was packed from the minute it opened. Shan kept the atmosphere fun and the guest book ended up being one of our favourite parts of the night."', name: "Priya & Marcus", event: "Wedding · Islington" },
-  { stars: 5, text: '"Perfect for our Year 11 prom. It felt polished, the students loved it, and everything was managed so professionally from start to finish."', name: "Mrs Patel", event: "Prom · Greater London" },
-  { stars: 5, text: '"We booked for a company celebration and the branding looked brilliant. Great service, easy setup, and really strong photo quality."', name: "Olivia R.", event: "Corporate Event · Canary Wharf" },
+  { stars: 5, text: '"The booth was packed from the minute it opened. Shan kept the atmosphere fun and the guest book ended up being one of our favourite parts of the night."', name: "Priya & Marcus", event: "Wedding · Swansea" },
+  { stars: 5, text: '"Perfect for our Year 11 prom. It felt polished, the students loved it, and everything was managed so professionally from start to finish."', name: "Mrs Patel", event: "Prom · South Wales" },
+  { stars: 5, text: '"We booked for a company celebration and the branding looked brilliant. Great service, easy setup, and really strong photo quality."', name: "Olivia R.", event: "Corporate Event · Cardiff Bay" },
 ];
 
 /* ── Component ──────────────────────────────────────────────────── */
@@ -85,7 +85,7 @@ export default function HomePage() {
 
       {/* ── Home Hero ─────────────────────────────────────────────── */}
       <section className="home-hero">
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="hero-stage">
             <div className="hero-slides" aria-hidden="true">
               {heroSlides.map((src, i) => (
@@ -99,9 +99,9 @@ export default function HomePage() {
 
             <div className="hero-overlay">
               <div className="home-hero-content reveal">
-                <h1 className="home-hero-title">Photo Booth Hire London</h1>
+                <h1 className="home-hero-title">PHOTO BOOTH HIRE SWANSEA</h1>
                 <p className="home-hero-subtitle">
-                  Stylish London photo booth hire for weddings, proms, parties, and corporate events.
+                  Swansea&rsquo;s favourite photo booth for weddings, parties and corporate events across South Wales.
                 </p>
                 <div className="hero-button-row">
                   <Link href="/packages" className="btn btn-primary hero-button">
@@ -132,7 +132,7 @@ export default function HomePage() {
 
       {/* ── Seasonal Banner ─────────────────────────────────────────── */}
       <section className="py-6">
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div
             className="reveal flex flex-col md:flex-row gap-6 p-6 md:p-8 rounded-[var(--radius-lg)]"
             style={{
@@ -148,7 +148,7 @@ export default function HomePage() {
                 className="text-xl md:text-2xl font-extrabold text-white m-0"
                 style={{ fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)", letterSpacing: "-0.03em" }}
               >
-                2026 dates are moving fast across London and surrounding areas.
+                2026 dates are moving fast across Swansea and surrounding areas.
               </h2>
             </div>
             <p className="m-0 flex-1" style={{ color: "var(--color-fg-muted)", alignSelf: "center" }}>
@@ -161,12 +161,12 @@ export default function HomePage() {
 
       {/* ── About + Home Cards ──────────────────────────────────────── */}
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading section-heading--split reveal">
-            <span className="eyebrow">About The Shan Booth</span>
-            <h2 className="section-title">All-inclusive photo booth hire across London.</h2>
+            <span className="eyebrow">About Photo Booth Hire Swansea</span>
+            <h2 className="section-title">All-inclusive photo booth hire across Swansea.</h2>
             <p style={{ fontSize: "1.04rem" }}>
-              The Shan Booth brings a fresh, all-inclusive approach to photo booth hire in London. Unlike most UK
+              Photo Booth Hire Swansea brings a fresh, all-inclusive approach to photo booth hire in Swansea. Unlike most UK
               providers who charge extra for USB drives, online galleries, and guest books, we include everything in
               every package. Powered by Canon R100 mirrorless cameras and studio-grade lighting, our booths deliver
               photos that are sharp, vibrant, and worth keeping.
@@ -175,7 +175,7 @@ export default function HomePage() {
 
           <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px,1fr))" }}>
             {[
-              { img: "/assets/wedding.webp",     alt: "Wedding couple at The Shan Booth",     title: "Weddings",                  desc: "Elegant prints, custom strip layouts, guest book add-ons, and a booth that feels part of the room." },
+              { img: "/assets/wedding.webp",     alt: "Wedding couple at Photo Booth Hire Swansea",     title: "Weddings",                  desc: "Elegant prints, custom strip layouts, guest book add-ons, and a booth that feels part of the room." },
               { img: "/assets/graduation.jpg",   alt: "Graduation photo booth moment",        title: "Proms & Graduations",       desc: "Fast queues, sharp photos, and a safe, organised setup for Year 11, Sixth Form, and uni celebrations." },
               { img: "/assets/corporate.webp",   alt: "Corporate photo booth activation",     title: "Brand & Corporate Events",  desc: "Branded prints, on-point presentation, and a booth that fits launches, activations, and team nights." },
               { img: "/assets/packages.webp",    alt: "Photo booth package setup",            title: "Transparent Packages",      desc: "Simple pricing with delivery, setup, unlimited prints, and optional upgrades when you want more." },
@@ -213,10 +213,10 @@ export default function HomePage() {
 
       {/* ── Event Links ─────────────────────────────────────────────── */}
       <section className="bg-sand" style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Events</span>
-            <h2 className="section-title">We cover all event types across London.</h2>
+            <h2 className="section-title">We cover all event types across Swansea.</h2>
             <p style={{ fontSize: "1.04rem" }}>
               Weddings, corporate parties, school proms and formals, birthday celebrations, brand activations, and
               community events. Not sure which booth suits your event? Get a quick quote and we&rsquo;ll help you choose.
@@ -229,7 +229,7 @@ export default function HomePage() {
               { pill: "Proms",      title: "Prom & Graduation Events",       desc: "DBS-checked staff, fast queues, and premium output for sixth form, Year 11, and university leavers.",   accent: "var(--color-sky-bright)" },
               { pill: "Corporate",  title: "Corporate & Brand Events",       desc: "Professional hosting, branded templates, and a booth experience that feels fun without losing its edge.", accent: "var(--color-accent)" },
               { pill: "Birthdays",  title: "Birthdays & Private Parties",    desc: "Playful props, colourful prints, and a flexible setup for homes, halls, restaurants, and hotels.",       accent: "var(--color-rose)" },
-              { pill: "Coverage",   title: "London & Surrounding Areas",     desc: "Covering Greater London and surrounding areas for weddings, corporate events, school proms, and private parties.", accent: "var(--color-sky-bright)" },
+              { pill: "Coverage",   title: "Swansea & Surrounding Areas",     desc: "Covering South Wales and surrounding areas for weddings, corporate events, school proms, and private parties.", accent: "var(--color-sky-bright)" },
             ].map(({ pill, title, desc, accent }) => (
               <article
                 key={title}
@@ -265,7 +265,7 @@ export default function HomePage() {
 
       {/* ── Packages (preview) ──────────────────────────────────────── */}
       <section className="bg-mist" style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Packages</span>
             <h2 className="section-title">Straightforward UK pricing by booth and hire length.</h2>
@@ -316,14 +316,14 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-6">
-            <span className="pill-note text-xs">Prices include VAT. Travel surcharge may apply outside the M25.</span>
+            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea. Cardiff covered at no extra charge.</span>
           </div>
         </div>
       </section>
 
       {/* ── Testimonials ────────────────────────────────────────────── */}
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Testimonials</span>
             <h2 className="section-title">What clients say when the booth hits exactly right.</h2>
@@ -366,7 +366,7 @@ export default function HomePage() {
 
       {/* ── FAQ ─────────────────────────────────────────────────────── */}
       <section className="bg-sand" style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">FAQ</span>
             <h2 className="section-title">A few questions before you lock the date.</h2>
@@ -418,7 +418,7 @@ export default function HomePage() {
 
       {/* ── CTA Banner ──────────────────────────────────────────────── */}
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div
             className="reveal text-center p-10 md:p-14 rounded-[var(--radius-xl)]"
             style={{

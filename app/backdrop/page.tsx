@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
-export const metadata = { title: "Backdrop Choices" };
+export const metadata = {
+  title: "Backdrop Options",
+  alternates: { canonical: "/backdrop" },
+};
 
 const backdrops = [
   { img: "/assets/blackbackdrop.png",  alt: "Black backdrop",      title: "Black Backdrop",      desc: "Sleek, modern, and ideal for evening receptions or corporate events." },
@@ -24,7 +27,7 @@ export default function BackdropPage() {
       <PageHero eyebrow="Backdrop" title="Backdrop Choices" description="Simple, clean, and event-ready. Choose the backdrop that fits your wedding, prom, birthday, or branded setup and we'll build the booth around it." heroBg="/assets/flowerbackdrop.png" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3 grid gap-5" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))" }}>
+        <div className="mx-auto px-4 md:px-3 grid gap-5" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))" }}>
           {backdrops.map(({ img, alt, title, desc }) => (
             <article key={title} className="reveal overflow-hidden rounded-[var(--radius-lg)] flex flex-col" style={cardStyle}>
               <div className="relative h-64 overflow-hidden bg-black/20">
@@ -46,7 +49,7 @@ export default function BackdropPage() {
       </section>
 
       <section className="bg-sand" style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Need Help Choosing?</span>
             <h2 className="section-title">Tell us your venue and theme and we&rsquo;ll recommend the right backdrop.</h2>

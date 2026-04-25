@@ -31,12 +31,12 @@ export default function QuickQuotePage() {
 
   return (
     <main>
-      <PageHero eyebrow="Quick Quote" title="Get A Quick Quote" description="Send the basics and Shan will come back with pricing guidance, availability, and the right booth recommendation for your London or surrounding area event." heroBg="/assets/hero-banner-4.webp" />
+      <PageHero eyebrow="Quick Quote" title="Get A Quick Quote" description="Send the basics and Shan will come back with pricing guidance, availability, and the right booth recommendation for your Swansea or surrounding area event." heroBg="/assets/hero-banner-4.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3 grid gap-8" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+        <div className="mx-auto px-4 md:px-3 grid gap-8" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
 
-          <div className="reveal p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
+          <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">Quote Form</span>
             <h2 className="section-title">Tell us about the event</h2>
             <form onSubmit={handleSubmit} className="grid gap-4">
@@ -58,7 +58,7 @@ export default function QuickQuotePage() {
             </form>
           </div>
 
-          <div className="reveal p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
+          <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">What Happens Next?</span>
             <h2 className="section-title">Fast reply, simple next step.</h2>
             <ul className="bullet-list text-sm mb-6">

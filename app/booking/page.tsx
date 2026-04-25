@@ -6,9 +6,9 @@ import { FormInput, FormSelect, FormTextarea } from "../components/FormCard";
 import { useReveal } from "../components/useReveal";
 
 const PRICES: Record<string, Record<string, number>> = {
-  "Open Booth / Selfie Pod":    { "2 Hours": 200, "3 Hours": 275, "4 Hours": 350, "5 Hours": 420 },
-  "Glam Booth / Magic Mirror":  { "2 Hours": 250, "3 Hours": 320, "4 Hours": 400, "5 Hours": 470 },
-  "Enclosed / Classic Booth":   { "2 Hours": 220, "3 Hours": 295, "4 Hours": 370, "5 Hours": 440 },
+  "Selfie Pod":     { "2 Hours": 220, "3 Hours": 295, "4 Hours": 370, "5 Hours": 440 },
+  "Magic Mirror":   { "2 Hours": 270, "3 Hours": 350, "4 Hours": 430, "5 Hours": 500 },
+  "Enclosed Booth": { "2 Hours": 220, "3 Hours": 295, "4 Hours": 370, "5 Hours": 440 },
 };
 
 const cardStyle = {
@@ -48,9 +48,9 @@ export default function BookingPage() {
       <PageHero eyebrow="Booking" title="Secure Your Date" description="Complete the booking form below and we'll create your invoice. If Stripe is configured, you'll be taken straight to secure payment." heroBg="/assets/wedding2.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3 grid gap-8" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+        <div className="mx-auto px-4 md:px-3 grid gap-8" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
 
-          <div className="reveal p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
+          <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">Booking Form</span>
             <h2 className="section-title">Confirm your booking</h2>
             <form onSubmit={handleSubmit} className="grid gap-4">
@@ -100,7 +100,7 @@ export default function BookingPage() {
             </form>
           </div>
 
-          <div className="reveal p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
+          <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">Booking Notes</span>
             <h2 className="section-title">What the booking flow does</h2>
             <ul className="bullet-list text-sm mb-6">
@@ -109,7 +109,7 @@ export default function BookingPage() {
               <li>Sends an admin notification with all event details</li>
               <li>Opens the secure payment invoice after submission when configured</li>
             </ul>
-            <p className="text-sm">This mirrors the booking flow for the UK site, adapted for Vercel route handlers in this London project.</p>
+            <p className="text-sm">This mirrors the booking flow for the UK site, adapted for Vercel route handlers in this Swansea project.</p>
           </div>
 
         </div>

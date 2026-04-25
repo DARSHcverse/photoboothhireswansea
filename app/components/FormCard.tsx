@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 const inputCls = [
   "w-full px-4 py-3 rounded-[var(--radius-sm)] border-0 text-sm outline-none",
-  "transition-shadow duration-200 focus:ring-2 focus:ring-[var(--color-accent)]/40",
+  "transition-shadow duration-200 focus:ring-2 focus:ring-accent/40",
 ].join(" ");
 
 const labelCls = "block text-[0.72rem] font-extrabold uppercase tracking-[0.1em] mb-1";

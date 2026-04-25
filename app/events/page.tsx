@@ -1,7 +1,10 @@
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
-export const metadata = { title: "Events We Cover" };
+export const metadata = {
+  title: "Events We Cover",
+  alternates: { canonical: "/events" },
+};
 
 const events = [
   { icon: "💍", eyebrow: "Wedding Receptions",   title: "Wedding Photo Booth Hire",          desc: "Keep the energy high after the speeches with elegant prints, premium lighting, and a booth setup that feels like part of the celebration.", items: ["Custom photo strip design with names and wedding date","Guest book upgrades and stylish backdrop options","Friendly host to keep guests moving and smiling"] },
@@ -21,10 +24,10 @@ const cardStyle = {
 export default function EventsPage() {
   return (
     <main>
-      <PageHero eyebrow="Events" title="Events We Cover" description="We cover all event types across London: weddings, corporate parties, school proms and formals, birthday celebrations, brand activations, and community events." heroBg="/assets/events.webp" />
+      <PageHero eyebrow="Events" title="Events We Cover" description="We cover all event types across Swansea: weddings, corporate parties, school proms and formals, birthday celebrations, brand activations, and community events." heroBg="/assets/events.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3 grid gap-6" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3 grid gap-6" style={{ maxWidth: "1240px" }}>
           {events.map(({ icon, eyebrow, title, desc, items }) => (
             <article key={title} className="reveal p-8 md:p-10 rounded-[var(--radius-xl)] flex flex-col md:flex-row gap-8 items-start" style={cardStyle}>
               <div

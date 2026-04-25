@@ -5,12 +5,13 @@ import Link from "next/link";
 import { useReveal } from "../components/useReveal";
 
 /* ── Data ─────────────────────────────────────────────────────────── */
+// Note: metadata for /packages is set via app/packages/layout.tsx for client-page support.
 type BoothType = "open" | "glam" | "enclosed";
 
 const boothLabels: Record<BoothType, string> = {
-  open:     "Open Booth / Selfie Pod",
-  glam:     "Glam Booth / Magic Mirror",
-  enclosed: "Enclosed / Classic Booth",
+  open:     "Selfie Pod",
+  glam:     "Magic Mirror",
+  enclosed: "Enclosed Booth",
 };
 
 interface Package {
@@ -23,17 +24,17 @@ interface Package {
 }
 
 const packages: Package[] = [
-  // Open Booth
-  { hours: "2 Hours", booth: "open",     price: "£200", desc: "Unlimited photos, instant prints, event props, photostrip design, USB digital images, a booth attendant, a standard backdrop, and a custom start screen.", items: ["Unlimited photos and instant prints","Event props and photostrip design","USB digital images and attendant","Standard backdrop and custom start screen"] },
-  { hours: "3 Hours", booth: "open",     price: "£275", popular: true, desc: "Everything in the 2-hour package, plus extra prints and an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints","Online gallery"] },
-  { hours: "4 Hours", booth: "open",     price: "£350", desc: "Everything in the 3-hour package, plus your choice of attendant and a traditional guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Traditional guest book"] },
-  { hours: "5 Hours", booth: "open",     price: "£420", desc: "The full all-inclusive package for events that want the booth running deep into the party.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
-  // Glam Booth
-  { hours: "2 Hours", booth: "glam",     price: "£250", desc: "Unlimited photos, postcard prints, event props, photostrip design, USB, an attendant, and a white backdrop.", items: ["Unlimited photos and postcard prints","Event props and photostrip design","USB and attendant","White backdrop"] },
-  { hours: "3 Hours", booth: "glam",     price: "£320", popular: true, desc: "Everything in the 2-hour package, plus extra prints.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints"] },
-  { hours: "4 Hours", booth: "glam",     price: "£400", desc: "Everything in the 3-hour package, plus your choice of attendant and a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Guest book"] },
-  { hours: "5 Hours", booth: "glam",     price: "£470", desc: "The full all-inclusive package for premium events that want extra booth time.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
-  // Enclosed
+  // Selfie Pod
+  { hours: "2 Hours", booth: "open",     price: "£220", desc: "Unlimited photos, instant prints, event props, photostrip design, USB digital images, a booth attendant, a standard backdrop, and a custom start screen.", items: ["Unlimited photos and instant prints","Event props and photostrip design","USB digital images and attendant","Standard backdrop and custom start screen"] },
+  { hours: "3 Hours", booth: "open",     price: "£295", popular: true, desc: "Everything in the 2-hour package, plus extra prints and an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints","Online gallery"] },
+  { hours: "4 Hours", booth: "open",     price: "£370", desc: "Everything in the 3-hour package, plus your choice of attendant and a traditional guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Traditional guest book"] },
+  { hours: "5 Hours", booth: "open",     price: "£440", desc: "The full all-inclusive package for events that want the booth running deep into the party.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
+  // Magic Mirror
+  { hours: "2 Hours", booth: "glam",     price: "£270", desc: "Unlimited photos, postcard prints, event props, photostrip design, USB, an attendant, and a white backdrop.", items: ["Unlimited photos and postcard prints","Event props and photostrip design","USB and attendant","White backdrop"] },
+  { hours: "3 Hours", booth: "glam",     price: "£350", popular: true, desc: "Everything in the 2-hour package, plus extra prints.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints"] },
+  { hours: "4 Hours", booth: "glam",     price: "£430", desc: "Everything in the 3-hour package, plus your choice of attendant and a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Guest book"] },
+  { hours: "5 Hours", booth: "glam",     price: "£500", desc: "The full all-inclusive package for premium events that want extra booth time.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
+  // Enclosed Booth
   { hours: "2 Hours", booth: "enclosed", price: "£220", desc: "Unlimited photos, instant prints, props, an attendant, and a backdrop for a classic private-booth feel.", items: ["Unlimited photos and instant prints","Props included","Attendant included","Backdrop included"] },
   { hours: "3 Hours", booth: "enclosed", price: "£295", popular: true, desc: "Everything in the 2-hour package, plus USB and an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","USB","Online gallery"] },
   { hours: "4 Hours", booth: "enclosed", price: "£370", desc: "Everything in the 3-hour package, plus a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Guest book"] },
@@ -58,9 +59,9 @@ export default function PackagesPage() {
 
   const filters: Array<{ val: FilterVal; label: string }> = [
     { val: "all",      label: "All Booths" },
-    { val: "open",     label: "Open Booth / Selfie Pod" },
-    { val: "glam",     label: "Glam Booth / Magic Mirror" },
-    { val: "enclosed", label: "Enclosed / Classic Booth" },
+    { val: "open",     label: "Selfie Pod" },
+    { val: "glam",     label: "Magic Mirror" },
+    { val: "enclosed", label: "Enclosed Booth" },
   ];
 
   return (
@@ -71,7 +72,7 @@ export default function PackagesPage() {
         className="page-hero"
         style={{ ["--hero-bg" as string]: "url('/assets/packages.webp')" }}
       >
-        <div className="relative z-10 mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="relative z-10 mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div
             className="reveal max-w-[46rem] p-7 rounded-[var(--radius-xl)]"
             style={{
@@ -84,8 +85,8 @@ export default function PackagesPage() {
             <span className="eyebrow">Packages &amp; Pricing</span>
             <h1 className="section-title">Packages &amp; Pricing</h1>
             <p>
-              Open Booth / Selfie Pod, Glam Booth / Magic Mirror, and Enclosed / Classic Booth pricing in GBP for
-              London and surrounding area events.
+              Selfie Pod, Magic Mirror, and Enclosed Booth pricing in GBP for
+              Swansea and surrounding area events.
             </p>
           </div>
         </div>
@@ -93,7 +94,7 @@ export default function PackagesPage() {
 
       {/* ── Packages Grid ───────────────────────────────────────────── */}
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Choose Your Package</span>
             <h2 className="section-title">Straightforward UK pricing by booth and hire length</h2>
@@ -155,14 +156,14 @@ export default function PackagesPage() {
           </div>
 
           <div className="text-center mt-6">
-            <span className="pill-note text-xs">Prices include VAT. Travel surcharge may apply outside the M25.</span>
+            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea. Cardiff covered at no extra charge.</span>
           </div>
         </div>
       </section>
 
       {/* ── Add-ons ─────────────────────────────────────────────────── */}
       <section className="bg-sand" style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Add-ons</span>
             <h2 className="section-title">Optional extras to elevate the booth</h2>
@@ -194,7 +195,7 @@ export default function PackagesPage() {
 
       {/* ── Booking Info ────────────────────────────────────────────── */}
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div
             className="reveal flex flex-col md:flex-row gap-10 items-start p-8 md:p-12 rounded-[var(--radius-xl)]"
             style={{
@@ -214,7 +215,7 @@ export default function PackagesPage() {
               <ul className="bullet-list text-sm mb-6">
                 <li>Deposits secure your date and booth package</li>
                 <li>Custom quotes available for larger or branded events</li>
-                <li>Travel beyond the M25 may include a small surcharge</li>
+                <li>Free travel within 25 miles of Swansea — Cardiff included</li>
                 <li>Package upgrades can be added as your plans develop</li>
               </ul>
               <Link href="/quickquote" className="btn btn-primary">Get a Custom Quote</Link>

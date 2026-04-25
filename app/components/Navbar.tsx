@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 const navLinks = [
   { href: "/",             label: "Homepage" },
@@ -50,25 +51,13 @@ export default function Navbar() {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             boxShadow: scrolled
-              ? "inset 0 0 0 1px rgba(255,255,255,0.09), 0 24px 56px rgba(0,0,0,0.5), 0 0 24px rgba(255,145,76,0.06)"
+              ? "inset 0 0 0 1px rgba(255,255,255,0.09), 0 24px 56px rgba(0,0,0,0.5), 0 0 24px rgba(26,111,212,0.06)"
               : "inset 0 0 0 1px rgba(255,255,255,0.07), 0 20px 48px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.22)",
           }}
         >
           {/* Brand */}
-          <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="The Shan Booth home" onClick={() => setMenuOpen(false)}>
-            <Image
-              src="/assets/logo.png"
-              alt="The Shan Booth logo"
-              width={46}
-              height={46}
-              className="rounded-full object-contain"
-            />
-            <span
-              className="text-[0.96rem] font-extrabold uppercase tracking-tight text-white leading-none whitespace-nowrap"
-              style={{ fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)" }}
-            >
-              The Shan Booth
-            </span>
+          <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Photo Booth Hire Swansea home" onClick={() => setMenuOpen(false)}>
+            <Logo variant="dark" />
           </Link>
 
           {/* Mobile toggle */}
@@ -121,8 +110,8 @@ export default function Navbar() {
                   style={{
                     fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)",
                     color: active ? "var(--color-accent)" : "rgba(255,255,255,0.72)",
-                    background: active ? "rgba(255,145,76,0.1)" : "transparent",
-                    boxShadow: active ? "inset 0 0 0 1px rgba(255,145,76,0.18)" : "none",
+                    background: active ? "rgba(26,111,212,0.1)" : "transparent",
+                    boxShadow: active ? "inset 0 0 0 1px rgba(26,111,212,0.18)" : "none",
                   }}
                   onClick={() => setMenuOpen(false)}
                   onMouseEnter={(e) => {
@@ -146,7 +135,7 @@ export default function Navbar() {
             {/* Contact icon */}
             <Link
               href="/contact"
-              aria-label="Contact The Shan Booth"
+              aria-label="Contact Photo Booth Hire Swansea"
               className="flex items-center justify-center w-[42px] h-[42px] rounded-full ml-1 transition-all duration-200"
               style={{
                 background: "rgba(255,255,255,0.06)",
@@ -154,8 +143,8 @@ export default function Navbar() {
               }}
               onClick={() => setMenuOpen(false)}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "rgba(255,145,76,0.14)";
-                (e.currentTarget as HTMLElement).style.boxShadow = "inset 0 0 0 1px rgba(255,145,76,0.22)";
+                (e.currentTarget as HTMLElement).style.background = "rgba(26,111,212,0.14)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "inset 0 0 0 1px rgba(26,111,212,0.22)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.06)";
@@ -189,7 +178,7 @@ export default function Navbar() {
                   style={{
                     fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)",
                     color: active ? "var(--color-accent)" : "rgba(255,255,255,0.72)",
-                    background: active ? "rgba(255,145,76,0.1)" : "transparent",
+                    background: active ? "rgba(26,111,212,0.1)" : "transparent",
                   }}
                   onClick={() => setMenuOpen(false)}
                 >

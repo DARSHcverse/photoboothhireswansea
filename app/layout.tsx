@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RevealInit from "./components/RevealInit";
 
-const fallbackSiteUrl = "https://photoboothhirelondon.uk";
+const fallbackSiteUrl = "https://photoboothhireswansea.co.uk";
 const metadataBase = new URL(
   process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
     ? process.env.NEXT_PUBLIC_SITE_URL
@@ -27,19 +27,19 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0e0e0e",
+  themeColor: "#0a0a0a",
 };
 
 export const metadata: Metadata = {
   metadataBase,
   title: {
-    default: "The Shan Booth | Photo Booth Hire London",
-    template: "%s | The Shan Booth London",
+    default: "Photo Booth Hire Swansea | PBH",
+    template: "%s | Photo Booth Hire Swansea",
   },
   description:
-    "London's premium photo booth hire service for weddings, corporate events, school proms, and parties. Crystal-clear photos, unlimited prints, and a professional attendant every time.",
+    "Swansea's premier photo booth hire service for weddings, corporate events, school proms and parties across South Wales. Selfie Pods, Magic Mirrors and Enclosed Booths with unlimited prints and a professional attendant every time.",
   keywords:
-    "photo booth hire London, photo booth UK, wedding photo booth London, prom photo booth, corporate event photo booth, The Shan Booth",
+    "photo booth hire Swansea, photo booth Cardiff, wedding photo booth Swansea, prom photo booth South Wales, corporate event photo booth, Selfie Pod, Magic Mirror, Enclosed Booth",
   alternates: {
     canonical: "/",
   },
@@ -52,12 +52,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "The Shan Booth",
-    url: "/",
+    siteName: "Photo Booth Hire Swansea",
+    url: "https://photoboothhireswansea.co.uk",
     images: [{ url: "/og-image.svg" }],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@pbhswansea",
     images: ["/og-image.svg"],
   },
 };

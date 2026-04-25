@@ -109,7 +109,7 @@ export async function POST(request: Request) {
       subject: `Your Booking Confirmation - ${data.invoiceNumber}`,
       html: `
         <h2>Hi ${escapeHtml(data.fullName)},</h2>
-        <p>Thank you for booking <strong>The Shan Booth</strong>.</p>
+        <p>Thank you for booking <strong>Photo Booth Hire Swansea</strong>.</p>
         <p><strong>Invoice Number:</strong> ${escapeHtml(data.invoiceNumber)}</p>
         <p><strong>Event Date:</strong> ${escapeHtml(data.eventDate)}</p>
         <p><strong>Location:</strong> ${escapeHtml(data.eventLocation)}</p>

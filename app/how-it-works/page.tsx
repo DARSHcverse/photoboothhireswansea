@@ -24,10 +24,10 @@ export default function HowItWorksPage() {
 
   return (
     <main>
-      <PageHero eyebrow="How It Works" title="How It Works" description="Booking The Shan Booth is designed to feel smooth from the first enquiry to the final print." heroBg="/assets/photobooth.webp" />
+      <PageHero eyebrow="How It Works" title="How It Works" description="Booking Photo Booth Hire Swansea is designed to feel smooth from the first enquiry to the final print." heroBg="/assets/photobooth.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3 grid gap-6" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3 grid gap-6" style={{ maxWidth: "1240px" }}>
           {steps.map(({ num, eyebrow, title, desc }) => (
             <article
               key={num}
@@ -59,7 +59,7 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="bg-sand" style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="section-heading reveal">
             <span className="eyebrow">Quick Answers</span>
             <h2 className="section-title">Common questions before you book</h2>
@@ -98,7 +98,7 @@ export default function HowItWorksPage() {
       </section>
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="reveal text-center p-10 md:p-14 rounded-[var(--radius-xl)]" style={{ background: "linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.01)),rgba(38,38,38,0.72)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05), 0 30px 60px rgba(0,0,0,0.3)" }}>
             <h2 className="section-title mx-auto" style={{ maxWidth: "28rem" }}>Ready to book?</h2>
             <p className="mx-auto mb-8" style={{ maxWidth: "22rem" }}>Get a tailored quote in minutes — just tell us the date, venue, and event type.</p>

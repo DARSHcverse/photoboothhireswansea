@@ -26,14 +26,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderNavLink = (item) =>
     `<a href="${item.href}"${item.slug === activePage ? ' class="is-active"' : ""}>${item.label}</a>`;
 
+  const logoSvgMarkup = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-label="PBH — Photo Booth Hire Swansea" width="160" height="46" style="display:block">
+      <rect x="2" y="6" width="52" height="52" rx="12" fill="#0a3d8f" />
+      <rect x="22" y="14" width="12" height="5" rx="1.5" fill="#ffffff" />
+      <rect x="10" y="20" width="36" height="26" rx="4" fill="#ffffff" />
+      <circle cx="28" cy="33" r="8" fill="#0a3d8f" />
+      <circle cx="28" cy="33" r="4.5" fill="#ffffff" />
+      <circle cx="42" cy="25" r="1.6" fill="#0a3d8f" />
+      <text x="64" y="30" font-family="'Plus Jakarta Sans',sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.02em">PBH</text>
+      <text x="64" y="44" font-family="'Plus Jakarta Sans',sans-serif" font-size="7.5" font-weight="700" fill="#1a6fd4" letter-spacing="0.08em">PHOTO BOOTH HIRE</text>
+      <text x="64" y="55" font-family="'Plus Jakarta Sans',sans-serif" font-size="6" font-weight="600" fill="#a0aec0" letter-spacing="0.18em">SWANSEA</text>
+    </svg>
+  `;
+
   const headerMarkup = `
     <nav class="navbar" aria-label="Primary">
       <div class="nav-shell">
-        <a class="brand" href="index.html" aria-label="The Shan Booth home">
-          <img class="brand-logo" src="assets/logo.png" alt="The Shan Booth logo" />
-          <span class="brand-copy">
-            <span class="brand-title">The Shan Booth</span>
-          </span>
+        <a class="brand" href="index.html" aria-label="Photo Booth Hire Swansea home">
+          ${logoSvgMarkup}
         </a>
         <button
           class="nav-toggle"
@@ -49,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="nav-panel" id="site-menu">
           <div class="nav-links">
             ${navItems.map(renderNavLink).join("")}
-            <a class="nav-phone" href="contact.html" aria-label="Contact The Shan Booth">
+            <a class="nav-phone" href="contact.html" aria-label="Contact Photo Booth Hire Swansea">
               <img src="assets/call-icon.png" alt="" />
             </a>
           </div>
@@ -58,30 +69,35 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
   `;
 
+  const areaItems = [
+    { href: "/", label: "Photo Booth Hire Swansea" },
+    { href: "/photo-booth-hire-cardiff", label: "Photo Booth Hire Cardiff", title: "Photo Booth Hire Cardiff — photoboothhirecardiff.co.uk" },
+    { href: "/photo-booth-hire-cardiff", label: "Photo Booth Hire South Wales" },
+  ];
+
   const footerMarkup = `
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">
-          <img class="footer-logo" src="assets/logo.png" alt="The Shan Booth logo" />
-          <div>
-            <div class="footer-title">The Shan Booth</div>
-            <p class="footer-tagline">London photo booth hire with crystal-clear photos, unlimited prints, and professional event support.</p>
-          </div>
+          ${logoSvgMarkup}
         </div>
-        <p>
-          Friendly, all-inclusive booth hire for weddings, corporate events, school proms,
-          brand activations, and private parties across London and surrounding areas.
-        </p>
+        <p class="footer-tagline">Swansea&rsquo;s favourite photo booth hire service for weddings, parties and events across South Wales.</p>
         <div class="footer-contact-list">
-          <div class="footer-contact-item"><span>📧</span><span>[your UK email]</span></div>
-          <div class="footer-contact-item"><span>📱</span><span>[your UK number]</span></div>
-          <div class="footer-contact-item"><span>📍</span><span>London, United Kingdom</span></div>
+          <div class="footer-contact-item"><span>📧</span><span>photoboothhireinwales@gmail.com</span></div>
+          <div class="footer-contact-item"><span>📱</span><span>[SWANSEA_PHONE_NUMBER]</span></div>
+          <div class="footer-contact-item"><span>📍</span><span>Swansea, Wales, UK</span></div>
         </div>
       </div>
       <div>
         <span class="eyebrow">Explore</span>
         <div class="footer-links">
           ${footerItems.map((item) => `<a href="${item.href}">${item.label}</a>`).join("")}
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Areas We Cover</span>
+        <div class="footer-links">
+          ${areaItems.map((item) => `<a href="${item.href}"${item.title ? ` title="${item.title}"` : ""}>${item.label}</a>`).join("")}
         </div>
       </div>
       <div class="footer-card">
@@ -106,8 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2025 The Shan Booth. All rights reserved. | Photo Booth Hire London, UK</p>
-      <p>Proudly serving Greater London and surrounding areas</p>
+      <p>© 2025 Photo Booth Hire Swansea. All rights reserved.</p>
+      <p>Photo Booth Hire Swansea &amp; South Wales</p>
     </div>
   `;
 
@@ -402,19 +418,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const bookingPrices = {
-    "Open Booth / Selfie Pod": {
-      "2 Hours": 200,
-      "3 Hours": 275,
-      "4 Hours": 350,
-      "5 Hours": 420,
+    "Selfie Pod": {
+      "2 Hours": 220,
+      "3 Hours": 295,
+      "4 Hours": 370,
+      "5 Hours": 440,
     },
-    "Glam Booth / Magic Mirror": {
-      "2 Hours": 250,
-      "3 Hours": 320,
-      "4 Hours": 400,
-      "5 Hours": 470,
+    "Magic Mirror": {
+      "2 Hours": 270,
+      "3 Hours": 350,
+      "4 Hours": 430,
+      "5 Hours": 500,
     },
-    "Enclosed / Classic Booth": {
+    "Enclosed Booth": {
       "2 Hours": 220,
       "3 Hours": 295,
       "4 Hours": 370,
@@ -426,7 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const now = new Date();
     const dateStr = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}`;
     const randomSeq = Math.floor(Math.random() * 900 + 100);
-    return `TSB-UK-${dateStr}-${randomSeq}`;
+    return `PBH-SW-${dateStr}-${randomSeq}`;
   };
 
   const bookingForm = document.querySelector("[data-booking-form]");

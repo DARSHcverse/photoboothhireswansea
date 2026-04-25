@@ -6,7 +6,7 @@ import PageHero from "../components/PageHero";
 import { useReveal } from "../components/useReveal";
 
 const faqs = [
-  { q: "Do you cover all of London?", a: "Yes, we cover all London boroughs and surrounding areas including Essex, Surrey, and Hertfordshire. Travel fees may apply for events outside Greater London and we'll confirm this when you enquire." },
+  { q: "Do you cover all of Swansea?", a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, South Wales, and South Wales. Travel fees may apply for events outside South Wales and we'll confirm this when you enquire." },
   { q: "Are your attendants DBS checked?", a: "Yes. All attendants hold a current DBS (Disclosure and Barring Service) check and are experienced working with all ages, including school and youth events." },
   { q: "What's included in your packages?", a: "Every package includes unlimited photos, instant prints, props, a custom photostrip design, a professional attendant, and your choice of backdrop. USB digital images and online gallery are included from 3-hour packages. Guest book is included in 4-hour and 5-hour packages. No hidden fees." },
   { q: "How much space do you need?", a: "We recommend a clear flat area of at least 3m × 3m for the booth and backdrop, plus room for a short queue. We'll confirm setup requirements once you share your venue details." },
@@ -30,7 +30,7 @@ export default function FaqPage() {
       />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="grid gap-3 max-w-3xl mx-auto">
             {faqs.map(({ q, a }, i) => (
               <div
@@ -65,7 +65,7 @@ export default function FaqPage() {
       </section>
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div
             className="reveal text-center p-10 md:p-14 rounded-[var(--radius-xl)]"
             style={{

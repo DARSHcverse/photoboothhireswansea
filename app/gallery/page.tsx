@@ -8,18 +8,18 @@ import { useReveal } from "../components/useReveal";
 type FilterVal = "all" | "weddings" | "proms" | "corporate" | "birthdays";
 
 const galleryItems = [
-  { filter: "weddings",  title: "Rose Gold Wedding",    sub: "Islington vows and a packed dance floor",      bg: "linear-gradient(180deg,#ffc26c,#f47920)", size: "tall" },
+  { filter: "weddings",  title: "Rose Gold Wedding",    sub: "Swansea vows and a packed dance floor",      bg: "linear-gradient(180deg,#ffc26c,#f47920)", size: "tall" },
   { filter: "proms",     title: "Leavers Night",        sub: "Sharp suits, sparkling dresses, loud smiles",  bg: "linear-gradient(180deg,#83d8f2,#3badd4)", size: "medium" },
-  { filter: "corporate", title: "Launch Party",         sub: "Canary Wharf activation with branded prints",  bg: "linear-gradient(180deg,#ffd86d,#f5a623)", size: "normal" },
+  { filter: "corporate", title: "Launch Party",         sub: "Cardiff Bay activation with branded prints",  bg: "linear-gradient(180deg,#ffd86d,#f5a623)", size: "normal" },
   { filter: "birthdays", title: "Sweet Sixteen",        sub: "Full evening of colour and group prints",      bg: "linear-gradient(180deg,#ff9db4,#f47920)",  size: "medium" },
-  { filter: "weddings",  title: "Garden Wedding",       sub: "Surrey countryside, custom strip design",      bg: "linear-gradient(180deg,#d4f0c0,#6db56d)", size: "normal" },
-  { filter: "proms",     title: "Sixth Form Formal",    sub: "Essex school, fast queue, big smiles",         bg: "linear-gradient(180deg,#c9b8ff,#7c5cbf)", size: "tall" },
-  { filter: "corporate", title: "Team Night Out",       sub: "London Bridge office party, GIF booth",        bg: "linear-gradient(180deg,#ffe49a,#fa7e25)", size: "normal" },
-  { filter: "birthdays", title: "50th Milestone",       sub: "Hackney hall, four generations of prints",     bg: "linear-gradient(180deg,#ffb3c1,#c0005e)", size: "normal" },
-  { filter: "weddings",  title: "Winter Celebration",   sub: "Mayfair hotel, Magic Mirror setup",            bg: "linear-gradient(180deg,#b8d4f8,#3a6fcf)", size: "medium" },
-  { filter: "proms",     title: "Year 11 Prom",         sub: "North London school hall, DBS-checked hosting", bg: "linear-gradient(180deg,#fce4a6,#f0a500)", size: "normal" },
-  { filter: "corporate", title: "Brand Activation",     sub: "Shoreditch pop-up with digital sharing",       bg: "linear-gradient(180deg,#f2c2ff,#c020d0)", size: "tall" },
-  { filter: "birthdays", title: "Family Reunion",       sub: "Camden restaurant, all-day hire",              bg: "linear-gradient(180deg,#c9f2d2,#2eae5c)", size: "normal" },
+  { filter: "weddings",  title: "Garden Wedding",       sub: "South Wales countryside, custom strip design",      bg: "linear-gradient(180deg,#d4f0c0,#6db56d)", size: "normal" },
+  { filter: "proms",     title: "Sixth Form Formal",    sub: "Cardiff school, fast queue, big smiles",         bg: "linear-gradient(180deg,#c9b8ff,#7c5cbf)", size: "tall" },
+  { filter: "corporate", title: "Team Night Out",       sub: "Swansea Bay office party, GIF booth",        bg: "linear-gradient(180deg,#ffe49a,#fa7e25)", size: "normal" },
+  { filter: "birthdays", title: "50th Milestone",       sub: "Swansea hall, four generations of prints",     bg: "linear-gradient(180deg,#ffb3c1,#c0005e)", size: "normal" },
+  { filter: "weddings",  title: "Winter Celebration",   sub: "Cardiff hotel, Magic Mirror setup",            bg: "linear-gradient(180deg,#b8d4f8,#3a6fcf)", size: "medium" },
+  { filter: "proms",     title: "Year 11 Prom",         sub: "North Swansea school hall, DBS-checked hosting", bg: "linear-gradient(180deg,#fce4a6,#f0a500)", size: "normal" },
+  { filter: "corporate", title: "Brand Activation",     sub: "Swansea pop-up with digital sharing",       bg: "linear-gradient(180deg,#f2c2ff,#c020d0)", size: "tall" },
+  { filter: "birthdays", title: "Family Reunion",       sub: "Cardiff restaurant, all-day hire",              bg: "linear-gradient(180deg,#c9f2d2,#2eae5c)", size: "normal" },
 ];
 
 const filters: Array<{ val: FilterVal; label: string }> = [
@@ -38,10 +38,10 @@ export default function GalleryPage() {
 
   return (
     <main>
-      <PageHero eyebrow="Our Gallery" title="Our Gallery" description="A peek at the colourful moments, big group shots, and booth energy we bring to celebrations across London and surrounding areas." heroBg="/assets/hero-banner-2.webp" />
+      <PageHero eyebrow="Our Gallery" title="Our Gallery" description="A peek at the colourful moments, big group shots, and booth energy we bring to celebrations across Swansea and surrounding areas." heroBg="/assets/hero-banner-2.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
 
           {/* Filters */}
           <div className="reveal flex flex-wrap justify-center gap-2 mb-8">
@@ -54,7 +54,7 @@ export default function GalleryPage() {
 
           {/* Masonry-style grid */}
           <div
-            className="grid gap-4"
+            className="grid gap-4 gallery-grid"
             style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gridAutoRows: "200px" }}
           >
             {visible.map(({ title, sub, bg, size }) => (

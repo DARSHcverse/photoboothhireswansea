@@ -1,12 +1,15 @@
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
-export const metadata = { title: "Our Services" };
+export const metadata = {
+  title: "Our Services",
+  alternates: { canonical: "/services" },
+};
 
 const services = [
   {
-    icon: "💍", eyebrow: "Wedding Photo Booth Hire London", title: "Wedding Photo Booth Hire London",
-    paras: ["Weddings deserve something that feels polished, warm, and easy for guests to enjoy. The Shan Booth fits beautifully into wedding receptions, evening celebrations, and after-dinner entertainment.", "Expect flattering lighting, instant prints that double as favours, and a host who helps everyone from your flower girls to your grandparents feel comfortable in front of the camera."],
+    icon: "💍", eyebrow: "Wedding Photo Booth Hire Swansea", title: "Wedding Photo Booth Hire Swansea",
+    paras: ["Weddings deserve something that feels polished, warm, and easy for guests to enjoy. Photo Booth Hire Swansea fits beautifully into wedding receptions, evening celebrations, and after-dinner entertainment.", "Expect flattering lighting, instant prints that double as favours, and a host who helps everyone from your flower girls to your grandparents feel comfortable in front of the camera."],
     items: ["Elegant backdrop styling and guest book options", "Custom photo strip design with names and wedding date", "Stress-free setup coordinated around your timeline"],
     cta: "Book Your Wedding Booth", href: "/booking",
   },
@@ -18,7 +21,7 @@ const services = [
   },
   {
     icon: "🎓", eyebrow: "Graduation Booth Hire", title: "Graduation Photo Booth Hire",
-    paras: ["Graduation events are packed with proud families, milestone moments, and celebrations that deserve more than phone snaps. The Shan Booth adds a premium photo moment guests can revisit instantly.", "Ideal for university receptions, school graduations, and family gatherings where people want keepsake prints as well as digital memories to share afterwards."],
+    paras: ["Graduation events are packed with proud families, milestone moments, and celebrations that deserve more than phone snaps. Photo Booth Hire Swansea adds a premium photo moment guests can revisit instantly.", "Ideal for university receptions, school graduations, and family gatherings where people want keepsake prints as well as digital memories to share afterwards."],
     items: ["Brilliant for gowns, caps, families, and friendship groups", "Custom print artwork for your school or university", "Professional setup that works indoors at busy venues"],
     cta: "Get a Graduation Quote", href: "/quickquote",
   },
@@ -30,14 +33,14 @@ const services = [
   },
   {
     icon: "🎂", eyebrow: "Birthday Photo Booth Hire", title: "Birthday Party Photo Booth Hire",
-    paras: ["Milestone birthdays need something memorable, social, and easy for guests of all ages to jump into. The Shan Booth adds instant entertainment without taking over the room.", "Whether you're planning a sweet sixteen in South London or a big family gathering elsewhere in Greater London, we tailor the mood to suit the crowd."],
+    paras: ["Milestone birthdays need something memorable, social, and easy for guests of all ages to jump into. Photo Booth Hire Swansea adds instant entertainment without taking over the room.", "Whether you're planning a sweet sixteen in South Wales or a big family gathering elsewhere in South Wales, we tailor the mood to suit the crowd."],
     items: ["Playful props, colourful backdrops, and instant prints", "Perfect for private homes, halls, restaurants, and hotels", "Flexible package lengths for daytime or evening parties"],
     cta: "Book a Birthday Booth", href: "/booking",
   },
   {
     icon: "🎊", eyebrow: "All Celebrations", title: "Photo Booth Hire for Every Celebration",
-    paras: ["Not every event fits neatly into one category, and that's exactly why our packages are flexible. The Shan Booth is a brilliant fit for engagement parties, baby showers, launches, awards nights, anniversaries, and community celebrations."],
-    items: ["Adaptable styling for formal, playful, or branded events", "Simple package upgrades with extras and add-ons", "Coverage across London and surrounding areas"],
+    paras: ["Not every event fits neatly into one category, and that's exactly why our packages are flexible. Photo Booth Hire Swansea is a brilliant fit for engagement parties, baby showers, launches, awards nights, anniversaries, and community celebrations."],
+    items: ["Adaptable styling for formal, playful, or branded events", "Simple package upgrades with extras and add-ons", "Coverage across Swansea and surrounding areas"],
     cta: "Get a Custom Quote", href: "/quickquote",
   },
 ];
@@ -52,10 +55,10 @@ const cardStyle = {
 export default function ServicesPage() {
   return (
     <main>
-      <PageHero eyebrow="Our Services" title="Our Services" description="From elegant weddings to all-out school leavers celebrations, The Shan Booth adapts its setup, styling, and energy to suit the event in front of it." heroBg="/assets/events.webp" />
+      <PageHero eyebrow="Our Services" title="Our Services" description="From elegant weddings to all-out school leavers celebrations, Photo Booth Hire Swansea adapts its setup, styling, and energy to suit the event in front of it." heroBg="/assets/events.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3 grid gap-6" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3 grid gap-6" style={{ maxWidth: "1240px" }}>
           {services.map(({ icon, eyebrow, title, paras, items, cta, href }) => (
             <article key={title} className="reveal p-8 md:p-10 rounded-[var(--radius-xl)] flex flex-col md:flex-row gap-8 items-start" style={cardStyle}>
               <div

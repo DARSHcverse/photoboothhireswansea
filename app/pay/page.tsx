@@ -1,6 +1,10 @@
 import PageHero from "../components/PageHero";
 
-export const metadata = { title: "Pay Here" };
+export const metadata = {
+  title: "Pay Here",
+  alternates: { canonical: "/pay" },
+  robots: { index: false, follow: false },
+};
 
 export default function PayPage() {
   return (
@@ -8,7 +12,7 @@ export default function PayPage() {
       <PageHero eyebrow="Pay Here" title="Secure Payment" description="Complete your secure payment below. If you haven't yet received an invoice, please visit the booking page first." heroBg="/assets/boothimg4.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-3" style={{ maxWidth: "900px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "900px" }}>
           <div
             className="reveal p-8 md:p-12 rounded-[var(--radius-xl)] flex flex-col gap-4"
             style={{

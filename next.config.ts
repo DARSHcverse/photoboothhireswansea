@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
     // Avoid picking the home directory as the workspace root when it has its own package.json.
     root: repoRoot,
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        has: [{ type: "host", value: "photoboothhirecardiff.co.uk" }],
+        destination: "https://photoboothhireswansea.co.uk/photo-booth-hire-cardiff",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "photoboothhirecardiff.co.uk" }],
+        destination: "https://photoboothhireswansea.co.uk/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
