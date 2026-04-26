@@ -380,13 +380,16 @@
     align-items: center;
     justify-content: flex-start;
     min-height: inherit;
-    padding: clamp(6.1rem, 8.6vw, 7rem) clamp(1.5rem, 11vw, 7rem) 2.85rem;
+    padding: clamp(5.8rem, 7.2vw, 6.8rem) 0 2.85rem;
+  }
+  .hero-overlay-inner {
+    width: 100%;
   }
   .home-hero-content {
     position: relative;
     display: grid;
     justify-items: start;
-    width: min(100%, 52rem);
+    width: min(100%, 48rem);
     min-height: auto;
     margin: 0;
     padding: 0;
@@ -629,7 +632,7 @@
 
   .hero-overlay {
     align-items: flex-end;
-    padding: 6.45rem 1.12rem 2.7rem;
+    padding: 6.45rem 0 2.7rem;
   }
 
   .home-hero-content {

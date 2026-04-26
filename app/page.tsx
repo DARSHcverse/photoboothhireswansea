@@ -98,18 +98,20 @@ export default function HomePage() {
             </div>
 
             <div className="hero-overlay">
-              <div className="home-hero-content reveal">
-                <h1 className="home-hero-title">PHOTO BOOTH HIRE SWANSEA</h1>
-                <p className="home-hero-subtitle">
-                  Swansea&rsquo;s favourite photo booth for weddings, parties and corporate events across South Wales.
-                </p>
-                <div className="hero-button-row">
-                  <Link href="/packages" className="btn btn-primary hero-button">
-                    View Packages
-                  </Link>
-                  <Link href="/quickquote" className="btn btn-secondary hero-button hero-button-secondary">
-                    Quick Quote
-                  </Link>
+              <div className="hero-overlay-inner mx-auto w-full px-4 md:px-3" style={{ maxWidth: "1240px" }}>
+                <div className="home-hero-content reveal">
+                  <h1 className="home-hero-title">PHOTO BOOTH HIRE SWANSEA</h1>
+                  <p className="home-hero-subtitle">
+                    Swansea&rsquo;s favourite photo booth for weddings, parties and corporate events across South Wales.
+                  </p>
+                  <div className="hero-button-row">
+                    <Link href="/packages" className="btn btn-primary hero-button">
+                      View Packages
+                    </Link>
+                    <Link href="/quickquote" className="btn btn-secondary hero-button hero-button-secondary">
+                      Quick Quote
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

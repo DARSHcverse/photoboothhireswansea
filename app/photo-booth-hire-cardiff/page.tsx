@@ -87,18 +87,20 @@ export default function PhotoBoothHireCardiffPage() {
               aria-hidden="true"
             />
             <div className="hero-overlay">
-              <div className="home-hero-content reveal">
-                <h1 className="home-hero-title">PHOTO BOOTH HIRE CARDIFF</h1>
-                <p className="home-hero-subtitle">
-                  Serving Cardiff, Swansea and all of South Wales — weddings, parties, corporate events and school proms.
-                </p>
-                <div className="hero-button-row">
-                  <Link href="/quickquote" className="btn btn-primary hero-button">
-                    Get a Quick Quote
-                  </Link>
-                  <Link href="/packages" className="btn btn-secondary hero-button hero-button-secondary">
-                    View Packages
-                  </Link>
+              <div className="hero-overlay-inner mx-auto w-full px-4 md:px-3" style={{ maxWidth: "1240px" }}>
+                <div className="home-hero-content reveal">
+                  <h1 className="home-hero-title">PHOTO BOOTH HIRE CARDIFF</h1>
+                  <p className="home-hero-subtitle">
+                    Serving Cardiff, Swansea and all of South Wales — weddings, parties, corporate events and school proms.
+                  </p>
+                  <div className="hero-button-row">
+                    <Link href="/quickquote" className="btn btn-primary hero-button">
+                      Get a Quick Quote
+                    </Link>
+                    <Link href="/packages" className="btn btn-secondary hero-button hero-button-secondary">
+                      View Packages
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
