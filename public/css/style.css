@@ -462,7 +462,23 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  min-width: 0;
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+.brand > svg {
+  width: 160px;
+  height: auto;
+  min-width: 140px;
+}
+
+@media (max-width: 767px) {
+  .brand { min-width: 130px; }
+  .brand > svg { width: 130px; min-width: 130px; }
+}
+
+@media (min-width: 1024px) {
+  .brand > svg { width: 180px; }
 }
 
 .brand-logo,

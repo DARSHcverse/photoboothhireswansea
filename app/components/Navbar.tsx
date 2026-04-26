@@ -40,26 +40,34 @@ export default function Navbar() {
       aria-label="Site header"
     >
       <nav aria-label="Primary">
-        {/* pill shell */}
         <div
-          className="flex items-center gap-5 mx-auto px-3 py-[0.7rem] rounded-full transition-all duration-300"
-          style={{
-            maxWidth: "calc(1240px + 2rem)",
-            background: scrolled
-              ? "rgba(10,10,10,0.92)"
-              : "rgba(12,12,12,0.78)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            boxShadow: scrolled
-              ? "inset 0 0 0 1px rgba(255,255,255,0.09), 0 24px 56px rgba(0,0,0,0.5), 0 0 24px rgba(26,111,212,0.06)"
-              : "inset 0 0 0 1px rgba(255,255,255,0.07), 0 20px 48px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.22)",
-          }}
+          className="flex items-center gap-3 mx-auto"
+          style={{ maxWidth: "calc(1240px + 2rem)" }}
         >
-          {/* Brand */}
-          <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Photo Booth Hire Swansea home" onClick={() => setMenuOpen(false)}>
-            <Logo variant="dark" />
+          {/* Brand — separate from nav pill */}
+          <Link
+            href="/"
+            className="navbar-brand flex items-center shrink-0"
+            aria-label="Photo Booth Hire Swansea home"
+            onClick={() => setMenuOpen(false)}
+          >
+            <Logo variant="dark" width={160} height={48} />
           </Link>
 
+          {/* pill shell */}
+          <div
+            className="flex items-center gap-5 flex-1 px-3 py-[0.7rem] rounded-full transition-all duration-300 md:mx-auto"
+            style={{
+              background: scrolled
+                ? "rgba(10,10,10,0.92)"
+                : "rgba(12,12,12,0.78)",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
+              boxShadow: scrolled
+                ? "inset 0 0 0 1px rgba(255,255,255,0.09), 0 24px 56px rgba(0,0,0,0.5), 0 0 24px rgba(26,111,212,0.06)"
+                : "inset 0 0 0 1px rgba(255,255,255,0.07), 0 20px 48px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.22)",
+            }}
+          >
           {/* Mobile toggle */}
           <button
             className="ml-auto md:hidden flex items-center justify-center w-11 h-11 rounded-full border-0"
@@ -99,7 +107,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center justify-end flex-1 gap-[2px]" id="site-menu">
+          <div className="hidden md:flex items-center justify-center flex-1 gap-[2px]" id="site-menu">
             {navLinks.map(({ href, label }) => {
               const active = pathname === href || (href !== "/" && pathname.startsWith(href));
               return (
@@ -153,6 +161,7 @@ export default function Navbar() {
             >
               <Image src="/assets/call-icon.png" alt="" width={22} height={22} className="object-contain" />
             </Link>
+          </div>
           </div>
         </div>
 

@@ -79,7 +79,7 @@ export default function PhotoBoothHireCardiffPage() {
     <main>
       {/* HERO */}
       <section className="home-hero">
-        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "100%" }}>
           <div className="hero-stage">
             <div
               className="hero-slide is-active"
