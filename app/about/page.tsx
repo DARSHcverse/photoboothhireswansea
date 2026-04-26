@@ -25,6 +25,60 @@ export default function AboutPage() {
     <main>
       <PageHero eyebrow="About Photo Booth Hire Swansea" title="About Photo Booth Hire Swansea" description="A fresh, all-inclusive photo booth hire service based in Swansea and built for weddings, corporate events, school proms, and milestone parties." heroBg="/assets/hero-banner-4.webp" />
 
+      {/* How It Started */}
+      <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
+          <div
+            className="reveal p-6 md:p-10 rounded-[var(--radius-xl)] mx-auto"
+            style={{ ...cardStyle, maxWidth: "800px" }}
+          >
+            <span className="eyebrow">From Australia to Wales</span>
+            <h2 className="section-title">The Story Behind the Booth</h2>
+            <p>
+              Photo Booth Hire Swansea started life on the other side of the world. Before relocating to Wales,
+              our operator Shan ran The Shan Booth in Melbourne, Australia — capturing weddings, Christmas
+              parties, corporate events and school formals across Victoria. Six events in, the reviews were
+              strong, the bookings were growing, and the passion for creating memorable moments was only
+              getting bigger.
+            </p>
+            <p>
+              Then life took a beautiful turn. Shan got married and made the decision to relocate to Swansea,
+              Wales — bringing the same equipment, the same attention to detail, and the same all-inclusive
+              approach that made The Shan Booth a hit in Melbourne. The booth crossed hemispheres. The
+              mission stayed exactly the same.
+            </p>
+            <p>
+              Photo Booth Hire Swansea is that next chapter. Same operator. Same Canon R100 mirrorless
+              camera. Same commitment to unlimited prints, zero hidden fees, and a professional attendant
+              who genuinely cares about your event. The only difference is the postcode — and the weather.
+            </p>
+            <p>
+              The gallery images on this site were captured at real events by The Shan Booth in Australia.
+              They represent the same quality, style and experience you can expect at your event here in
+              South Wales. This is not a new business finding its feet — it is an experienced operator
+              starting a new chapter in a new home.
+            </p>
+
+            <div className="story-stats">
+              <div className="story-stat">
+                <span className="story-stat-num">6+</span>
+                <span className="story-stat-label">Real Events</span>
+              </div>
+              <div className="story-stat">
+                <span className="story-stat-num">100%</span>
+                <span className="story-stat-label">5-Star Rated</span>
+              </div>
+              <div className="story-stat">
+                <span className="story-stat-num">2</span>
+                <span className="story-stat-label">Countries</span>
+              </div>
+            </div>
+
+            <hr className="story-divider" />
+          </div>
+        </div>
+      </section>
+
       {/* Story */}
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
         <div className="mx-auto px-4 md:px-3 grid gap-8 items-center" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>

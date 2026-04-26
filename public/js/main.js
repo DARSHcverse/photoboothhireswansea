@@ -125,6 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>© 2025 Photo Booth Hire Swansea. All rights reserved.</p>
       <p>Photo Booth Hire Swansea &amp; South Wales</p>
     </div>
+    <p style="font-size: 0.7rem; color: var(--color-fg-faint, #6b7280); opacity: 0.6; text-align: center; margin-top: 4px;">
+      Photo Booth Hire Swansea is the UK sister business of The Shan Booth, Australia.
+    </p>
   `;
 
   const siteHeader = document.querySelector(".site-header");
@@ -308,6 +311,112 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
+  }
+
+  const staticGrid = document.querySelector("[data-static-gallery-grid]");
+  const staticVideoGrid = document.querySelector("[data-static-video-grid]");
+  const staticVideoHeading = document.querySelector("[data-static-video-heading]");
+  const staticFilterRow = document.querySelector("[data-static-gallery-filters]");
+  const staticLightbox = document.querySelector("[data-static-lightbox]");
+
+  if (staticGrid && staticLightbox) {
+    const lightboxImg = staticLightbox.querySelector("[data-static-lightbox-image]");
+    const lightboxClose = staticLightbox.querySelector("[data-static-lightbox-close]");
+    const lightboxPrev = staticLightbox.querySelector("[data-static-lightbox-prev]");
+    const lightboxNext = staticLightbox.querySelector("[data-static-lightbox-next]");
+
+    let allItems = [];
+    let activeFilter = "all";
+    let visiblePhotos = [];
+    let lightboxIndex = -1;
+
+    const renderGrid = () => {
+      const photos = allItems.filter((i) => i.type === "image");
+      const videos = allItems.filter((i) => i.type === "video");
+      visiblePhotos = activeFilter === "all" ? photos : photos.filter((p) => p.event === activeFilter);
+      const visibleVideos = activeFilter === "all" ? videos : videos.filter((v) => v.event === activeFilter);
+
+      staticGrid.innerHTML = visiblePhotos
+        .map((p, idx) => {
+          const landscape = p.width && p.height && p.width >= p.height;
+          return `<button class="static-gallery-card reveal${landscape ? " is-landscape" : ""}" type="button" data-static-photo-index="${idx}" aria-label="Open ${p.eventName || p.alt}"><img src="${p.src}" alt="${p.alt}" loading="lazy" /><div class="card-overlay"><span class="card-type">${p.eventType || ""}</span><strong class="card-name">${p.eventName || ""}</strong></div></button>`;
+        })
+        .join("");
+
+      if (staticVideoGrid) {
+        staticVideoGrid.innerHTML = visibleVideos
+          .map((v) => `<video src="${v.src}" controls preload="metadata" playsinline></video>`)
+          .join("");
+      }
+      if (staticVideoHeading) {
+        staticVideoHeading.hidden = visibleVideos.length === 0;
+      }
+    };
+
+    const openLightbox = (idx) => {
+      if (idx < 0 || idx >= visiblePhotos.length) return;
+      lightboxIndex = idx;
+      lightboxImg.src = visiblePhotos[idx].src;
+      lightboxImg.alt = visiblePhotos[idx].alt;
+      staticLightbox.classList.add("is-open");
+      staticLightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    const closeLightbox = () => {
+      staticLightbox.classList.remove("is-open");
+      staticLightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      lightboxIndex = -1;
+    };
+    const showPrev = () => {
+      if (lightboxIndex < 0 || visiblePhotos.length === 0) return;
+      openLightbox((lightboxIndex - 1 + visiblePhotos.length) % visiblePhotos.length);
+    };
+    const showNext = () => {
+      if (lightboxIndex < 0 || visiblePhotos.length === 0) return;
+      openLightbox((lightboxIndex + 1) % visiblePhotos.length);
+    };
+
+    staticGrid.addEventListener("click", (event) => {
+      const target = event.target.closest("[data-static-photo-index]");
+      if (!target) return;
+      openLightbox(Number(target.dataset.staticPhotoIndex));
+    });
+    if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener("click", showPrev);
+    if (lightboxNext) lightboxNext.addEventListener("click", showNext);
+    staticLightbox.addEventListener("click", (event) => {
+      if (event.target === staticLightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (!staticLightbox.classList.contains("is-open")) return;
+      if (event.key === "Escape") closeLightbox();
+      else if (event.key === "ArrowLeft") showPrev();
+      else if (event.key === "ArrowRight") showNext();
+    });
+
+    if (staticFilterRow) {
+      staticFilterRow.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-static-filter]");
+        if (!button) return;
+        activeFilter = button.dataset.staticFilter;
+        staticFilterRow
+          .querySelectorAll("[data-static-filter]")
+          .forEach((b) => b.classList.toggle("is-active", b === button));
+        renderGrid();
+      });
+    }
+
+    fetch("assets/gallery/manifest.json")
+      .then((r) => (r.ok ? r.json() : []))
+      .then((data) => {
+        allItems = Array.isArray(data) ? data : [];
+        renderGrid();
+      })
+      .catch(() => {
+        allItems = [];
+        renderGrid();
+      });
   }
 
   const accordions = document.querySelectorAll(".faq-item");

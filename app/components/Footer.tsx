@@ -155,15 +155,28 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="mx-auto px-4 mt-10 pt-6 flex flex-wrap items-center justify-between gap-4 text-xs"
+          className="mx-auto px-4 mt-10 pt-6 text-xs"
           style={{
             maxWidth: "1240px",
             borderTop: "1px solid rgba(255,255,255,0.06)",
             color: "var(--color-fg-faint)",
           }}
         >
-          <span>© 2025 Photo Booth Hire Swansea. All rights reserved.</span>
-          <span>Photo Booth Hire Swansea &amp; South Wales</span>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <span>© 2025 Photo Booth Hire Swansea. All rights reserved.</span>
+            <span>Photo Booth Hire Swansea &amp; South Wales</span>
+          </div>
+          <p
+            style={{
+              fontSize: "0.7rem",
+              color: "var(--color-fg-faint)",
+              opacity: 0.6,
+              textAlign: "center",
+              marginTop: "4px",
+            }}
+          >
+            Photo Booth Hire Swansea is the UK sister business of The Shan Booth, Australia.
+          </p>
         </div>
       </div>
     </footer>
