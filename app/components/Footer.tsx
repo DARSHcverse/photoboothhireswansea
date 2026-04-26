@@ -58,7 +58,7 @@ export default function Footer() {
               Swansea&rsquo;s favourite photo booth hire service for weddings, parties and events across South Wales.
             </p>
             <div className="mt-4 grid gap-2 text-sm" style={{ color: "var(--color-fg-muted)" }}>
-              <div className="flex items-center gap-2"><span>📧</span><span>photoboothhireinwales@gmail.com</span></div>
+              <div className="flex items-center gap-2"><span>📧</span><span>photoboothhireswansea@gmail.com</span></div>
               <div className="flex items-center gap-2"><span>📱</span><span>[SWANSEA_PHONE_NUMBER]</span></div>
               <div className="flex items-center gap-2"><span>📍</span><span>Swansea, Wales, UK</span></div>
             </div>
