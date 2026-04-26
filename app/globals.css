@@ -46,6 +46,13 @@
     width: 130px !important;
     height: 40px !important;
   }
+  .navbar-brand-mobile {
+    min-width: 0;
+  }
+  .navbar-brand-mobile > span {
+    width: 116px !important;
+    height: 36px !important;
+  }
 }
 @media (min-width: 1024px) {
   .navbar-brand > span {
@@ -607,7 +614,7 @@
 
   .hero-overlay {
     align-items: flex-end;
-    padding: 5.35rem 1rem 2.7rem;
+    padding: 6.45rem 1.12rem 2.7rem;
   }
 
   .home-hero-content {
@@ -617,7 +624,14 @@
   }
 
   .home-hero-title {
-    font-size: clamp(2.9rem, 15vw, 4.35rem);
+    max-width: 8.5ch;
+    font-size: clamp(2.55rem, 13vw, 3.8rem);
+    line-height: 0.9;
+  }
+
+  .home-hero-subtitle {
+    max-width: 26rem;
+    font-size: clamp(1.03rem, 4.7vw, 1.3rem);
   }
 
   .hero-dots {

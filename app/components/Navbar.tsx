@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed inset-x-0 top-0 z-80 px-4 pt-3"
+      className="fixed inset-x-0 top-0 z-80 px-3 sm:px-4 pt-3"
       aria-label="Site header"
     >
       <nav aria-label="Primary">
@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Brand — separate from nav pill */}
           <Link
             href="/"
-            className="navbar-brand flex items-center shrink-0"
+            className="navbar-brand hidden md:flex items-center shrink-0"
             aria-label="Photo Booth Hire Swansea home"
             onClick={() => setMenuOpen(false)}
           >
@@ -56,7 +56,7 @@ export default function Navbar() {
 
           {/* pill shell */}
           <div
-            className="flex items-center gap-5 flex-1 px-3 py-[0.7rem] rounded-full transition-all duration-300 md:mx-auto"
+            className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 md:flex md:items-center md:gap-4 flex-1 px-3 py-[0.62rem] md:py-[0.7rem] rounded-full transition-all duration-300 md:mx-auto"
             style={{
               background: scrolled
                 ? "rgba(10,10,10,0.92)"
@@ -68,9 +68,31 @@ export default function Navbar() {
                 : "inset 0 0 0 1px rgba(255,255,255,0.07), 0 20px 48px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.22)",
             }}
           >
+            <Link
+              href="/"
+              className="navbar-brand navbar-brand-mobile md:hidden flex items-center shrink-0 justify-self-start"
+              aria-label="Photo Booth Hire Swansea home"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Logo variant="dark" width={124} height={38} />
+            </Link>
+
+            <Link
+              href="/"
+              className="md:hidden justify-self-center text-center text-[0.95rem] font-extrabold tracking-[0.1em] uppercase"
+              style={{
+                fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)",
+                color: "rgba(255,255,255,0.88)",
+              }}
+              aria-label="Go to homepage"
+              onClick={() => setMenuOpen(false)}
+            >
+              PBH Swansea
+            </Link>
+
           {/* Mobile toggle */}
           <button
-            className="ml-auto md:hidden flex items-center justify-center w-11 h-11 rounded-full border-0"
+            className="md:hidden flex items-center justify-center w-11 h-11 rounded-full border-0 shrink-0 justify-self-end"
             style={{
               background: "rgba(255,255,255,0.06)",
               boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.1)",
