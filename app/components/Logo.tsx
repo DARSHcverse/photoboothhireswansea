@@ -5,6 +5,7 @@ interface LogoProps {
   size?: number;
   width?: number;
   height?: number;
+  fit?: "cover" | "contain";
 }
 
 export default function Logo({
@@ -12,10 +13,12 @@ export default function Logo({
   size = 64,
   width,
   height,
+  fit = "cover",
 }: LogoProps) {
   const resolvedWidth = width ?? size;
   const resolvedHeight = height ?? size;
   const isHorizontal = resolvedWidth > resolvedHeight;
+  const useContain = fit === "contain";
 
   return (
     <span
@@ -34,10 +37,10 @@ export default function Logo({
         fill
         sizes={`${resolvedWidth}px`}
         style={{
-          objectFit: "cover",
+          objectFit: useContain ? "contain" : "cover",
           objectPosition: "center",
-          transform: isHorizontal ? "scale(1.46)" : "scale(1.3)",
-          filter: "drop-shadow(0 10px 22px rgba(0,0,0,0.22))",
+          transform: useContain ? "none" : isHorizontal ? "scale(1.46)" : "scale(1.3)",
+          filter: useContain ? "none" : "drop-shadow(0 10px 22px rgba(0,0,0,0.22))",
         }}
       />
     </span>

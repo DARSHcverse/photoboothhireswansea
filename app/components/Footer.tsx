@@ -50,7 +50,9 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Logo variant="dark" width={160} height={48} />
+              <Link href="/" aria-label="Go to homepage" className="footer-brand-logo inline-flex items-center">
+                <Logo variant="dark" width={180} height={56} fit="contain" />
+              </Link>
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "var(--color-fg-muted)" }}>
               Swansea&rsquo;s favourite photo booth hire service for weddings, parties and events across South Wales.
