@@ -3,13 +3,13 @@ import Link from "next/link";
 import PageHero from "../components/PageHero";
 
 export const metadata = {
-  title: { absolute: "Our Photo Booths | Selfie Pod, Magic Mirror and Enclosed Booth Swansea" },
+  title: { absolute: "Our Photo Booths | Selfie Pod, Glam Booth and Enclosed Booth Swansea" },
   alternates: { canonical: "/photobooths" },
 };
 
 const booths = [
   { img: "/assets/boothimg6.webp", alt: "Open booth setup",            title: "Selfie Pod",       desc: "A sleek, modern open-air setup that fits any venue and encourages group shots and guest interaction. The most popular choice for weddings, corporate events, and birthday parties.", items: ["Sleek open-air design","Perfect for group shots and guest interaction","Most popular for weddings, brands, and birthdays"] },
-  { img: "/assets/glam.png",       alt: "Glam booth portrait style",   title: "Magic Mirror",     desc: "Swansea's favourite for weddings and upscale events. The Magic Mirror delivers stunning full-length portraits with a signature glam finish in black and white or colour.", items: ["Full-length portraits with glam styling","Black and white or colour finish","Ideal for weddings and premium events"] },
+  { img: "/assets/glam.png",       alt: "Glam Booth portrait style",   title: "Glam Booth",       desc: "The Glam Booth is our signature open air booth experience — designed for guests who want something a little more elevated. Using professional studio lighting and a carefully tuned black and white finish, every photo comes out with a cinematic, glamour feel. Think classic Hollywood portraits, not standard photo booth snaps. Perfect for weddings, milestone birthdays, and any event where the photos need to look as good as the night feels. Printed on the spot, sharp every time, and unlike anything else on the South Wales market.", items: ["Full-length portraits with glam styling","Black and white or colour finish","Ideal for weddings and premium events"] },
   { img: "/assets/enclosed.jpeg",  alt: "Enclosed booth setup",        title: "Enclosed Booth", desc: "A nostalgic, private photo booth experience. Perfect for school proms, weddings with a vintage theme, and guests who love the classic photo strip feel.", items: ["Classic enclosed booth feel","Great for proms and vintage-style weddings","Perfect for guests who love photo strips"] },
 ];
 
@@ -23,7 +23,7 @@ const cardStyle = {
 export default function PhotoboothsPage() {
   return (
     <main>
-      <PageHero eyebrow="Photobooths" title="Choose Your Booth" description="Selfie Pod, Magic Mirror, or Enclosed Booth. Each setup gives a different feel, and we'll help you pick the one that fits your venue, event style, and guest energy." heroBg="/assets/boothimg6.webp" />
+      <PageHero eyebrow="Photobooths" title="Choose Your Booth" description="Selfie Pod, Glam Booth, or Enclosed Booth. Each setup gives a different feel, and we'll help you pick the one that fits your venue, event style, and guest energy." heroBg="/assets/boothimg6.webp" />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
         <div className="mx-auto px-4 md:px-3 grid gap-6" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>

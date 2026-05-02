@@ -10,7 +10,7 @@ type BoothType = "open" | "glam" | "enclosed";
 
 const boothLabels: Record<BoothType, string> = {
   open:     "Selfie Pod",
-  glam:     "Magic Mirror",
+  glam:     "Glam Booth",
   enclosed: "Enclosed Booth",
 };
 
@@ -29,7 +29,7 @@ const packages: Package[] = [
   { hours: "3 Hours", booth: "open",     price: "£295", popular: true, desc: "Everything in the 2-hour package, plus extra prints and an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints","Online gallery"] },
   { hours: "4 Hours", booth: "open",     price: "£370", desc: "Everything in the 3-hour package, plus your choice of attendant and a traditional guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Traditional guest book"] },
   { hours: "5 Hours", booth: "open",     price: "£440", desc: "The full all-inclusive package for events that want the booth running deep into the party.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
-  // Magic Mirror
+  // Glam Booth
   { hours: "2 Hours", booth: "glam",     price: "£270", desc: "Unlimited photos, postcard prints, event props, photostrip design, USB, an attendant, and a white backdrop.", items: ["Unlimited photos and postcard prints","Event props and photostrip design","USB and attendant","White backdrop"] },
   { hours: "3 Hours", booth: "glam",     price: "£350", popular: true, desc: "Everything in the 2-hour package, plus extra prints.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints"] },
   { hours: "4 Hours", booth: "glam",     price: "£430", desc: "Everything in the 3-hour package, plus your choice of attendant and a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Guest book"] },
@@ -60,7 +60,7 @@ export default function PackagesPage() {
   const filters: Array<{ val: FilterVal; label: string }> = [
     { val: "all",      label: "All Booths" },
     { val: "open",     label: "Selfie Pod" },
-    { val: "glam",     label: "Magic Mirror" },
+    { val: "glam",     label: "Glam Booth" },
     { val: "enclosed", label: "Enclosed Booth" },
   ];
 
@@ -85,7 +85,7 @@ export default function PackagesPage() {
             <span className="eyebrow">Packages &amp; Pricing</span>
             <h1 className="section-title">Packages &amp; Pricing</h1>
             <p>
-              Selfie Pod, Magic Mirror, and Enclosed Booth pricing in GBP for
+              Selfie Pod, Glam Booth, and Enclosed Booth pricing in GBP for
               Swansea and surrounding area events.
             </p>
           </div>

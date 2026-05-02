@@ -19,9 +19,9 @@ const booths = [
     items: ["Sleek open-air design", "Perfect for group shots", "Most popular for weddings, brands, and birthdays"],
   },
   {
-    title: "Magic Mirror",
+    title: "Glam Booth",
     price: "From £270",
-    desc: "Cardiff's favourite for weddings and upscale events. The Magic Mirror delivers stunning full-length portraits with a signature glam finish.",
+    desc: "Hollywood-style black and white portraits taken in a sleek open air setup. Dramatic lighting, glamour prints, and a finish that looks stunning every time.",
     items: ["Full-length portraits with glam styling", "Black and white or colour finish", "Ideal for weddings and premium events"],
   },
   {

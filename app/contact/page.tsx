@@ -47,7 +47,7 @@ export default function ContactPage() {
                 <FormSelect id="contact-service" name="service" label="Event Type" required options={["Wedding","Prom","Graduation","Corporate Event","Birthday Party","Other Celebration"]} />
                 <FormInput id="contact-eventDate" name="eventDate" label="Event Date" type="date" required />
                 <FormInput id="contact-eventLocation" name="eventLocation" label="Venue / Location" type="text" required />
-                <FormSelect id="contact-packageInterest" name="packageInterest" label="Package Interest" options={["Selfie Pod","Magic Mirror","Enclosed Booth","Not sure yet"]} />
+                <FormSelect id="contact-packageInterest" name="packageInterest" label="Package Interest" options={["Selfie Pod","Glam Booth","Enclosed Booth","Not sure yet"]} />
               </div>
               <FormTextarea id="contact-message" name="message" label="Message" placeholder="Tell us about your event, timings, guest numbers, or any styling ideas." />
               {status === "sent" && <p className="text-sm" style={{ color: "var(--color-accent)" }}>✓ Enquiry sent! We&rsquo;ll be in touch soon.</p>}

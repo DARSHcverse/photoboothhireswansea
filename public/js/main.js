@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { slug: "backdrop", href: "backdrop.html", label: "Backdrop" },
     { slug: "booking", href: "booking.html", label: "Booking" },
     { slug: "quickquote", href: "quickquote.html", label: "Quick Quote" },
+    { slug: "about", href: "about.html", label: "About" },
     { slug: "pay", href: "pay.html", label: "Pay Here" },
   ];
   const footerItems = [
@@ -533,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "4 Hours": 370,
       "5 Hours": 440,
     },
-    "Magic Mirror": {
+    "Glam Booth": {
       "2 Hours": 270,
       "3 Hours": 350,
       "4 Hours": 430,

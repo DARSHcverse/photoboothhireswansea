@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     template: "%s | Photo Booth Hire Swansea",
   },
   description:
-    "Swansea's premier photo booth hire service for weddings, corporate events, school proms and parties across South Wales. Selfie Pods, Magic Mirrors and Enclosed Booths with unlimited prints and a professional attendant every time.",
+    "Swansea's premier photo booth hire service for weddings, corporate events, school proms and parties across South Wales. Selfie Pods, Glam Booths and Enclosed Booths with unlimited prints and a professional attendant every time.",
   keywords:
-    "photo booth hire Swansea, photo booth Cardiff, wedding photo booth Swansea, prom photo booth South Wales, corporate event photo booth, Selfie Pod, Magic Mirror, Enclosed Booth",
+    "photo booth hire Swansea, photo booth Cardiff, wedding photo booth Swansea, prom photo booth South Wales, corporate event photo booth, Selfie Pod, Glam Booth, Enclosed Booth",
   alternates: {
     canonical: "/",
   },

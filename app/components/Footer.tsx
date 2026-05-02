@@ -20,6 +20,15 @@ const areas = [
   { href: "/photo-booth-hire-cardiff",    label: "Photo Booth Hire South Wales" },
 ];
 
+const eventsLinks = [
+  { href: "/events/weddings",            label: "Wedding Photo Booth Hire" },
+  { href: "/events/corporate",           label: "Corporate Photo Booth Hire" },
+  { href: "/events/proms",               label: "Prom Photo Booth Hire" },
+  { href: "/events/birthdays",           label: "Birthday Party Photo Booth Hire" },
+  { href: "/events/christmas-parties",   label: "Christmas Party Photo Booth Hire" },
+  { href: "/events/brand-activations",   label: "Brand Activation Photo Booth" },
+];
+
 const socials = [
   { label: "IG", href: "#", aria: "Instagram" },
   { label: "TT", href: "#", aria: "TikTok" },
@@ -41,10 +50,9 @@ export default function Footer() {
         }}
       >
         <div
-          className="mx-auto px-4 grid gap-10"
+          className="mx-auto px-4 grid gap-8 footer-grid"
           style={{
             maxWidth: "1240px",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           }}
         >
           {/* Brand column */}
@@ -90,6 +98,23 @@ export default function Footer() {
                   key={label}
                   href={href}
                   title={title}
+                  className="text-sm transition-colors duration-200 hover:text-white"
+                  style={{ color: "var(--color-fg-muted)" }}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Events We Cover column */}
+          <div>
+            <span className="eyebrow">Events We Cover</span>
+            <div className="grid gap-2 mt-1">
+              {eventsLinks.map(({ href, label }) => (
+                <Link
+                  key={label}
+                  href={href}
                   className="text-sm transition-colors duration-200 hover:text-white"
                   style={{ color: "var(--color-fg-muted)" }}
                 >

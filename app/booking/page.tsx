@@ -7,7 +7,7 @@ import { useReveal } from "../components/useReveal";
 
 const PRICES: Record<string, Record<string, number>> = {
   "Selfie Pod":     { "2 Hours": 220, "3 Hours": 295, "4 Hours": 370, "5 Hours": 440 },
-  "Magic Mirror":   { "2 Hours": 270, "3 Hours": 350, "4 Hours": 430, "5 Hours": 500 },
+  "Glam Booth":     { "2 Hours": 270, "3 Hours": 350, "4 Hours": 430, "5 Hours": 500 },
   "Enclosed Booth": { "2 Hours": 220, "3 Hours": 295, "4 Hours": 370, "5 Hours": 440 },
 };
 
