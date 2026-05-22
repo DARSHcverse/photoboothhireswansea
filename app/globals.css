@@ -24,6 +24,7 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --radius-sm: 14px;
+  --top-banner-height: 40px;
 
   --shadow-glow: 0 24px 64px rgba(26, 111, 212, 0.18);
 }
@@ -171,6 +172,98 @@
     box-shadow:
       inset 0 0 0 1px rgba(255,255,255,0.05),
       0 30px 60px rgba(0,0,0,0.3);
+  }
+
+  .top-banner {
+    overflow: hidden;
+    color: #ffffff;
+    background: var(--color-accent);
+    max-height: 120px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.28s ease, opacity 0.28s ease, transform 0.28s ease;
+  }
+
+  .top-banner--closing {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  .top-banner__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--top-banner-height);
+    padding: 0.35rem 3rem 0.35rem 1rem;
+    text-align: center;
+  }
+
+  .top-banner__text {
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .top-banner__link {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  .top-banner__close {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    color: #ffffff;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 1;
+    transform: translateY(-50%);
+    opacity: 0.88;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+  }
+
+  .top-banner__close:hover,
+  .top-banner__close:focus-visible {
+    opacity: 1;
+    background: rgba(255,255,255,0.12);
+  }
+
+  .availability-notice {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    color: var(--color-accent);
+    background: rgba(26,111,212,0.1);
+    box-shadow: inset 0 0 0 1px rgba(26,111,212,0.3);
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .field-hint {
+    margin: 0.45rem 0 0;
+    color: var(--color-fg-muted);
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .response-note {
+    margin: 0 auto 1.5rem;
+    max-width: 34rem;
+    color: rgba(255,255,255,0.84);
+    font-size: 0.92rem;
+    text-align: center;
   }
 
   /* Scroll reveal */
@@ -614,6 +707,15 @@
   /* Ensure tap targets never shrink below 44px on mobile */
   .btn { min-height: 48px; padding: 0.85rem 1.25rem; }
   .filter-btn { min-height: 44px; }
+
+  .top-banner__inner {
+    padding-right: 2.85rem;
+    padding-left: 0.85rem;
+  }
+
+  .top-banner__text {
+    font-size: 0.72rem;
+  }
 
   /* Button rows always stack on small mobile */
   .btn-row-responsive {

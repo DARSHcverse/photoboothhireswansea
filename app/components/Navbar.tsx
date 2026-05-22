@@ -18,10 +18,13 @@ const navLinks = [
   { href: "/pay",          label: "Pay Here" },
 ];
 
+const BANNER_STORAGE_KEY = "pbh-banner-dismissed";
+
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [bannerState, setBannerState] = useState<"hidden" | "visible" | "closing">("hidden");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -35,12 +38,54 @@ export default function Navbar() {
     return () => document.body.classList.remove("menu-open");
   }, [menuOpen]);
 
+  useEffect(() => {
+    try {
+      const dismissed = window.localStorage.getItem(BANNER_STORAGE_KEY) === "true";
+      setBannerState(dismissed ? "hidden" : "visible");
+    } catch {
+      setBannerState("visible");
+    }
+  }, []);
+
+  const dismissBanner = () => {
+    try {
+      window.localStorage.setItem(BANNER_STORAGE_KEY, "true");
+    } catch {
+      // Ignore storage failures and still dismiss for this session.
+    }
+
+    setBannerState("closing");
+    window.setTimeout(() => setBannerState("hidden"), 260);
+  };
+
   return (
     <header
-      className="fixed inset-x-0 top-0 z-80 px-3 sm:px-4 pt-3"
+      className="fixed inset-x-0 top-0 z-80"
       aria-label="Site header"
     >
-      <nav aria-label="Primary">
+      {bannerState !== "hidden" && (
+        <div className={`top-banner${bannerState === "closing" ? " top-banner--closing" : ""}`}>
+          <div className="top-banner__inner">
+            <p className="top-banner__text">
+              {"🎉 Now taking bookings for 2027 events across Swansea and South Wales — "}
+              <Link href="/quickquote" className="top-banner__link">
+                secure your date early
+              </Link>
+              !
+            </p>
+            <button
+              type="button"
+              className="top-banner__close"
+              aria-label="Dismiss announcement banner"
+              onClick={dismissBanner}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+
+      <nav aria-label="Primary" className="px-3 sm:px-4 pt-3">
         <div
           className="flex items-center gap-3 mx-auto"
           style={{ maxWidth: "calc(1240px + 2rem)" }}

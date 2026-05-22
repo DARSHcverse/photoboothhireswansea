@@ -126,10 +126,10 @@ export default function PromsPage() {
               className="font-extrabold text-white my-4"
               style={{ fontSize: "clamp(2.4rem,6vw,3.4rem)", lineHeight: 1, letterSpacing: "-0.04em", fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)" }}
             >
-              From £220 for 2 hours
+              From £250 for 2 hours
             </div>
             <p className="mx-auto mb-6" style={{ maxWidth: "32rem" }}>
-              Selfie Pod pricing for school proms starts at £220. See the full breakdown of 2, 3, 4 and 5 hour
+              Selfie Pod pricing for school proms starts at £250. See the full breakdown of 2, 3, 4 and 5 hour
               packages with DBS-checked attendant included.
             </p>
             <Link href="/packages" className="btn btn-primary">See Full Pricing</Link>
@@ -185,6 +185,12 @@ export default function PromsPage() {
               and a tailored quote.
             </p>
             <Link href="/quickquote" className="btn btn-light">Get a Free Quote</Link>
+            <p className="text-sm mt-4 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Now taking bookings for 2027 events — secure your date early.
+            </p>
+            <p className="text-sm mt-2 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Prom season runs May to July 2027 — schools are already confirming dates.
+            </p>
           </div>
         </div>
       </section>

@@ -14,19 +14,19 @@ const cardStyle = {
 const booths = [
   {
     title: "Selfie Pod",
-    price: "From £220",
+    price: "From £250",
     desc: "A sleek, modern open-air setup that fits any venue and encourages group shots and guest interaction. The most popular choice for Cardiff weddings, corporate events, and birthday parties.",
     items: ["Sleek open-air design", "Perfect for group shots", "Most popular for weddings, brands, and birthdays"],
   },
   {
     title: "Glam Booth",
-    price: "From £270",
+    price: "From £300",
     desc: "Hollywood-style black and white portraits taken in a sleek open air setup. Dramatic lighting, glamour prints, and a finish that looks stunning every time.",
     items: ["Full-length portraits with glam styling", "Black and white or colour finish", "Ideal for weddings and premium events"],
   },
   {
     title: "Enclosed Booth",
-    price: "From £220",
+    price: "From £250",
     desc: "A nostalgic, private photo booth experience. Perfect for school proms, weddings with a vintage theme, and guests who love the classic photo strip feel.",
     items: ["Classic enclosed booth feel", "Great for proms and vintage-style weddings", "Perfect for guests who love photo strips"],
   },

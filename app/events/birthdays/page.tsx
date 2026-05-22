@@ -127,7 +127,7 @@ export default function BirthdaysPage() {
               className="font-extrabold text-white my-4"
               style={{ fontSize: "clamp(2.4rem,6vw,3.4rem)", lineHeight: 1, letterSpacing: "-0.04em", fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)" }}
             >
-              From £220 for 2 hours
+              From £250 for 2 hours
             </div>
             <p className="mx-auto mb-6" style={{ maxWidth: "32rem" }}>
               Selfie Pod pricing for birthdays starts at £220. See the full breakdown of 2, 3, 4 and 5 hour packages
@@ -186,6 +186,9 @@ export default function BirthdaysPage() {
               and a tailored quote.
             </p>
             <Link href="/quickquote" className="btn btn-light">Get a Free Quote</Link>
+            <p className="text-sm mt-4 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Now taking bookings for 2027 events — secure your date early.
+            </p>
           </div>
         </div>
       </section>

@@ -15,25 +15,43 @@ const heroSlides = [
 
 const cardImageSizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw";
 
+const launchReasons = [
+  {
+    icon: "📅",
+    title: "Best Date Selection",
+    text: "Popular summer weekends and December dates go fast. Early bookings get first pick.",
+  },
+  {
+    icon: "🏷️",
+    title: "2027 Pricing Locked In",
+    text: "Book now and your price is fixed at our 2027 rates. No surprises closer to the date.",
+  },
+  {
+    icon: "⭐",
+    title: "Personalised from the Start",
+    text: "Early bookings get more time to design custom strips, choose backdrops and plan extras.",
+  },
+];
+
 /* ── Packages data ──────────────────────────────────────────────── */
 const packages = [
   {
-    hours: "2 Hours", name: "Selfie Pod", price: "£220",
+    hours: "2 Hours", name: "Selfie Pod", price: "£250",
     desc: "Unlimited photos, instant prints, event props, photostrip design, USB digital images, a booth attendant, a standard backdrop, and a custom start screen.",
     items: ["Unlimited photos and instant prints", "Event props and photostrip design", "USB digital images and attendant", "Standard backdrop and custom start screen"],
   },
   {
-    hours: "3 Hours", name: "Selfie Pod", price: "£295", popular: true,
+    hours: "3 Hours", name: "Selfie Pod", price: "£325", popular: true,
     desc: "Everything in the 2-hour package, plus extra prints and an online gallery.",
     items: ["3 hours of booth hire", "All 2-hour inclusions", "Extra prints", "Online gallery"],
   },
   {
-    hours: "4 Hours", name: "Selfie Pod", price: "£370",
+    hours: "4 Hours", name: "Selfie Pod", price: "£400",
     desc: "Everything in the 3-hour package, plus your choice of attendant and a traditional guest book.",
     items: ["4 hours of booth hire", "All 3-hour inclusions", "Male or female attendant choice", "Traditional guest book"],
   },
   {
-    hours: "5 Hours", name: "Selfie Pod", price: "£440",
+    hours: "5 Hours", name: "Selfie Pod", price: "£470",
     desc: "The full all-inclusive package for events that want the booth running deep into the party.",
     items: ["5 hours of booth hire", "All 4-hour inclusions", "Full all-inclusive package"],
   },
@@ -100,6 +118,7 @@ export default function HomePage() {
             <div className="hero-overlay">
               <div className="hero-overlay-inner mx-auto w-full px-4 md:px-3" style={{ maxWidth: "1240px" }}>
                 <div className="home-hero-content reveal">
+                  <span className="pill-note mb-4">🗓️ Now Booking for 2027</span>
                   <h1 className="home-hero-title">PHOTO BOOTH HIRE SWANSEA</h1>
                   <p className="home-hero-subtitle">
                     Swansea&rsquo;s favourite photo booth for weddings, parties and corporate events across South Wales.
@@ -132,6 +151,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Launch Booking Section ─────────────────────────────────── */}
+      <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0 0" }}>
+        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
+          <div
+            className="glass reveal p-6 md:p-8 rounded-[var(--radius-xl)]"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(26,111,212,0.14), rgba(10,61,143,0.06)), rgba(18,20,30,0.82)",
+              boxShadow: "inset 0 0 0 1px rgba(26,111,212,0.14), 0 30px 60px rgba(0,0,0,0.3)",
+            }}
+          >
+            <div className="section-heading section-heading--split" style={{ margin: "0 0 2rem", maxWidth: "52rem" }}>
+              <span className="eyebrow">Launching March 2027</span>
+              <h2 className="section-title">Now Taking Advance Bookings</h2>
+              <p style={{ fontSize: "1.04rem" }}>
+                Photo Booth Hire Swansea officially launches in March 2027 — and we are already taking bookings for
+                events from that date onwards. Whether you are planning a summer wedding, a school prom, a corporate
+                event or a Christmas party, securing your date now means you get first choice and plenty of time to
+                personalise every detail.
+              </p>
+            </div>
+
+            <div className="grid gap-4 mb-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
+              {launchReasons.map(({ icon, title, text }) => (
+                <article
+                  key={title}
+                  className="glass reveal p-5 rounded-[var(--radius-lg)]"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)), rgba(10,14,24,0.72)",
+                    boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05), 0 20px 40px rgba(0,0,0,0.24)",
+                  }}
+                >
+                  <div className="text-2xl mb-3" aria-hidden="true">{icon}</div>
+                  <h3
+                    className="text-base font-extrabold text-white m-0 mb-2"
+                    style={{ fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)", letterSpacing: "-0.02em" }}
+                  >
+                    {title}
+                  </h3>
+                  <p className="text-sm m-0">{text}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-4 mb-4">
+              <Link href="/quickquote" className="btn btn-primary">Check Your Date</Link>
+              <Link href="/packages" className="btn btn-secondary">View Packages</Link>
+            </div>
+
+            <p className="text-sm m-0" style={{ color: "var(--color-fg-muted)" }}>
+              Currently booking: Spring 2027 · Summer 2027 · Christmas 2027
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Seasonal Banner ─────────────────────────────────────────── */}
       <section className="py-6">
         <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
@@ -150,12 +226,12 @@ export default function HomePage() {
                 className="text-xl md:text-2xl font-extrabold text-white m-0"
                 style={{ fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)", letterSpacing: "-0.03em" }}
               >
-                2026 dates are moving fast across Swansea and surrounding areas.
+                Now Booking — 2027
               </h2>
             </div>
             <p className="m-0 flex-1" style={{ color: "var(--color-fg-muted)", alignSelf: "center" }}>
-              Peak weddings, corporate events, school proms, and milestone parties tend to go first. Early enquiries
-              get the best date choice and the easiest time to personalise strips, backdrops, and extras.
+              Now taking advance bookings for events from March 2027 across Swansea and South Wales. Summer weddings,
+              proms and Christmas parties are already being requested — secure your date early.
             </p>
           </div>
         </div>

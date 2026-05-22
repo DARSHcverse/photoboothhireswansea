@@ -36,10 +36,10 @@
       <section class="page-hero">
         <div class="container hero-copy reveal">
           <span class="eyebrow">Quick Quote</span>
-          <h1 class="hero-title">Get A Quick Quote</h1>
+          <h1 class="hero-title">Check Your 2027 Date</h1>
           <p>
-            Send the basics and Shan will come back with pricing guidance, availability, and the right booth
-            recommendation for your Swansea or surrounding area event.
+            We are now taking advance bookings for events from March 2027 onwards. Fill in the form below and Shan
+            will come back to you within 24 hours with availability and a tailored quote.
           </p>
         </div>
       </section>
@@ -49,6 +49,9 @@
           <div class="contact-card reveal">
             <span class="eyebrow">Quote Form</span>
             <h2 class="section-title">Tell us about the event</h2>
+            <div class="availability-notice">
+              📅 Currently booking events from March 2027 onwards across Swansea, Cardiff and South Wales.
+            </div>
             <form data-quick-quote-form>
               <div class="form-grid">
                 <div class="field">
@@ -65,7 +68,8 @@
                 </div>
                 <div class="field">
                   <label for="quote-eventDate">Event Date</label>
-                  <input id="quote-eventDate" name="eventDate" type="date" required />
+                  <input id="quote-eventDate" name="eventDate" type="date" min="2027-03-01" aria-describedby="quote-eventDate-hint" required />
+                  <p id="quote-eventDate-hint" class="field-hint">Please select a date from March 2027 onwards</p>
                 </div>
                 <div class="field">
                   <label for="quote-eventLocation">Venue / Location</label>
@@ -103,7 +107,7 @@
                 ></textarea>
               </div>
               <div class="form-status" data-form-status></div>
-              <button class="button button-primary" type="submit">Send Quote Request</button>
+              <button class="button button-primary" type="submit">Check My 2027 Date</button>
             </form>
           </div>
 

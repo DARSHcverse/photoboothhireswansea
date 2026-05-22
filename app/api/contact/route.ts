@@ -1,19 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import QuoteConfirmation from "../../../emails/QuoteConfirmation";
-import AdminQuoteAlert from "../../../emails/AdminQuoteAlert";
+import ContactConfirmation from "../../../emails/ContactConfirmation";
+import AdminContactAlert from "../../../emails/AdminContactAlert";
 import { splitName, formatTimestamp } from "../../../lib/form-helpers";
 
 export const runtime = "nodejs";
-
-const requiredFields = [
-  "fullName",
-  "email",
-  "phoneNumber",
-  "eventDate",
-  "eventLocation",
-  "service",
-] as const;
 
 export async function POST(request: Request) {
   if (!process.env.RESEND_API_KEY) {
@@ -40,28 +31,17 @@ export async function POST(request: Request) {
       fullName: String(body.fullName || "").trim(),
       email: String(body.email || "").trim(),
       phoneNumber: String(body.phoneNumber || "").trim(),
-      eventDate: String(body.eventDate || "").trim(),
-      eventLocation: String(body.eventLocation || "").trim(),
-      packageDuration: String(body.packageDuration || "").trim(),
-      packageInterest: String(body.packageInterest || "").trim(),
-      service: String(body.service || "").trim(),
-      guestCount: String(body.guestCount || "").trim(),
       message: String(body.message || "").trim(),
     };
 
-    for (const key of requiredFields) {
-      if (!data[key]) {
-        return NextResponse.json(
-          { error: "Required fields are missing for the quote request." },
-          { status: 400 },
-        );
-      }
+    if (!data.fullName || !data.email || !data.message) {
+      return NextResponse.json(
+        { error: "Required fields are missing for the contact message." },
+        { status: 400 },
+      );
     }
 
     const { firstName, lastName } = splitName(data.fullName);
-    const boothType = data.packageInterest || "To be discussed";
-    const hireDuration = data.packageDuration || "To be discussed";
-    const guestCount = data.guestCount || "Not specified";
     const submittedAt = formatTimestamp();
 
     const resend = new Resend(resendApiKey);
@@ -72,20 +52,15 @@ export async function POST(request: Request) {
       from: fromName,
       to: [data.email],
       replyTo: resendToEmail,
-      subject: "Thanks for your enquiry — Photo Booth Hire Swansea",
-      react: QuoteConfirmation({
+      subject: "We got your message — Photo Booth Hire Swansea",
+      react: ContactConfirmation({
         firstName,
-        eventType: data.service,
-        eventDate: data.eventDate,
-        venue: data.eventLocation,
-        boothType,
-        hireDuration,
-        guestCount,
+        message: data.message,
       }),
     });
 
     if (clientEmail.error) {
-      console.error("Quote client email failed:", clientEmail.error);
+      console.error("Contact client email failed:", clientEmail.error);
       return NextResponse.json(
         { error: "Failed to send confirmation email." },
         { status: 500 },
@@ -96,35 +71,29 @@ export async function POST(request: Request) {
       from: systemFromName,
       to: [resendToEmail],
       replyTo: data.email,
-      subject: `🎉 New Quote Request — ${data.service} on ${data.eventDate}`,
-      react: AdminQuoteAlert({
+      subject: `💬 New Message — ${firstName} ${lastName}`.trim(),
+      react: AdminContactAlert({
         firstName,
         lastName,
         clientEmail: data.email,
         clientPhone: data.phoneNumber,
-        eventType: data.service,
-        eventDate: data.eventDate,
-        venue: data.eventLocation,
-        boothType,
-        hireDuration,
-        guestCount,
         message: data.message,
         submittedAt,
       }),
     });
 
     if (adminEmail.error) {
-      console.error("Quote admin email failed:", adminEmail.error);
+      console.error("Contact admin email failed:", adminEmail.error);
     }
 
     return NextResponse.json({
       success: true,
-      message: "Quote request received",
+      message: "Message received",
     });
   } catch (error) {
-    console.error("Quote request failed:", error);
+    console.error("Contact request failed:", error);
     return NextResponse.json(
-      { error: "Failed to send quote request." },
+      { error: "Failed to send contact message." },
       { status: 500 },
     );
   }

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Christmas Party Photo Booth Hire Swansea | PBH" },
   description:
-    "Festive photo booth hire for Christmas parties in Swansea and South Wales. Christmas props, themed strip designs and unlimited prints for work parties and private celebrations. From £220.",
+    "Christmas party photo booth hire Swansea 2027. Festive props, branded prints and unlimited photos for work parties and private celebrations across South Wales. Book early — December dates fill fast. From £220.",
   alternates: { canonical: "/events/christmas-parties" },
 };
 

@@ -36,10 +36,10 @@
       <section class="page-hero">
         <div class="container hero-copy reveal">
           <span class="eyebrow">Booking</span>
-          <h1 class="hero-title">Secure Your Date</h1>
+          <h1 class="hero-title">Book Your 2027 Event</h1>
           <p>
-            Complete the booking form below and we&rsquo;ll create your invoice. If Stripe is configured in
-            Vercel, you&rsquo;ll be taken straight to secure payment.
+            Secure your date for 2027 with a deposit. We will confirm availability and send full details within 24
+            hours of your booking request.
           </p>
         </div>
       </section>
@@ -49,6 +49,9 @@
           <div class="contact-card reveal">
             <span class="eyebrow">Booking Form</span>
             <h2 class="section-title">Confirm your booking</h2>
+            <div class="availability-notice">
+              📅 Currently booking events from March 2027 onwards across Swansea, Cardiff and South Wales.
+            </div>
             <form data-booking-form>
               <div class="form-grid">
                 <div class="field">
@@ -65,7 +68,7 @@
                 </div>
                 <div class="field">
                   <label for="booking-eventDate">Event Date</label>
-                  <input id="booking-eventDate" name="eventDate" type="date" required />
+                  <input id="booking-eventDate" name="eventDate" type="date" min="2027-03-01" required />
                 </div>
                 <div class="field">
                   <label for="booking-eventLocation">Venue / Location</label>

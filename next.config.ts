@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
     // Avoid picking the home directory as the workspace root when it has its own package.json.
     root: repoRoot,
   },
+  images: {
+    qualities: [70, 75, 80, 90],
+  },
   async redirects() {
     return [
       {

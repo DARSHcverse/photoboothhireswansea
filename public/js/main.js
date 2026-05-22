@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { label: "FB", href: "#", aria: "Facebook" },
     { label: "PI", href: "#", aria: "Pinterest" },
   ];
+  const bannerStorageKey = "pbh-banner-dismissed";
 
   const renderNavLink = (item) =>
     `<a href="${item.href}"${item.slug === activePage ? ' class="is-active"' : ""}>${item.label}</a>`;
@@ -69,6 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
   `;
+  const bannerMarkup = `
+    <div class="top-banner top-banner--fixed" data-top-banner>
+      <div class="top-banner__inner">
+        <p class="top-banner__text">
+          🎉 Now taking bookings for 2027 events across Swansea and South Wales —
+          <a class="top-banner__link" href="quickquote.html">secure your date early</a>!
+        </p>
+        <button class="top-banner__close" type="button" aria-label="Dismiss announcement banner">×</button>
+      </div>
+    </div>
+  `;
 
   const areaItems = [
     { href: "/", label: "Photo Booth Hire Swansea" },
@@ -85,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="footer-tagline">Swansea&rsquo;s favourite photo booth hire service for weddings, parties and events across South Wales.</p>
         <div class="footer-contact-list">
           <div class="footer-contact-item"><span>📧</span><span>photoboothhireinwales@gmail.com</span></div>
-          <div class="footer-contact-item"><span>📱</span><span>[SWANSEA_PHONE_NUMBER]</span></div>
+          <div class="footer-contact-item"><span>📱</span><span>+447544193175</span></div>
           <div class="footer-contact-item"><span>📍</span><span>Swansea, Wales, UK</span></div>
         </div>
       </div>
@@ -133,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const siteHeader = document.querySelector(".site-header");
   const siteFooter = document.querySelector(".site-footer");
+  let topBanner = null;
 
   if (siteHeader) {
     siteHeader.innerHTML = headerMarkup;
@@ -140,6 +153,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (siteFooter) {
     siteFooter.innerHTML = footerMarkup;
+  }
+
+  const updateTopBannerOffset = () => {
+    const offset = topBanner ? topBanner.offsetHeight : 0;
+    document.documentElement.style.setProperty("--top-banner-offset", `${offset}px`);
+    document.body.classList.toggle("has-top-banner", Boolean(topBanner));
+  };
+
+  let bannerDismissed = false;
+
+  try {
+    bannerDismissed = window.localStorage.getItem(bannerStorageKey) === "true";
+  } catch {
+    bannerDismissed = false;
+  }
+
+  if (siteHeader && !bannerDismissed) {
+    siteHeader.insertAdjacentHTML("beforebegin", bannerMarkup);
+    topBanner = document.querySelector("[data-top-banner]");
+
+    const closeBannerButton = topBanner?.querySelector(".top-banner__close");
+    closeBannerButton?.addEventListener("click", () => {
+      try {
+        window.localStorage.setItem(bannerStorageKey, "true");
+      } catch {
+        // Ignore storage failures and still dismiss for this session.
+      }
+
+      topBanner.classList.add("top-banner--closing");
+      window.setTimeout(() => {
+        topBanner?.remove();
+        topBanner = null;
+        updateTopBannerOffset();
+        setHeaderState();
+      }, 260);
+    });
   }
 
   const navToggle = document.querySelector(".nav-toggle");
@@ -190,8 +239,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth >= 981) {
       closeMenu();
     }
+    updateTopBannerOffset();
     setHeaderState();
   });
+  updateTopBannerOffset();
   setHeaderState();
 
   const revealItems = document.querySelectorAll(".reveal");
@@ -529,22 +580,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const bookingPrices = {
     "Selfie Pod": {
-      "2 Hours": 220,
-      "3 Hours": 295,
-      "4 Hours": 370,
-      "5 Hours": 440,
+      "2 Hours": 250,
+      "3 Hours": 325,
+      "4 Hours": 400,
+      "5 Hours": 470,
     },
     "Glam Booth": {
-      "2 Hours": 270,
-      "3 Hours": 350,
-      "4 Hours": 430,
-      "5 Hours": 500,
+      "2 Hours": 300,
+      "3 Hours": 380,
+      "4 Hours": 460,
+      "5 Hours": 530,
     },
     "Enclosed Booth": {
-      "2 Hours": 220,
-      "3 Hours": 295,
-      "4 Hours": 370,
-      "5 Hours": 440,
+      "2 Hours": 250,
+      "3 Hours": 325,
+      "4 Hours": 400,
+      "5 Hours": 470,
     },
   };
 

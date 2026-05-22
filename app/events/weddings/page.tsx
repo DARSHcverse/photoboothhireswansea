@@ -131,7 +131,7 @@ export default function WeddingsPage() {
               className="font-extrabold text-white my-4"
               style={{ fontSize: "clamp(2.4rem,6vw,3.4rem)", lineHeight: 1, letterSpacing: "-0.04em", fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)" }}
             >
-              From £270 for 2 hours
+              From £300 for 2 hours
             </div>
             <p className="mx-auto mb-6" style={{ maxWidth: "32rem" }}>
               Glam Booth pricing for weddings. See the full package breakdown for 3, 4 and 5 hour wedding packages
@@ -192,6 +192,12 @@ export default function WeddingsPage() {
               package advice, and a tailored quote.
             </p>
             <Link href="/quickquote" className="btn btn-light">Get a Free Quote</Link>
+            <p className="text-sm mt-4 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Now taking bookings for 2027 events — secure your date early.
+            </p>
+            <p className="text-sm mt-2 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Summer 2027 wedding dates are already being requested — enquire now to check availability for your date.
+            </p>
           </div>
         </div>
       </section>
