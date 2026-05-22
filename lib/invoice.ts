@@ -1,17 +1,19 @@
 import { promises as fs } from "fs";
 import path from "path";
+import os from "os";
 import { format } from "date-fns";
 
-const COUNTER_FILE = path.join(process.cwd(), "data", "invoice-counter.json");
+const PRIMARY_FILE = path.join(process.cwd(), "data", "invoice-counter.json");
+const FALLBACK_FILE = path.join(os.tmpdir(), "pbh-invoice-counter.json");
 
 type CounterFile = {
   date: string;
   sequence: number;
 };
 
-async function readCounter(): Promise<CounterFile | null> {
+async function tryRead(filePath: string): Promise<CounterFile | null> {
   try {
-    const raw = await fs.readFile(COUNTER_FILE, "utf8");
+    const raw = await fs.readFile(filePath, "utf8");
     const parsed = JSON.parse(raw);
     if (
       typeof parsed?.date === "string" &&
@@ -26,9 +28,19 @@ async function readCounter(): Promise<CounterFile | null> {
   }
 }
 
+async function readCounter(): Promise<CounterFile | null> {
+  return (await tryRead(PRIMARY_FILE)) ?? (await tryRead(FALLBACK_FILE));
+}
+
 async function writeCounter(counter: CounterFile): Promise<void> {
-  await fs.mkdir(path.dirname(COUNTER_FILE), { recursive: true });
-  await fs.writeFile(COUNTER_FILE, JSON.stringify(counter, null, 2), "utf8");
+  const payload = JSON.stringify(counter, null, 2);
+  try {
+    await fs.mkdir(path.dirname(PRIMARY_FILE), { recursive: true });
+    await fs.writeFile(PRIMARY_FILE, payload, "utf8");
+    return;
+  } catch {
+    await fs.writeFile(FALLBACK_FILE, payload, "utf8");
+  }
 }
 
 export async function generateInvoiceNumber(): Promise<string> {
