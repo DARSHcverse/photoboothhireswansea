@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   icons: {
-    icon: [{ url: "/IconLogo.ico", sizes: "any" }],
-    shortcut: [{ url: "/IconLogo.ico" }],
+    icon: [{ url: "/IconLogo.png", type: "image/png", sizes: "48x48" }],
+    shortcut: [{ url: "/IconLogo.png", type: "image/png" }],
     apple: [
       { url: "/apple-touch-icon.png" },
       { url: "/apple-touch-icon-precomposed.png" },
