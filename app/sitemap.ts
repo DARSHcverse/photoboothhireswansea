@@ -1,21 +1,30 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://www.photoboothhireswansea.co.uk";
+  const now = new Date();
+
   return [
-    { url: "https://photoboothhireswansea.co.uk",                                  lastModified: new Date(), changeFrequency: "weekly",  priority: 1   },
-    { url: "https://photoboothhireswansea.co.uk/photobooths",                      lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: "https://photoboothhireswansea.co.uk/packages",                         lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: "https://photoboothhireswansea.co.uk/events",                           lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: "https://photoboothhireswansea.co.uk/events/weddings",                  lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: "https://photoboothhireswansea.co.uk/events/corporate",                 lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: "https://photoboothhireswansea.co.uk/events/proms",                     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: "https://photoboothhireswansea.co.uk/events/birthdays",                 lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: "https://photoboothhireswansea.co.uk/events/christmas-parties",         lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: "https://photoboothhireswansea.co.uk/events/brand-activations",         lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: "https://photoboothhireswansea.co.uk/about",                            lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: "https://photoboothhireswansea.co.uk/gallery",                          lastModified: new Date(), changeFrequency: "weekly",  priority: 0.7 },
-    { url: "https://photoboothhireswansea.co.uk/faq",                              lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: "https://photoboothhireswansea.co.uk/contact",                          lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: "https://photoboothhireswansea.co.uk/photo-booth-hire-cardiff",         lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: baseUrl,                                       lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${baseUrl}/photobooths`,                      lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/packages`,                         lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/events`,                           lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/events/weddings`,                  lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/events/corporate`,                 lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/events/proms`,                     lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/events/birthdays`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/events/christmas-parties`,         lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/events/brand-activations`,         lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/photo-booth-hire-cardiff`,         lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/gallery`,                          lastModified: now, changeFrequency: "weekly",  priority: 0.7 },
+    { url: `${baseUrl}/about`,                            lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/faq`,                              lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/contact`,                          lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/services`,                         lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/how-it-works`,                     lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/backdrop`,                         lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/testimonials`,                     lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/booking`,                          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/quickquote`,                       lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 }

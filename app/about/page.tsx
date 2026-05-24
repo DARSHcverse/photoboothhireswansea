@@ -1,9 +1,22 @@
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
+const PAGE_URL = "https://www.photoboothhireswansea.co.uk/about";
+
 export const metadata = {
-  title: "About Us",
-  alternates: { canonical: "/about" },
+  title: { absolute: "About Us | Photo Booth Hire Swansea | PBH" },
+  description:
+    "The story behind Photo Booth Hire Swansea — from Melbourne Australia to South Wales. Experienced operator launching March 2027.",
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: "Photo Booth Hire Swansea",
+    title: "About Us | Photo Booth Hire Swansea | PBH",
+    description:
+      "The story behind Photo Booth Hire Swansea — from Melbourne Australia to South Wales.",
+    url: PAGE_URL,
+  },
 };
 
 const features = [

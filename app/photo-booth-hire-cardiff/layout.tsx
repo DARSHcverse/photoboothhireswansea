@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
 
+const PAGE_URL = "https://www.photoboothhireswansea.co.uk/photo-booth-hire-cardiff";
+
 export const metadata: Metadata = {
-  title: { absolute: "Photo Booth Hire Cardiff | PBH Swansea" },
+  title: { absolute: "Photo Booth Hire Cardiff | From £220 | PBH" },
   description:
-    "Professional photo booth hire in Cardiff and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, parties, corporate events and school proms. From £250. Serving all Cardiff areas.",
+    "Professional photo booth hire in Cardiff and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and events. From £220.",
   alternates: {
-    canonical: "https://photoboothhireswansea.co.uk/photo-booth-hire-cardiff",
-    types: { "text/html": "https://photoboothhirecardiff.co.uk" },
+    canonical: PAGE_URL,
+    types: { "text/html": "https://www.photoboothhirecardiff.co.uk" },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: "Photo Booth Hire Swansea",
+    title: "Photo Booth Hire Cardiff | From £220 | PBH",
+    description:
+      "Professional photo booth hire in Cardiff and South Wales. From £220.",
+    url: PAGE_URL,
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Photo Booth Hire Cardiff — PBH" }],
   },
 };
 

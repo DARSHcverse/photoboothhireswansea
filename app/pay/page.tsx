@@ -2,7 +2,7 @@ import PageHero from "../components/PageHero";
 
 export const metadata = {
   title: "Pay Here",
-  alternates: { canonical: "/pay" },
+  alternates: { canonical: "https://www.photoboothhireswansea.co.uk/pay" },
   robots: { index: false, follow: false },
 };
 

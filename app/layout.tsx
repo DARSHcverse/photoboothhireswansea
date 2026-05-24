@@ -4,13 +4,9 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RevealInit from "./components/RevealInit";
+import { JsonLd } from "./components/JsonLd";
 
-const fallbackSiteUrl = "https://photoboothhireswansea.co.uk";
-const metadataBase = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : fallbackSiteUrl,
-);
+const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -31,17 +27,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase,
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Photo Booth Hire Swansea | PBH",
+    default: "Photo Booth Hire Swansea | From £220 | PBH",
     template: "%s | Photo Booth Hire Swansea",
   },
   description:
-    "Swansea's premier photo booth hire service launching March 2027. Now taking advance bookings for weddings, corporate events, school proms and parties across South Wales. Selfie Pods, Glam Booths and Enclosed Booths with unlimited prints and a professional attendant every time.",
+    "Professional photo booth hire in Swansea and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and corporate events. From £220. Now booking 2027.",
   keywords:
     "photo booth hire Swansea, photo booth Cardiff, wedding photo booth Swansea, prom photo booth South Wales, corporate event photo booth, Selfie Pod, Glam Booth, Enclosed Booth",
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
   icons: {
     icon: [{ url: "/IconLogo.ico", sizes: "any" }],
@@ -53,15 +49,65 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
+    locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    url: "https://photoboothhireswansea.co.uk",
-    images: [{ url: "/og-image.svg" }],
+    title: "Photo Booth Hire Swansea | From £220 | PBH",
+    description:
+      "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
+    url: SITE_URL,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Photo Booth Hire Swansea — PBH",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@pbhswansea",
-    images: ["/og-image.svg"],
+    title: "Photo Booth Hire Swansea | From £220 | PBH",
+    description:
+      "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
+    images: ["/og-image.jpg"],
   },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Photo Booth Hire Swansea",
+  alternateName: "PBH Swansea",
+  description:
+    "Professional photo booth hire in Swansea and South Wales for weddings, corporate events, proms and parties.",
+  url: SITE_URL,
+  telephone: "+447544193175",
+  email: "photoboothhireinwales@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Swansea",
+    addressRegion: "Wales",
+    addressCountry: "GB",
+  },
+  areaServed: [
+    "Swansea",
+    "Cardiff",
+    "South Wales",
+    "Bridgend",
+    "Neath",
+    "Port Talbot",
+    "Llanelli",
+    "Barry",
+    "Penarth",
+    "Caerphilly",
+    "Pontypridd",
+  ],
+  priceRange: "££",
+  currenciesAccepted: "GBP",
+  paymentAccepted: "Cash, Credit Card",
+  openingHours: "Mo-Su 09:00-21:00",
+  sameAs: ["https://www.photoboothhirecardiff.co.uk"],
 };
 
 export default function RootLayout({
@@ -75,6 +121,7 @@ export default function RootLayout({
       style={{ fontFamily: "var(--font-manrope, 'Manrope', sans-serif)" }}
     >
       <body>
+        <JsonLd data={localBusinessSchema} />
         <RevealInit />
         <Navbar />
         {children}

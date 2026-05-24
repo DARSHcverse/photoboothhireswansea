@@ -81,7 +81,7 @@ export default function CorporatePage() {
             </ul>
           </div>
           <div className="reveal relative w-full overflow-hidden rounded-[var(--radius-xl)]" style={{ aspectRatio: "4 / 3", ...cardStyle }}>
-            <Image src="/assets/corporate.webp" alt="Corporate photo booth activation" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="/assets/corporate.webp" alt="Corporate photo booth hire Swansea Cardiff" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
       </section>

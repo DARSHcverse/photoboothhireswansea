@@ -81,7 +81,7 @@ export default function PromsPage() {
             </ul>
           </div>
           <div className="reveal relative w-full overflow-hidden rounded-[var(--radius-xl)]" style={{ aspectRatio: "4 / 3", ...cardStyle }}>
-            <Image src="/assets/graduation.jpg" alt="Prom photo booth setup" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="/assets/graduation.jpg" alt="Prom photo booth hire Swansea Wales" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
       </section>

@@ -83,7 +83,7 @@ export default function WeddingsPage() {
             </ul>
           </div>
           <div className="reveal relative w-full overflow-hidden rounded-[var(--radius-xl)]" style={{ aspectRatio: "4 / 3", ...cardStyle }}>
-            <Image src="/assets/wedding2.webp" alt="Wedding photo booth setup" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="/assets/wedding2.webp" alt="Wedding photo booth hire Swansea South Wales" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
       </section>
@@ -197,6 +197,13 @@ export default function WeddingsPage() {
             </p>
             <p className="text-sm mt-2 mb-0" style={{ color: "var(--color-fg-muted)" }}>
               Summer 2027 wedding dates are already being requested — enquire now to check availability for your date.
+            </p>
+            <p className="text-sm mt-4 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Planning a corporate event? See our{" "}
+              <Link href="/events/corporate" style={{ color: "var(--color-accent)" }}>
+                Corporate Photo Booth Hire
+              </Link>{" "}
+              page.
             </p>
           </div>
         </div>

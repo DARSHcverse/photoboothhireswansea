@@ -1,9 +1,22 @@
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
+const PAGE_URL = "https://www.photoboothhireswansea.co.uk/services";
+
 export const metadata = {
-  title: "Our Services",
-  alternates: { canonical: "/services" },
+  title: { absolute: "Our Services | Photo Booth Hire Swansea" },
+  description:
+    "Full photo booth hire services in Swansea and South Wales. Unlimited prints, custom strip design, backdrops and professional attendant.",
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: "Photo Booth Hire Swansea",
+    title: "Our Services | Photo Booth Hire Swansea",
+    description:
+      "Full photo booth hire services in Swansea and South Wales.",
+    url: PAGE_URL,
+  },
 };
 
 const services = [

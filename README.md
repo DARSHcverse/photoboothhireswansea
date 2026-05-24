@@ -96,3 +96,21 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 npm run start
 ```
+
+## Google Search Console Setup
+
+1. Go to search.google.com/search-console
+2. Add Property: https://www.photoboothhireswansea.co.uk
+3. Verify using HTML file method
+4. Replace `public/google-site-verification.html` with the downloaded file and deploy to Vercel
+5. Click Verify
+6. Submit sitemap: https://www.photoboothhireswansea.co.uk/sitemap.xml
+7. Add second property for Cardiff domain: https://www.photoboothhirecardiff.co.uk
+8. Verify Cardiff domain separately
+9. Monitor both properties for indexing
+
+## SEO assets
+
+- `public/og-image.jpg` — Open Graph image (1200×630). If missing, add one with the
+  PBH logo and the wording "Photo Booth Hire Swansea" on a dark navy background.
+

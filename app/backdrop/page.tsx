@@ -2,9 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
+const PAGE_URL = "https://www.photoboothhireswansea.co.uk/backdrop";
+
 export const metadata = {
-  title: "Backdrop Options",
-  alternates: { canonical: "/backdrop" },
+  title: { absolute: "Backdrop Options | Photo Booth Hire Swansea" },
+  description:
+    "Choose your backdrop for your Swansea photo booth hire. A range of elegant and fun options to match your event theme.",
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: "Photo Booth Hire Swansea",
+    title: "Backdrop Options | Photo Booth Hire Swansea",
+    description: "Choose your backdrop for your Swansea photo booth hire.",
+    url: PAGE_URL,
+  },
 };
 
 const backdrops = [

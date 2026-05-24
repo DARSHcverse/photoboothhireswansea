@@ -1,9 +1,22 @@
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 
+const PAGE_URL = "https://www.photoboothhireswansea.co.uk/testimonials";
+
 export const metadata = {
-  title: "Client Reviews",
-  alternates: { canonical: "/testimonials" },
+  title: { absolute: "Client Reviews | Photo Booth Hire Swansea" },
+  description:
+    "Read reviews from real clients of Photo Booth Hire Swansea. Weddings, corporate events and parties across South Wales.",
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: "Photo Booth Hire Swansea",
+    title: "Client Reviews | Photo Booth Hire Swansea",
+    description:
+      "Read reviews from real clients of Photo Booth Hire Swansea.",
+    url: PAGE_URL,
+  },
 };
 
 const testimonials = [
