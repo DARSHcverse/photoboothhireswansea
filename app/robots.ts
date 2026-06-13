@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/pay", "/api/", "/_next/"],
+        disallow: ["/api/", "/_next/"],
       },
     ],
     sitemap: "https://www.photoboothhireswansea.co.uk/sitemap.xml",

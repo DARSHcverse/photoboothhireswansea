@@ -6,6 +6,82 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Legacy static HTML URLs should resolve to the current canonical routes.
+      {
+        source: "/index.html",
+        destination: "https://www.photoboothhireswansea.co.uk/",
+        permanent: true,
+      },
+      {
+        source: "/about.html",
+        destination: "https://www.photoboothhireswansea.co.uk/about",
+        permanent: true,
+      },
+      {
+        source: "/backdrop.html",
+        destination: "https://www.photoboothhireswansea.co.uk/backdrop",
+        permanent: true,
+      },
+      {
+        source: "/booking.html",
+        destination: "https://www.photoboothhireswansea.co.uk/booking",
+        permanent: true,
+      },
+      {
+        source: "/contact.html",
+        destination: "https://www.photoboothhireswansea.co.uk/contact",
+        permanent: true,
+      },
+      {
+        source: "/events.html",
+        destination: "https://www.photoboothhireswansea.co.uk/events",
+        permanent: true,
+      },
+      {
+        source: "/faq.html",
+        destination: "https://www.photoboothhireswansea.co.uk/faq",
+        permanent: true,
+      },
+      {
+        source: "/gallery.html",
+        destination: "https://www.photoboothhireswansea.co.uk/gallery",
+        permanent: true,
+      },
+      {
+        source: "/how-it-works.html",
+        destination: "https://www.photoboothhireswansea.co.uk/how-it-works",
+        permanent: true,
+      },
+      {
+        source: "/packages.html",
+        destination: "https://www.photoboothhireswansea.co.uk/packages",
+        permanent: true,
+      },
+      {
+        source: "/pay.html",
+        destination: "https://www.photoboothhireswansea.co.uk/pay",
+        permanent: true,
+      },
+      {
+        source: "/photobooths.html",
+        destination: "https://www.photoboothhireswansea.co.uk/photobooths",
+        permanent: true,
+      },
+      {
+        source: "/quickquote.html",
+        destination: "https://www.photoboothhireswansea.co.uk/quickquote",
+        permanent: true,
+      },
+      {
+        source: "/services.html",
+        destination: "https://www.photoboothhireswansea.co.uk/services",
+        permanent: true,
+      },
+      {
+        source: "/testimonials.html",
+        destination: "https://www.photoboothhireswansea.co.uk/testimonials",
+        permanent: true,
+      },
       // Redirect non-www to www for Swansea domain
       {
         source: "/:path*",
