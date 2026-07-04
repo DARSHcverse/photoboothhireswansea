@@ -82,6 +82,17 @@ const nextConfig: NextConfig = {
         destination: "https://www.photoboothhireswansea.co.uk/testimonials",
         permanent: true,
       },
+      // Legacy ecommerce (shop/cart) URLs from the old platform -> booking page.
+      {
+        source: "/shop",
+        destination: "https://www.photoboothhireswansea.co.uk/booking",
+        permanent: true,
+      },
+      {
+        source: "/shop/:path*",
+        destination: "https://www.photoboothhireswansea.co.uk/booking",
+        permanent: true,
+      },
       // Redirect non-www to www for Swansea domain
       {
         source: "/:path*",
