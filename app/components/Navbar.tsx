@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/backdrop",     label: "Backdrop" },
   { href: "/booking",      label: "Booking" },
   { href: "/quickquote",   label: "Quick Quote" },
+  { href: "/blog",         label: "Blog" },
   { href: "/about",        label: "About" },
   { href: "/pay",          label: "Pay Here" },
 ];

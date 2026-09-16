@@ -997,3 +997,40 @@
   .lightbox-arrow { width: 44px; height: 44px; font-size: 2rem; }
   .lightbox-close { width: 44px; height: 44px; }
 }
+
+/* ---------- Blog ---------- */
+.blog-prose h2 { margin-top: 2.75rem; }
+.blog-prose h2:first-child { margin-top: 0; }
+.blog-prose p { font-size: 1.02rem; }
+.blog-prose strong { color: var(--color-fg); }
+.blog-prose hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 2.5rem 0;
+}
+.blog-prose blockquote {
+  margin: 0 0 1.5rem;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid var(--color-accent);
+}
+.blog-prose blockquote p { margin-bottom: 0.5rem; }
+
+.blog-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.blog-table th,
+.blog-table td {
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  color: var(--color-fg-muted);
+}
+.blog-table th {
+  color: var(--color-fg);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.blog-table tr:last-child td { border-bottom: 0; }

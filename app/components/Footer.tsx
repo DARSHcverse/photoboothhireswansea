@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/pay",          label: "Pay Here" },
   { href: "/gallery",      label: "Gallery" },
   { href: "/faq",          label: "FAQ" },
+  { href: "/blog",         label: "Blog" },
 ];
 
 const areas = [
@@ -27,6 +28,7 @@ const eventsLinks = [
   { href: "/events/birthdays",           label: "Birthday Party Photo Booth Hire" },
   { href: "/events/christmas-parties",   label: "Christmas Party Photo Booth Hire" },
   { href: "/events/brand-activations",   label: "Brand Activation Photo Booth" },
+  { href: "/event-managers",             label: "For Event Managers" },
 ];
 
 const socials = [

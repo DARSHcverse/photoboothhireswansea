@@ -120,6 +120,14 @@ export default function RootLayout({
       className={`${manrope.variable} ${plusJakarta.variable}`}
       style={{ fontFamily: "var(--font-manrope, 'Manrope', sans-serif)" }}
     >
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Photo Booth Hire Swansea — Blog"
+          href={`${SITE_URL}/blog/rss.xml`}
+        />
+      </head>
       <body>
         <JsonLd data={localBusinessSchema} />
         <RevealInit />
