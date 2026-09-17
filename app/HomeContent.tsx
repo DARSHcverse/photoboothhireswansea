@@ -77,13 +77,6 @@ const faqs = [
   },
 ];
 
-/* ── Testimonials ───────────────────────────────────────────────── */
-const testimonials = [
-  { stars: 5, text: '"The booth was packed from the minute it opened. Shan kept the atmosphere fun and the guest book ended up being one of our favourite parts of the night."', name: "Priya & Marcus", event: "Wedding · Swansea" },
-  { stars: 5, text: '"Perfect for our Year 11 prom. It felt polished, the students loved it, and everything was managed so professionally from start to finish."', name: "Mrs Patel", event: "Prom · South Wales" },
-  { stars: 5, text: '"We booked for a company celebration and the branding looked brilliant. Great service, easy setup, and really strong photo quality."', name: "Olivia R.", event: "Corporate Event · Cardiff Bay" },
-];
-
 /* ── Component ──────────────────────────────────────────────────── */
 export default function HomePage() {
   const [slide, setSlide] = useState(0);
@@ -395,49 +388,6 @@ export default function HomePage() {
 
           <div className="text-center mt-6">
             <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea. Cardiff covered at no extra charge.</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Testimonials ────────────────────────────────────────────── */}
-      <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
-          <div className="section-heading reveal">
-            <span className="eyebrow">Testimonials</span>
-            <h2 className="section-title">What clients say when the booth hits exactly right.</h2>
-          </div>
-
-          <div className="grid gap-5" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))" }}>
-            {testimonials.map(({ stars, text, name, event }) => (
-              <article
-                key={name}
-                className="reveal flex flex-col gap-3 p-6 rounded-[var(--radius-lg)]"
-                style={{
-                  background: "linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.01)),rgba(38,38,38,0.72)",
-                  backdropFilter: "blur(18px)",
-                  WebkitBackdropFilter: "blur(18px)",
-                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05), 0 30px 60px rgba(0,0,0,0.3)",
-                }}
-              >
-                <div className="text-[1.1rem] tracking-[0.08em]" style={{ color: "var(--color-accent)" }}>
-                  {"★".repeat(stars)}
-                </div>
-                <p className="text-sm flex-1">{text}</p>
-                <div>
-                  <h3
-                    className="text-sm font-bold text-white m-0"
-                    style={{ fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)" }}
-                  >
-                    {name}
-                  </h3>
-                  <p className="text-xs m-0" style={{ color: "var(--color-fg-faint)" }}>{event}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/testimonials" className="btn btn-primary">Read More Reviews</Link>
           </div>
         </div>
       </section>

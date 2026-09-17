@@ -77,9 +77,16 @@ const nextConfig: NextConfig = {
         destination: "https://www.photoboothhireswansea.co.uk/services",
         permanent: true,
       },
+      // The testimonials page was removed; send it and its legacy URL to the
+      // gallery, which shows real events rather than written reviews.
       {
         source: "/testimonials.html",
-        destination: "https://www.photoboothhireswansea.co.uk/testimonials",
+        destination: "https://www.photoboothhireswansea.co.uk/gallery",
+        permanent: true,
+      },
+      {
+        source: "/testimonials",
+        destination: "https://www.photoboothhireswansea.co.uk/gallery",
         permanent: true,
       },
       // Legacy ecommerce (shop/cart) URLs from the old platform -> booking page.
