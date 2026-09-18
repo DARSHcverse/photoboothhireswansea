@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Fully branded photo booth hire for brand activations in Swansea and Cardiff.",
     url: PAGE_URL,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Brand activation photo booth Swansea" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Brand activation photo booth Swansea" }],
   },
 };
 

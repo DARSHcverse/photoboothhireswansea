@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Fun birthday party photo booth hire in Swansea. Milestone birthdays across South Wales.",
     url: PAGE_URL,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Birthday party photo booth hire Swansea" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Birthday party photo booth hire Swansea" }],
   },
 };
 

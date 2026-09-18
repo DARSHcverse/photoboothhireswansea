@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     url: SITE_URL,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Photo Booth Hire Swansea — PBH" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Photo Booth Hire Swansea — PBH" }],
   },
 };
 

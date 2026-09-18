@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Photo Booth Hire Swansea blog",

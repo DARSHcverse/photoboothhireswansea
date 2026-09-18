@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Festive photo booth hire for Christmas parties in Swansea and South Wales.",
     url: PAGE_URL,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Christmas party photo booth hire Swansea" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Christmas party photo booth hire Swansea" }],
   },
 };
 

@@ -39,13 +39,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  manifest: "/site.webmanifest",
   icons: {
-    icon: [{ url: "/favicon_io/favicon.ico", type: "image/x-icon" }],
-    shortcut: [{ url: "/favicon_io/favicon.ico", type: "image/x-icon" }],
-    apple: [
-      { url: "/apple-touch-icon.png" },
-      { url: "/apple-touch-icon-precomposed.png" },
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon_io/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon_io/favicon-16x16.png", type: "image/png", sizes: "16x16" },
     ],
+    shortcut: [{ url: "/favicon.ico" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Photo Booth Hire Swansea — PBH",
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
     title: "Photo Booth Hire Swansea | From £220 | PBH",
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
 };
 
@@ -82,6 +84,8 @@ const localBusinessSchema = {
   description:
     "Professional photo booth hire in Swansea and South Wales for weddings, corporate events, proms and parties.",
   url: SITE_URL,
+  logo: `${SITE_URL}/favicon_io/android-chrome-512x512.png`,
+  image: `${SITE_URL}/og-image.png`,
   telephone: "+447544193175",
   email: "photoboothhireinwales@gmail.com",
   address: {

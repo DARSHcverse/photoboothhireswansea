@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Professional photo booth hire in Cardiff and South Wales. From £220.",
     url: PAGE_URL,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Photo Booth Hire Cardiff — PBH" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Photo Booth Hire Cardiff — PBH" }],
   },
 };
 
