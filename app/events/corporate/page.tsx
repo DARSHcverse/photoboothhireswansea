@@ -129,7 +129,7 @@ export default function CorporatePage() {
               From £250 for 2 hours
             </div>
             <p className="mx-auto mb-6" style={{ maxWidth: "32rem" }}>
-              Selfie Pod pricing starts at £220 for corporate events. See the full breakdown of 2, 3, 4 and 5 hour
+              Selfie Pod pricing starts at £250 for corporate events. See the full breakdown of 2, 3, 4 and 5 hour
               packages with branded overlays and full attendant service.
             </p>
             <Link href="/packages" className="btn btn-primary">See Full Pricing</Link>

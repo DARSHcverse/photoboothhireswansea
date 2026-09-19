@@ -59,8 +59,9 @@ Copy the exact format from an existing post. Specifically:
 - NEVER invent statistics, prices, reviews, awards, testimonials or customer
   names. If you need a figure you cannot verify from the existing site content,
   leave it out or write around it.
-- Prices that already appear on the site: packages from £220, weddings from
-  £270. Do not state any other figure.
+- Prices that already appear on the site: packages from £250 (Selfie Pod and
+  Enclosed, 2 hours), Glam Booth and weddings from £300. Do not state any
+  other figure, and never quote a price that is not in `app/packages/page.tsx`.
 - Do not contradict facts established in existing posts (60-90 min setup,
   ~45 min build, ~10 second prints, 3m x 2m space, 30 min pack-down).
 - Do not modify any file other than the single new post you create.

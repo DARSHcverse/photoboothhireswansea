@@ -129,7 +129,7 @@ export default function ChristmasPartiesPage() {
               From £250 for 2 hours
             </div>
             <p className="mx-auto mb-6" style={{ maxWidth: "32rem" }}>
-              Selfie Pod pricing for Christmas parties starts at £220. See the full breakdown of 2, 3, 4 and 5 hour
+              Selfie Pod pricing for Christmas parties starts at £250. See the full breakdown of 2, 3, 4 and 5 hour
               packages with festive props included.
             </p>
             <Link href="/packages" className="btn btn-primary">See Full Pricing</Link>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/events/birthdays";
 
 export const metadata: Metadata = {
-  title: { absolute: "Birthday Party Photo Booth Hire Swansea | From £220" },
+  title: { absolute: "Birthday Party Photo Booth Hire Swansea | From £250" },
   description:
     "Fun birthday party photo booth hire in Swansea. Props, instant prints and custom strip designs for milestone birthdays across South Wales.",
   alternates: { canonical: PAGE_URL },
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Birthday Party Photo Booth Hire Swansea | From £220",
+    title: "Birthday Party Photo Booth Hire Swansea | From £250",
     description:
       "Fun birthday party photo booth hire in Swansea. Milestone birthdays across South Wales.",
     url: PAGE_URL,

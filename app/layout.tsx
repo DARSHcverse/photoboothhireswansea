@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Photo Booth Hire Swansea | From £220 | PBH",
+    default: "Photo Booth Hire Swansea | From £250 | PBH",
     template: "%s | Photo Booth Hire Swansea",
   },
   description:
-    "Professional photo booth hire in Swansea and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and corporate events. From £220. Now booking 2027.",
+    "Professional photo booth hire in Swansea and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and corporate events. From £250. Now booking 2027.",
   keywords:
     "photo booth hire Swansea, photo booth Cardiff, wedding photo booth Swansea, prom photo booth South Wales, corporate event photo booth, Selfie Pod, Glam Booth, Enclosed Booth",
   alternates: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Hire Swansea | From £220 | PBH",
+    title: "Photo Booth Hire Swansea | From £250 | PBH",
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     url: SITE_URL,
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@pbhswansea",
-    title: "Photo Booth Hire Swansea | From £220 | PBH",
+    title: "Photo Booth Hire Swansea | From £250 | PBH",
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     images: ["/og-image.png"],

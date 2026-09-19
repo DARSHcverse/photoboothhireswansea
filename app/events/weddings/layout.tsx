@@ -4,7 +4,7 @@ import { JsonLd } from "../../components/JsonLd";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/events/weddings";
 
 export const metadata: Metadata = {
-  title: { absolute: "Wedding Photo Booth Hire Swansea | From £270" },
+  title: { absolute: "Wedding Photo Booth Hire Swansea | From £300" },
   description:
     "Elegant wedding photo booth hire in Swansea and South Wales. Custom strips, guest books and a professional attendant. Summer 2027 booking now.",
   alternates: { canonical: PAGE_URL },
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Wedding Photo Booth Hire Swansea | From £270",
+    title: "Wedding Photo Booth Hire Swansea | From £300",
     description:
       "Elegant wedding photo booth hire in Swansea and South Wales. Now booking summer 2027.",
     url: PAGE_URL,
@@ -34,9 +34,9 @@ const weddingServiceSchema = {
   },
   offers: {
     "@type": "Offer",
-    price: "270",
+    price: "300",
     priceCurrency: "GBP",
-    description: "From £270 for 2 hours",
+    description: "From £300 for 2 hours",
   },
 };
 
