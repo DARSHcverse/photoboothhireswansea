@@ -115,6 +115,7 @@ export default function ContactPage() {
                 { icon: "📧", strong: "photoboothhireinwales@gmail.com",     detail: "Email for quotes, availability, and booking questions." },
                 { icon: "📱", strong: "+447544193175",    detail: "Available for event enquiries and planning follow-ups." },
                 { icon: "📍", strong: "Swansea, Wales, UK", detail: "Covering South Wales and surrounding areas." },
+                { icon: "📸", strong: "@photoboothhireswansea", detail: "Follow on Instagram for recent events, backdrops and booth setups." },
               ].map(({ icon, strong, detail }) => (
                 <div key={strong} className="flex gap-3 items-start">
                   <span className="text-xl">{icon}</span>
@@ -126,9 +127,16 @@ export default function ContactPage() {
               ))}
             </div>
             <div className="flex gap-2 mb-6">
-              {[["IG","Instagram"],["TT","TikTok"],["FB","Facebook"],["PI","Pinterest"]].map(([l,a]) => (
-                <a key={l} href="#" aria-label={a} className="inline-flex items-center justify-center w-10 h-10 rounded-full text-xs font-bold" style={{ color: "var(--color-fg-muted)", background: "rgba(255,255,255,0.04)", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)" }}>{l}</a>
-              ))}
+              <a
+                href="https://www.instagram.com/photoboothhireswansea/"
+                aria-label="Photo Booth Hire Swansea on Instagram"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="inline-flex items-center gap-2 h-10 px-4 rounded-full text-xs font-bold transition-all duration-200 hover:bg-white/10"
+                style={{ color: "var(--color-fg-muted)", background: "rgba(255,255,255,0.04)", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)" }}
+              >
+                Follow on Instagram
+              </a>
             </div>
             <div
               className="p-6 rounded-[var(--radius-lg)] flex flex-col gap-2"

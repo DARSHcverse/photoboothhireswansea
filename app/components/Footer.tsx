@@ -32,11 +32,34 @@ const eventsLinks = [
 ];
 
 const socials = [
-  { label: "IG", href: "#", aria: "Instagram" },
-  { label: "TT", href: "#", aria: "TikTok" },
-  { label: "FB", href: "#", aria: "Facebook" },
-  { label: "PI", href: "#", aria: "Pinterest" },
+  {
+    href: "https://www.instagram.com/photoboothhireswansea/",
+    aria: "Photo Booth Hire Swansea on Instagram",
+    label: "Instagram",
+  },
 ];
+
+/** Instagram glyph, inlined so the footer pulls in no icon dependency. */
+function InstagramIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -165,7 +188,9 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={aria}
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full text-xs font-bold transition-all duration-200 hover:bg-white/10"
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  className="inline-flex items-center gap-2 h-10 px-4 rounded-full text-xs font-bold transition-all duration-200 hover:bg-white/10"
                   style={{
                     fontFamily: "var(--font-plus-jakarta, 'Plus Jakarta Sans', sans-serif)",
                     color: "var(--color-fg-muted)",
@@ -173,6 +198,7 @@ export default function Footer() {
                     boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)",
                   }}
                 >
+                  <InstagramIcon />
                   {label}
                 </a>
               ))}

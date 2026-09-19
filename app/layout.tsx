@@ -111,7 +111,10 @@ const localBusinessSchema = {
   currenciesAccepted: "GBP",
   paymentAccepted: "Cash, Credit Card",
   openingHours: "Mo-Su 09:00-21:00",
-  sameAs: ["https://www.photoboothhirecardiff.co.uk"],
+  sameAs: [
+    "https://www.instagram.com/photoboothhireswansea/",
+    "https://www.photoboothhirecardiff.co.uk",
+  ],
 };
 
 export default function RootLayout({
