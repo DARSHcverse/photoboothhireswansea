@@ -23,7 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/events/birthdays`,                 lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/events/christmas-parties`,         lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/events/brand-activations`,         lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/photo-booth-hire-cardiff`,         lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
+    // Cardiff lives on its own canonical domain; listing the Swansea path
+    // here would advertise a non-canonical duplicate.
+    { url: "https://www.photoboothhirecardiff.co.uk",     lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/event-managers`,                   lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/gallery`,                          lastModified: buildDate, changeFrequency: "weekly",  priority: 0.7 },
     { url: `${baseUrl}/about`,                            lastModified: buildDate, changeFrequency: "monthly", priority: 0.6 },

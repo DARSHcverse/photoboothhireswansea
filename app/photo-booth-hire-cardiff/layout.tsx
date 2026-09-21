@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import { JsonLd } from "../components/JsonLd";
 
 const SITE_URL = "https://www.photoboothhireswansea.co.uk";
-const PAGE_URL = `${SITE_URL}/photo-booth-hire-cardiff`;
 const CARDIFF_DOMAIN = "https://www.photoboothhirecardiff.co.uk";
+
+/**
+ * This page is served at the Cardiff domain root as well as at
+ * /photo-booth-hire-cardiff on the main site. The Cardiff domain is the
+ * canonical home so it can rank for Cardiff searches in its own right.
+ */
+const PAGE_URL = CARDIFF_DOMAIN;
 
 export const metadata: Metadata = {
   title: { absolute: "Photo Booth Hire Cardiff | From £250 | PBH" },
@@ -13,7 +19,6 @@ export const metadata: Metadata = {
     "photo booth hire Cardiff, Cardiff photo booth, wedding photo booth Cardiff, corporate photo booth Cardiff Bay, photo booth Penarth, photo booth Barry",
   alternates: {
     canonical: PAGE_URL,
-    types: { "text/html": CARDIFF_DOMAIN },
   },
   openGraph: {
     type: "website",

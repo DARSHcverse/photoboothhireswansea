@@ -107,34 +107,32 @@ const nextConfig: NextConfig = {
         destination: "https://www.photoboothhireswansea.co.uk/:path*",
         permanent: true,
       },
-      // Redirect Cardiff domain homepage to Cardiff page
-      {
-        source: "/",
-        has: [{ type: "host", value: "photoboothhirecardiff.co.uk" }],
-        destination: "https://www.photoboothhireswansea.co.uk/photo-booth-hire-cardiff",
-        permanent: true,
-      },
-      // Redirect Cardiff domain www to Cardiff page
-      {
-        source: "/",
-        has: [{ type: "host", value: "www.photoboothhirecardiff.co.uk" }],
-        destination: "https://www.photoboothhireswansea.co.uk/photo-booth-hire-cardiff",
-        permanent: true,
-      },
-      // All other Cardiff domain paths redirect to main site
+      // Cardiff: force the apex onto www so one hostname is canonical. The
+      // www host is NOT redirected — it serves the Cardiff page via the
+      // rewrite below, so the domain can rank on its own.
       {
         source: "/:path*",
         has: [{ type: "host", value: "photoboothhirecardiff.co.uk" }],
-        destination: "https://www.photoboothhireswansea.co.uk/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.photoboothhirecardiff.co.uk" }],
-        destination: "https://www.photoboothhireswansea.co.uk/:path*",
+        destination: "https://www.photoboothhirecardiff.co.uk/:path*",
         permanent: true,
       },
     ];
+  },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // The Cardiff domain root serves the Cardiff page without changing
+        // the URL. Deeper paths fall through and resolve normally, so
+        // /packages etc. still work on this domain.
+        {
+          source: "/",
+          has: [{ type: "host", value: "www.photoboothhirecardiff.co.uk" }],
+          destination: "/photo-booth-hire-cardiff",
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
   },
 };
 
