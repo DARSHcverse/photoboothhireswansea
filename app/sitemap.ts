@@ -1,8 +1,16 @@
 import { MetadataRoute } from "next";
+import { headers } from "next/headers";
 import { getAllPostMeta, getLatestUpdate } from "../lib/blog";
+import { CARDIFF_HOST, resolveSiteHost, SWANSEA_HOST } from "../lib/site-host";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.photoboothhireswansea.co.uk";
+/**
+ * Both domains are served by this app, so each one needs its own sitemap.
+ * A sitemap may only list URLs on the host that serves it — Google ignores
+ * cross-domain entries from an unverified sitemap.
+ */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const host = resolveSiteHost((await headers()).get("host"));
+  const baseUrl = SWANSEA_HOST;
 
   const posts = getAllPostMeta();
   const latestPost = getLatestUpdate(posts);
@@ -11,6 +19,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // URLs carry their own `updated` date instead — an accurate `lastmod` is
   // what Google uses to decide a recrawl is worthwhile.
   const buildDate = new Date();
+
+  if (host === CARDIFF_HOST) {
+    return [
+      {
+        url: CARDIFF_HOST,
+        lastModified: buildDate,
+        changeFrequency: "monthly",
+        priority: 1.0,
+      },
+    ];
+  }
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl,                                       lastModified: buildDate, changeFrequency: "weekly",  priority: 1.0 },
@@ -23,9 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/events/birthdays`,                 lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/events/christmas-parties`,         lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/events/brand-activations`,         lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
-    // Cardiff lives on its own canonical domain; listing the Swansea path
-    // here would advertise a non-canonical duplicate.
-    { url: "https://www.photoboothhirecardiff.co.uk",     lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/event-managers`,                   lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/gallery`,                          lastModified: buildDate, changeFrequency: "weekly",  priority: 0.7 },
     { url: `${baseUrl}/about`,                            lastModified: buildDate, changeFrequency: "monthly", priority: 0.6 },
