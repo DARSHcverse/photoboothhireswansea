@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useReveal } from "../components/useReveal";
+import AvailabilityNote from "../components/AvailabilityNote";
 
 /* ── Data ─────────────────────────────────────────────────────────── */
 // Note: metadata for /packages is set via app/packages/layout.tsx for client-page support.
@@ -88,6 +89,9 @@ export default function PackagesPage() {
               Selfie Pod, Glam Booth, and Enclosed Booth pricing in GBP for
               Swansea and surrounding area events.
             </p>
+            <AvailabilityNote>
+              Peak 2027 dates are filling — summer Saturdays and December go first
+            </AvailabilityNote>
           </div>
         </div>
       </section>

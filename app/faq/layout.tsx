@@ -59,7 +59,31 @@ const faqSchema = {
       name: "How far in advance should I book?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As early as possible for peak dates like summer weddings, proms, and Christmas parties. We recommend booking at least 4–8 weeks ahead, though we do accommodate last-minute enquiries subject to availability.",
+        text: "It depends entirely on your date. Peak dates — summer Saturdays between May and September, and anything in December — are typically booked 9 to 12 months ahead, because there are only so many Saturdays in a year. Quieter midweek dates and January to March can often be booked just a few weeks out. Last-minute enquiries are genuinely worth making, as cancellations and midweek gaps do come up.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How early should I book a photo booth for a 2027 wedding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For a summer 2027 Saturday, 9 to 12 months ahead is sensible — most couples book their photo booth shortly after confirming the venue. Winter weddings generally need 6 to 9 months. The earlier you book, the more choice you have over booth type, backdrop and strip design, and the rate agreed at booking is the rate you pay.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do photo booths get fully booked in Swansea?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Peak dates do. Summer Saturdays, the whole of December and bank holiday weekends are the first to go, often many months ahead. Midweek dates and January to March stay available much longer. If your date is flexible, there is usually far more availability than people expect.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it too late to book a photo booth for my event?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Often not. Cancellations happen and midweek dates sit open, and we have set up for events confirmed inside a fortnight. What we cannot do is free up a peak Saturday that is already taken. Checking takes a minute and costs nothing — send us your date and venue and we will tell you straight away.",
       },
     },
     {

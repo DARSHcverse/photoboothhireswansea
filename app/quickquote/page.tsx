@@ -93,7 +93,7 @@ export default function QuickQuotePage() {
             <span className="eyebrow">Quote Form</span>
             <h2 className="section-title">Tell us about the event</h2>
             <div className="availability-notice mb-5">
-              📅 Currently booking events from March 2027 onwards across Swansea, Cardiff and South Wales.
+              📅 Now booking March 2027 onwards. Summer Saturdays and December fill first — checking your date takes a minute and costs nothing.
             </div>
             <form onSubmit={handleSubmit} className="grid gap-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

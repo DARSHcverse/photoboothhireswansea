@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "../../components/PageHero";
+import AvailabilityNote from "../../components/AvailabilityNote";
 import { useReveal } from "../../components/useReveal";
 
 const introBullets = [
@@ -64,6 +65,9 @@ export default function ChristmasPartiesPage() {
 
       <section style={{ padding: "clamp(2rem,4vw,3rem) 0 0" }}>
         <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
+          <div className="flex justify-center reveal mb-4">
+            <AvailabilityNote>December books up first — corporate parties run midweek too</AvailabilityNote>
+          </div>
           <div className="flex flex-wrap gap-3 justify-center reveal">
             <Link href="/packages" className="btn btn-primary">View Packages</Link>
             <Link href="/quickquote" className="btn btn-secondary">Get a Free Quote</Link>
