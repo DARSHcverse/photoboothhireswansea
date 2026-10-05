@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RevealInit from "./components/RevealInit";
 import { JsonLd } from "./components/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
 
 const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 
@@ -141,6 +142,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
