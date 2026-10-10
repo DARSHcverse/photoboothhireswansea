@@ -25,12 +25,12 @@ export default function QuoteConfirmation(props: QuoteConfirmationProps) {
   const { firstName } = props;
 
   return (
-    <EmailLayout preview="Thanks for your enquiry — we'll be in touch within 24 hours">
+    <EmailLayout preview="Thanks for your enquiry — we'll be in touch shortly">
       <Text style={emailStyles.paragraph}>Hi {firstName || "there"},</Text>
 
       <Text style={emailStyles.paragraph}>
         Thank you for getting in touch with Photo Booth Hire Swansea! We have received your enquiry
-        and Shan will be in touch within 24 hours with availability and a tailored quote for your
+        and Shan will be in touch shortly with availability and a tailored quote for your
         event.
       </Text>
 

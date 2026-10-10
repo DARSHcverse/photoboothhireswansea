@@ -9,12 +9,13 @@ export type ContactConfirmationProps = {
 
 export default function ContactConfirmation({ firstName, message }: ContactConfirmationProps) {
   return (
-    <EmailLayout preview="We got your message — we'll reply within 24 hours">
+    <EmailLayout preview="We got your message — we'll reply shortly">
       <Text style={emailStyles.paragraph}>Hi {firstName || "there"},</Text>
 
       <Text style={emailStyles.paragraph}>
-        Thanks for getting in touch! We have received your message and will get back to you within
-        24 hours. If your query is urgent, feel free to call us directly on +44 7544 193175.
+        Thanks for getting in touch! We have received your message and will usually get back to
+        you within minutes. If your query is urgent, feel free to call or WhatsApp us directly on
+        +44 7544 193175.
       </Text>
 
       <Section style={emailStyles.summaryBox}>

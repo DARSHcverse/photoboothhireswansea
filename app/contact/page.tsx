@@ -55,7 +55,7 @@ export default function ContactPage() {
               <span className="eyebrow">Message received</span>
               <h2 className="section-title">Message Sent! 👋</h2>
               <p className="text-base mb-5">
-                Thanks {firstName || "there"}! We got your message and will reply within 24 hours.
+                Thanks {firstName || "there"}! We got your message and will usually reply within minutes.
               </p>
               <p className="text-sm" style={{ color: "var(--color-fg-muted)" }}>
                 Did not receive the confirmation email? Check your spam folder or contact us at{" "}
@@ -76,12 +76,12 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in Touch"
         title="Get in Touch"
-        description="We are launching in Swansea in March 2027 and taking bookings now. Whether you have a question about packages, want to check your date, or are ready to book — get in touch and Shan will reply within 24 hours."
+        description="We are launching in Swansea in March 2027 and taking bookings now. Whether you have a question about packages, want to check your date, or are ready to book — get in touch and Shan usually replies within minutes."
         heroBg="/assets/hero-banner-4.webp"
       />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
-        <p className="response-note reveal">⚡ We typically reply within 24 hours — often much faster.</p>
+        <p className="response-note reveal">⚡ Messages usually answered within minutes, not days.</p>
         <div className="mx-auto px-4 md:px-3 grid gap-8" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
 
           {/* Form card */}

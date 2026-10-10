@@ -122,7 +122,7 @@ export default function BookingPage() {
       <PageHero
         eyebrow="Booking"
         title="Book Your 2027 Event"
-        description="Secure your date for 2027 with a deposit. We will confirm availability and send full details within 24 hours of your booking request."
+        description="Secure your date for 2027 with a deposit. We will confirm availability and send full details as soon as we see your booking request — usually within minutes."
         heroBg="/assets/wedding2.webp"
       />
 

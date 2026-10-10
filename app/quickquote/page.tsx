@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import PageHero from "../components/PageHero";
+import PriceCalculator from "../components/PriceCalculator";
 import { Field, FormInput, FormSelect, FormTextarea, inputCls, inputStyle } from "../components/FormCard";
 import { useReveal } from "../components/useReveal";
 
@@ -57,7 +58,7 @@ export default function QuickQuotePage() {
               <h2 className="section-title">Enquiry Sent! 🎉</h2>
               <p className="text-base mb-5">
                 Thanks {firstName || "there"}! We have received your enquiry and you should
-                receive a confirmation email shortly. Shan will be in touch within 24 hours.
+                receive a confirmation email shortly. Shan usually replies within minutes.
               </p>
               <p className="text-sm" style={{ color: "var(--color-fg-muted)" }}>
                 Did not receive the email? Check your spam folder or contact us at{" "}
@@ -82,15 +83,21 @@ export default function QuickQuotePage() {
       <PageHero
         eyebrow="Quick Quote"
         title="Check Your 2027 Date"
-        description="We are now taking advance bookings for events from March 2027 onwards. Fill in the form below and Shan will come back to you within 24 hours with availability and a tailored quote."
+        description="We are now taking advance bookings for events from March 2027 onwards. See your price instantly below, then send your date over — Shan usually replies within minutes, not days."
         heroBg="/assets/hero-banner-4.webp"
       />
 
       <section style={{ padding: "clamp(4.75rem,8vw,7.5rem) 0" }}>
+        <div className="mx-auto px-4 md:px-3 mb-8" style={{ maxWidth: "1240px" }}>
+          <div className="reveal">
+            <PriceCalculator />
+          </div>
+        </div>
+
         <div className="mx-auto px-4 md:px-3 grid gap-8" style={{ maxWidth: "1240px", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
 
-          <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
-            <span className="eyebrow">Quote Form</span>
+          <div id="quote-form" className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
+            <span className="eyebrow">Check Your Date</span>
             <h2 className="section-title">Tell us about the event</h2>
             <div className="availability-notice mb-5">
               📅 Now booking March 2027 onwards. Summer Saturdays and December fill first — checking your date takes a minute and costs nothing.
