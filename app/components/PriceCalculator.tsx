@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import QuickDateCheck from "./QuickDateCheck";
 import {
   BOOTH_BLURBS,
   BOOTH_LABELS,
@@ -34,6 +34,7 @@ const cardStyle = {
 export default function PriceCalculator() {
   const [booth, setBooth] = useState<BoothType>("open");
   const [hours, setHours] = useState<Hours>(POPULAR_HOURS);
+  const [checking, setChecking] = useState(false);
 
   const price = getPrice(booth, hours);
   const included = getIncluded(hours);
@@ -144,9 +145,19 @@ export default function PriceCalculator() {
         before you book.
       </p>
 
-      <Link href="#quote-form" className="btn btn-primary w-full justify-center">
+      <button
+        type="button"
+        onClick={() => setChecking(true)}
+        className="btn btn-primary w-full justify-center"
+      >
         Check this date is free →
-      </Link>
+      </button>
+
+      <QuickDateCheck
+        open={checking}
+        onClose={() => setChecking(false)}
+        summary={`${BOOTH_LABELS[booth]} · ${hours} hours · £${price}`}
+      />
     </div>
   );
 }

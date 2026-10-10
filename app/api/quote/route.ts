@@ -6,14 +6,7 @@ import { splitName, formatTimestamp } from "../../../lib/form-helpers";
 
 export const runtime = "nodejs";
 
-const requiredFields = [
-  "fullName",
-  "email",
-  "phoneNumber",
-  "eventDate",
-  "eventLocation",
-  "service",
-] as const;
+const requiredFields = ["fullName", "eventDate"] as const;
 
 export async function POST(request: Request) {
   if (!process.env.RESEND_API_KEY) {
@@ -58,33 +51,47 @@ export async function POST(request: Request) {
       }
     }
 
+    // The quick date check asks for one contact method, since some people will
+    // not give a phone number and others prefer not to give an email. Either
+    // is enough to reply; neither is not.
+    if (!data.email && !data.phoneNumber) {
+      return NextResponse.json(
+        { error: "Please give us either an email address or a phone number." },
+        { status: 400 },
+      );
+    }
+
     const { firstName, lastName } = splitName(data.fullName);
     const boothType = data.packageInterest || "To be discussed";
     const hireDuration = data.packageDuration || "To be discussed";
     const guestCount = data.guestCount || "Not specified";
+    const eventType = data.service || "Not specified";
+    const venue = data.eventLocation || "Not specified";
     const submittedAt = formatTimestamp();
 
     const resend = new Resend(resendApiKey);
     const fromName = `Photo Booth Hire Swansea <${resendFromEmail}>`;
     const systemFromName = `PBH System <${resendFromEmail}>`;
 
-    const clientEmail = await resend.emails.send({
-      from: fromName,
-      to: [data.email],
-      replyTo: resendToEmail,
-      subject: "Thanks for your enquiry — Photo Booth Hire Swansea",
-      react: QuoteConfirmation({
-        firstName,
-        eventType: data.service,
-        eventDate: data.eventDate,
-        venue: data.eventLocation,
-        boothType,
-        hireDuration,
-        guestCount,
-      }),
-    });
+    const clientEmail = data.email
+      ? await resend.emails.send({
+          from: fromName,
+          to: [data.email],
+          replyTo: resendToEmail,
+          subject: "Thanks for your enquiry — Photo Booth Hire Swansea",
+          react: QuoteConfirmation({
+            firstName,
+            eventType,
+            eventDate: data.eventDate,
+            venue,
+            boothType,
+            hireDuration,
+            guestCount,
+          }),
+        })
+      : null;
 
-    if (clientEmail.error) {
+    if (clientEmail?.error) {
       console.error("Quote client email failed:", clientEmail.error);
       return NextResponse.json(
         { error: "Failed to send confirmation email." },
@@ -96,15 +103,15 @@ export async function POST(request: Request) {
       from: systemFromName,
       to: [resendToEmail],
       replyTo: data.email,
-      subject: `🎉 New Quote Request — ${data.service} on ${data.eventDate}`,
+      subject: `🎉 New Quote Request — ${eventType} on ${data.eventDate}`,
       react: AdminQuoteAlert({
         firstName,
         lastName,
         clientEmail: data.email,
         clientPhone: data.phoneNumber,
-        eventType: data.service,
+        eventType,
         eventDate: data.eventDate,
-        venue: data.eventLocation,
+        venue,
         boothType,
         hireDuration,
         guestCount,
