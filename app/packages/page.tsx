@@ -92,6 +92,10 @@ export default function PackagesPage() {
             <AvailabilityNote>
               Peak 2027 dates are filling — summer Saturdays and December go first
             </AvailabilityNote>
+            <p className="text-sm mt-4 mb-0" style={{ color: "var(--color-fg-muted)" }}>
+              Fully insured and PAT tested from launch — certificates sent to your
+              venue on request.
+            </p>
           </div>
         </div>
       </section>

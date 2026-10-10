@@ -7,6 +7,7 @@ import { useReveal } from "../components/useReveal";
 
 const faqs = [
   { q: "Do you cover all of Swansea?", a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, South Wales, and South Wales. Travel fees may apply for events outside South Wales and we'll confirm this when you enquire." },
+  { q: "Are you insured?", a: "Yes. Full public liability insurance and PAT testing on all equipment are in place from launch in March 2027, and certificates are available to your venue on request. Most venues in Swansea and Cardiff ask suppliers for both before letting them load in, so it is worth checking your venue's requirements early and we will send whatever they need." },
   { q: "Are your attendants DBS checked?", a: "Yes. All attendants hold a current DBS (Disclosure and Barring Service) check and are experienced working with all ages, including school and youth events." },
   { q: "What's included in your packages?", a: "Every package includes unlimited photos, instant prints, props, a custom photostrip design, a professional attendant, and your choice of backdrop. USB digital images and online gallery are included from 3-hour packages. Guest book is included in 4-hour and 5-hour packages. No hidden fees." },
   { q: "How much space do you need?", a: "We recommend a clear flat area of at least 3m × 3m for the booth and backdrop, plus room for a short queue. We'll confirm setup requirements once you share your venue details." },

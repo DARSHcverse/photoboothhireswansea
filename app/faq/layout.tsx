@@ -32,6 +32,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "Are you insured?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Full public liability insurance and PAT testing on all equipment are in place from launch in March 2027, and certificates are available to your venue on request. Most venues in Swansea and Cardiff ask suppliers for both before letting them load in, so it is worth checking your venue's requirements early and we will send whatever they need.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Are your attendants DBS checked?",
       acceptedAnswer: {
         "@type": "Answer",

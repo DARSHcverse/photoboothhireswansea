@@ -73,6 +73,7 @@ const benefits = [
 
 const clientFacing = [
   "DBS-checked attendant in smart dress for the full hire",
+  "Public liability insurance and PAT certificates from launch, sent straight to your venue",
   "Custom strip design carrying your client's branding or event identity",
   "Booth built and tested 60–90 minutes before doors, never during",
   "Unlimited prints with copies for everyone in the photo",
