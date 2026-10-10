@@ -206,9 +206,6 @@ export default function QuickDateCheck({ open, onClose, summary }: Props) {
                 {status === "sending" ? "Sending…" : "Check my date →"}
               </button>
 
-              <p className="text-xs text-center m-0" style={{ color: "var(--color-fg-muted)" }}>
-                Prefer to chat? Message us on WhatsApp instead.
-              </p>
             </form>
           </>
         )}
