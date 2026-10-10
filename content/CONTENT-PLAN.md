@@ -60,7 +60,7 @@ they target — people search while planning, not on the day.
 | Target | Working title | Category | Primary keyword |
 |---|---|---|---|
 | ~~Sep 2026~~ | ~~How Early Should You Book a Photo Booth?~~ ✅ published | Planning | how early to book a photo booth |
-| Oct 2026 | How Much Does Photo Booth Hire Cost in Swansea? | Planning | photo booth hire cost swansea |
+| ~~Oct 2026~~ | ~~How Much Does Photo Booth Hire Cost in Swansea?~~ ✅ published | Planning | photo booth hire cost swansea |
 | Nov 2026 | Christmas Party Photo Booth Ideas for South Wales Businesses | News | christmas party photo booth swansea |
 | Dec 2026 | Photo Booth Backdrops: How to Match Your Venue | Booths | photo booth backdrop ideas |
 | Jan 2027 | The 2027 Wedding Planning Timeline (and Where the Booth Fits) | Weddings | wedding planning timeline wales |
@@ -88,6 +88,7 @@ posts competing for one query rank worse than one. Current coverage:
 - **Booth comparison** → `selfie-pod-vs-glam-booth-vs-enclosed-booth`
 - **On-the-day expectations** → `what-to-expect-photo-booth-hire-swansea`
 - **Trade / agencies** → `photo-booth-hire-for-event-managers-south-wales`
+- **Pricing** → `photo-booth-hire-cost-swansea`
 
 ## What not to publish
 
