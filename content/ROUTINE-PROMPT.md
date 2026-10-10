@@ -59,9 +59,10 @@ Copy the exact format from an existing post. Specifically:
 - NEVER invent statistics, prices, reviews, awards, testimonials or customer
   names. If you need a figure you cannot verify from the existing site content,
   leave it out or write around it.
-- Prices that already appear on the site: packages from £250 (Selfie Pod and
-  Enclosed, 2 hours), Glam Booth and weddings from £300. Do not state any
-  other figure, and never quote a price that is not in `app/packages/page.tsx`.
+- PRICES: the only valid source is the package table in `app/packages/page.tsx`.
+  Read it and use those figures exactly. Never state a price that is not in
+  that file. As of writing: Selfie Pod and Enclosed from £250 (2hr), Glam Booth
+  from £300 (2hr) — but always re-read the file rather than trusting this line.
 - Do not contradict facts established in existing posts (60-90 min setup,
   ~45 min build, ~10 second prints, 3m x 2m space, 30 min pack-down).
 - Do not modify any file other than the single new post you create.
@@ -77,6 +78,17 @@ internal links you used, and anything you were unsure about and want checked.
 ```
 
 ---
+
+## If the push fails
+
+The 1 October 2026 run wrote a good post, passed the build, then could not
+push: GitHub returned 403 "Resource not accessible by integration". The PR was
+never created and the draft died with the sandbox.
+
+The live routine prompt now requires the agent to print the full post text into
+the run transcript when a push fails, so the work is always recoverable. The
+underlying fix is to grant the Claude GitHub App write access to this repo at
+https://github.com/apps/claude/installations/select_target
 
 ## After it opens a PR
 
