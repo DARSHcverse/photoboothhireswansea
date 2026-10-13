@@ -14,8 +14,8 @@ export default function ContactConfirmation({ firstName, message }: ContactConfi
 
       <Text style={emailStyles.paragraph}>
         Thanks for getting in touch! We have received your message and will usually get back to
-        you within minutes. If your query is urgent, feel free to call us directly on
-        +44 7544 193175.
+        you within minutes. If your query is urgent, call us on +44 7544 193175 or
+        message us on WhatsApp at +44 7351 799563.
       </Text>
 
       <Section style={emailStyles.summaryBox}>

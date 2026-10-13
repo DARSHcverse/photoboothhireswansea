@@ -113,7 +113,8 @@ export default function ContactPage() {
             <div className="grid gap-5 mb-6">
               {[
                 { icon: "📧", strong: "photoboothhireinwales@gmail.com",     detail: "Email for quotes, availability, and booking questions." },
-                { icon: "📱", strong: "+447544193175",    detail: "Available for event enquiries and planning follow-ups." },
+                { icon: "📱", strong: "+447544193175",    detail: "Call us for event enquiries and planning follow-ups." },
+                { icon: "💬", strong: "+447351799563",    detail: "WhatsApp us — often the quickest way to check a date." },
                 { icon: "📍", strong: "Swansea, Wales, UK", detail: "Covering South Wales and surrounding areas." },
                 { icon: "📸", strong: "@photoboothhireswansea", detail: "Follow on Instagram for recent events, backdrops and booth setups." },
               ].map(({ icon, strong, detail }) => (

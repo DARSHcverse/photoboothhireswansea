@@ -5,7 +5,7 @@ const PAGE_URL = "https://www.photoboothhireswansea.co.uk/contact";
 export const metadata: Metadata = {
   title: { absolute: "Contact Photo Booth Hire Swansea | Get a Quote" },
   description:
-    "Get in touch with Photo Booth Hire Swansea. We usually reply within minutes. Call, email or fill in our quick quote form.",
+    "Get in touch with Photo Booth Hire Swansea. We usually reply within minutes. Call, email, WhatsApp or fill in our quick quote form.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",

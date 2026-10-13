@@ -1,14 +1,9 @@
 /**
- * Hidden until a dedicated business number is live.
- *
- * The old value was Shan's personal number, and a WhatsApp number can only be
- * registered to one app at a time, so enquiries would have landed in personal
- * WhatsApp. Set ENABLED to true and put the business number in PHONE to bring
- * the button back — nothing else needs changing.
+ * The WhatsApp Business number, which is deliberately NOT the number used for
+ * calls (+447544193175). A WhatsApp number can only be registered to one app
+ * at a time, so this line is kept separate for WhatsApp Business.
  */
-const ENABLED = false;
-
-const PHONE = "447544193175";
+const PHONE = "447351799563";
 
 const PREFILL = encodeURIComponent(
   "Hi! I'd like to check if you have a date available for a photo booth.",
@@ -22,8 +17,6 @@ const PREFILL = encodeURIComponent(
  * and a link costs nothing in page weight or main-thread time.
  */
 export default function WhatsAppButton() {
-  if (!ENABLED) return null;
-
   return (
     <a
       href={`https://wa.me/${PHONE}?text=${PREFILL}`}
