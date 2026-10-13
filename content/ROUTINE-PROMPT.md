@@ -64,7 +64,7 @@ Copy the exact format from an existing post. Specifically:
   that file. As of writing: Selfie Pod and Enclosed from £250 (2hr), Glam Booth
   from £300 (2hr) — but always re-read the file rather than trusting this line.
 - Do not contradict facts established in existing posts (60-90 min setup,
-  ~45 min build, ~10 second prints, 3m x 2m space, 30 min pack-down).
+  ~45 min build, ~10 second prints, 3m x 3m space, 30 min pack-down).
 - Do not modify any file other than the single new post you create.
 
 ## Before opening the PR
