@@ -18,6 +18,7 @@ const includedItems = [
   "Fully customised branded photo strip overlay with logo and campaign details",
   "Unlimited photos and instant prints",
   "Professional attendant for setup, hosting and pack-down",
+  "USB digital images included in every package",
   "Digital copies via QR code or online gallery (3+ hour packages)",
   "Choice of backdrop to match brand aesthetic",
   "Quick turnaround for high footfall activation environments",
@@ -34,7 +35,7 @@ const faqs = [
   },
   {
     q: "Can guests share photos digitally at the event?",
-    a: "Yes — digital copies are included from 3 hour packages. Guests can receive their photos via QR code or online gallery link, making it easy to share on social media immediately after their session.",
+    a: "Yes — USB digital images are included in every package, and from 3 hours you also get an online gallery. Guests can receive their photos via QR code or online gallery link, making it easy to share on social media immediately after their session.",
   },
   {
     q: "Do you work with agencies and event companies?",

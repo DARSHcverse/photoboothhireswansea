@@ -58,7 +58,7 @@ Only these. Anything else must be verified against the site first.
 - Canon EOS R100 mirrorless camera, professional studio lighting
 - Unlimited photos, instant prints, custom strip design, props, backdrop
 - DBS-checked attendant, included in every package
-- USB digital images; online gallery on 3hr+; guest book and extra print on 4hr+
+- USB digital images in every package; online gallery on 3hr+; guest book and extra print on 4hr+
 - Covers Swansea, Cardiff, Bridgend, Neath, Port Talbot, Llanelli, the Vale
 - Setup 60–90 minutes before start, not counted in hire time
 - Previously ran a photo booth business in Melbourne, Australia

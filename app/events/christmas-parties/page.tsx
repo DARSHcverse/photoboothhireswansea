@@ -20,7 +20,8 @@ const includedItems = [
   "Custom Christmas photo strip design with your party name",
   "Unlimited photos and instant prints",
   "Professional attendant for setup and hosting",
-  "USB digital images and online gallery (3+ hour packages)",
+  "USB digital images included in every package",
+  "Online gallery (3+ hour packages)",
   "Choice of festive backdrop",
 ];
 

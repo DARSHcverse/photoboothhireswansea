@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: "What's included in your packages?",
-    a: "Every package includes unlimited photos, instant prints, props, a custom photostrip design, a professional attendant, and your choice of backdrop. USB digital images and online gallery are included from 3-hour packages. Guest book is included in 4-hour and 5-hour packages. No hidden fees.",
+    a: "Every package includes unlimited photos, instant prints, props, a custom photostrip design, a professional attendant, and your choice of backdrop. USB digital images are included in every package, and an online gallery from 3-hour packages. Guest book is included in 4-hour and 5-hour packages. No hidden fees.",
   },
   {
     q: "How much space do you need?",

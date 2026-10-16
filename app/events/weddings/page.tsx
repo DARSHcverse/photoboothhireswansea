@@ -20,7 +20,8 @@ const includedItems = [
   "Custom photo strip design with names and wedding date",
   "Professional DBS-checked attendant",
   "Choice of backdrop and event props",
-  "USB digital images and online gallery (3+ hour packages)",
+  "USB digital images included in every package",
+  "Online gallery (3+ hour packages)",
   "Guest book (4 and 5 hour packages)",
 ];
 

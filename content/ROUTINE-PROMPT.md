@@ -63,6 +63,9 @@ Copy the exact format from an existing post. Specifically:
   Read it and use those figures exactly. Never state a price that is not in
   that file. As of writing: Selfie Pod and Enclosed from £250 (2hr), Glam Booth
   from £300 (2hr) — but always re-read the file rather than trusting this line.
+- INCLUSIONS: USB digital images are in EVERY package including 2 hours. The
+  online gallery starts at 3 hours; guest book and attendant choice at 4.
+  Verify against `app/packages/page.tsx` before stating any of this.
 - Do not contradict facts established in existing posts (60-90 min setup,
   ~45 min build, ~10 second prints, 3m x 3m space, 30 min pack-down).
 - Do not modify any file other than the single new post you create.

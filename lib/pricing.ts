@@ -43,12 +43,13 @@ export const ALWAYS_INCLUDED = [
   "Custom photo strip design",
   "Professional DBS-checked attendant",
   "Backdrop and event props",
+  "USB digital images",
   "Delivery, setup and pack-down",
 ];
 
 /** Extras unlocked by longer hires, keyed by the minimum hours needed. */
 export const UNLOCKED_AT: { hours: Hours; label: string }[] = [
-  { hours: 3, label: "USB digital images and online gallery" },
+  { hours: 3, label: "Online gallery" },
   { hours: 4, label: "Traditional guest book" },
   { hours: 4, label: "Choice of male or female attendant" },
 ];

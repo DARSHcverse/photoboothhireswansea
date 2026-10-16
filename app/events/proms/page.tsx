@@ -19,7 +19,8 @@ const includedItems = [
   "Unlimited photos and instant prints",
   "DBS-checked professional attendant",
   "Fun props and themed accessories suited to the year group",
-  "USB digital images and online gallery (3+ hour packages)",
+  "USB digital images included in every package",
+  "Online gallery (3+ hour packages)",
   "Choice of backdrop to match prom theme",
 ];
 

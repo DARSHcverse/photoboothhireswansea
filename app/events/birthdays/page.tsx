@@ -19,7 +19,8 @@ const includedItems = [
   "Unlimited photos and instant prints",
   "Themed props to match the party",
   "Professional attendant for setup, hosting and pack-down",
-  "USB digital images and online gallery (3+ hour packages)",
+  "USB digital images included in every package",
+  "Online gallery (3+ hour packages)",
   "Choice of backdrop to match the party theme",
 ];
 

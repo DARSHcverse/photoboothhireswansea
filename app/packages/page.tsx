@@ -36,8 +36,8 @@ const packages: Package[] = [
   { hours: "4 Hours", booth: "glam",     price: "£460", desc: "Everything in the 3-hour package, plus your choice of attendant and a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Guest book"] },
   { hours: "5 Hours", booth: "glam",     price: "£530", desc: "The full all-inclusive package for premium events that want extra booth time.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
   // Enclosed Booth
-  { hours: "2 Hours", booth: "enclosed", price: "£250", desc: "Unlimited photos, instant prints, props, an attendant, and a backdrop for a classic private-booth feel.", items: ["Unlimited photos and instant prints","Props included","Attendant included","Backdrop included"] },
-  { hours: "3 Hours", booth: "enclosed", price: "£325", popular: true, desc: "Everything in the 2-hour package, plus USB and an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","USB","Online gallery"] },
+  { hours: "2 Hours", booth: "enclosed", price: "£250", desc: "Unlimited photos, instant prints, props, an attendant, and a backdrop for a classic private-booth feel.", items: ["Unlimited photos and instant prints","Props included","Attendant included","Backdrop and USB digital images included"] },
+  { hours: "3 Hours", booth: "enclosed", price: "£325", popular: true, desc: "Everything in the 2-hour package, plus an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","Online gallery"] },
   { hours: "4 Hours", booth: "enclosed", price: "£400", desc: "Everything in the 3-hour package, plus a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Guest book"] },
   { hours: "5 Hours", booth: "enclosed", price: "£470", desc: "The full all-inclusive package for guests who want the classic booth running all evening.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
 ];
