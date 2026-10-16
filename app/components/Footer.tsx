@@ -88,7 +88,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "var(--color-fg-muted)" }}>
-              Swansea&rsquo;s favourite photo booth hire service for weddings, parties and events across South Wales.
+              All-inclusive photo booth hire for weddings, parties and events across Swansea and South Wales.
             </p>
             <div className="mt-4 grid gap-2 text-sm" style={{ color: "var(--color-fg-muted)" }}>
               <div className="flex items-center gap-2"><span>📧</span><span>photoboothhireswansea@gmail.com</span></div>
@@ -216,7 +216,7 @@ export default function Footer() {
           }}
         >
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <span>© 2025 Photo Booth Hire Swansea. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Photo Booth Hire Swansea. All rights reserved.</span>
             <span>Photo Booth Hire Swansea &amp; South Wales</span>
           </div>
           <p

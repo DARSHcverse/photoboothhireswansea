@@ -40,6 +40,7 @@ export async function POST(request: Request) {
       service: String(body.service || "").trim(),
       guestCount: String(body.guestCount || "").trim(),
       message: String(body.message || "").trim(),
+      heardFrom: String(body.heardFrom || "").trim(),
     };
 
     for (const key of requiredFields) {
@@ -66,6 +67,11 @@ export async function POST(request: Request) {
     const hireDuration = data.packageDuration || "To be discussed";
     const guestCount = data.guestCount || "Not specified";
     const eventType = data.service || "Not specified";
+    // Append the source to the admin message so it lands in the alert email
+    // without changing the shared email template.
+    const adminMessage = data.heardFrom
+      ? `${data.message ? `${data.message}\n\n` : ""}Heard about us via: ${data.heardFrom}`
+      : data.message;
     const venue = data.eventLocation || "Not specified";
     const submittedAt = formatTimestamp();
 
@@ -115,7 +121,7 @@ export async function POST(request: Request) {
         boothType,
         hireDuration,
         guestCount,
-        message: data.message,
+        message: adminMessage,
         submittedAt,
       }),
     });

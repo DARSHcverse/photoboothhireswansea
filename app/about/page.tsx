@@ -86,6 +86,13 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* These figures are from the Australian business, so say so plainly
+                rather than letting them read as UK experience. */}
+            <p className="text-sm" style={{ color: "var(--color-fg-muted)", marginTop: "0.75rem" }}>
+              All events with The Shan Booth, Australia &mdash; our sister business.
+              Photo Booth Hire Swansea launches in March 2027.
+            </p>
+
             <hr className="story-divider" />
           </div>
         </div>
@@ -145,7 +152,7 @@ export default function AboutPage() {
           <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">Coverage</span>
             <h2 className="section-title">Swansea &amp; surrounding areas</h2>
-            <p>We cover all Swansea boroughs and surrounding counties including Cardiff, South Wales, South Wales, and South Wales. Travel outside South Wales may include a small surcharge confirmed at enquiry.</p>
+            <p>We cover all Swansea boroughs and surrounding counties including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book.</p>
             <Link href="/quickquote" className="btn btn-primary">Check Your Date</Link>
           </div>
         </div>

@@ -6,7 +6,7 @@ import PageHero from "../components/PageHero";
 import { useReveal } from "../components/useReveal";
 
 const faqs = [
-  { q: "Do you cover all of Swansea?", a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, South Wales, and South Wales. Travel fees may apply for events outside South Wales and we'll confirm this when you enquire." },
+  { q: "Do you cover all of Swansea?", a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book." },
   { q: "Are you insured?", a: "Yes. Full public liability insurance and PAT testing on all equipment are in place from launch in March 2027, and certificates are available to your venue on request. Most venues in Swansea and Cardiff ask suppliers for both before letting them load in, so it is worth checking your venue's requirements early and we will send whatever they need." },
   { q: "Are your attendants DBS checked?", a: "Yes. All attendants hold a current DBS (Disclosure and Barring Service) check and are experienced working with all ages, including school and youth events." },
   { q: "What's included in your packages?", a: "Every package includes unlimited photos, instant prints, props, a custom photostrip design, a professional attendant, and your choice of backdrop. USB digital images and online gallery are included from 3-hour packages. Guest book is included in 4-hour and 5-hour packages. No hidden fees." },

@@ -129,6 +129,10 @@ export default function QuickQuotePage() {
                 <FormSelect id="quote-service" name="service" label="Service" required options={["Wedding","Birthday Party","Prom","Graduation","Corporate Event","Private Party"]} />
                 <FormSelect id="quote-packageInterest" name="packageInterest" label="Booth Interest" options={["Selfie Pod","Glam Booth","Enclosed Booth","Not sure yet"]} />
                 <FormInput id="quote-guestCount" name="guestCount" label="Guest Numbers" type="text" />
+                {/* Optional on purpose — the only reliable way to know which
+                    channel actually produces enquiries, but not worth losing
+                    a submission over. */}
+                <FormSelect id="quote-heardFrom" name="heardFrom" label="How did you hear about us? (optional)" options={["Google search","Instagram","Recommended by a friend","Wedding directory","Saw us at an event","Other"]} />
               </div>
               <FormTextarea id="quote-message" name="message" label="Message" placeholder="Timings, guest numbers, preferred booth style, or any venue notes." />
               {status === "error" && <p className="text-sm text-red-400">Something went wrong. Please try again.</p>}

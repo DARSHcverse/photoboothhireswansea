@@ -16,7 +16,6 @@ const navLinks = [
   { href: "/quickquote",   label: "Quick Quote" },
   { href: "/blog",         label: "Blog" },
   { href: "/about",        label: "About" },
-  { href: "/pay",          label: "Pay Here" },
 ];
 
 const BANNER_STORAGE_KEY = "pbh-banner-dismissed";

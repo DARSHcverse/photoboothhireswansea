@@ -27,7 +27,7 @@ const faqSchema = {
       name: "Do you cover all of Swansea?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, South Wales, and South Wales. Travel fees may apply for events outside South Wales and we'll confirm this when you enquire.",
+        text: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book.",
       },
     },
     {

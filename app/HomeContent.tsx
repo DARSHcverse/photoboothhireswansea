@@ -61,7 +61,7 @@ const packages = [
 const faqs = [
   {
     q: "Do you cover all of Swansea?",
-    a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, South Wales, and South Wales. Travel fees may apply for events outside South Wales and we'll confirm this when you enquire.",
+    a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book.",
   },
   {
     q: "Are your attendants DBS checked?",
@@ -114,7 +114,7 @@ export default function HomePage() {
                   <span className="pill-note mb-4">🗓️ Now Booking for 2027</span>
                   <h1 className="home-hero-title">PHOTO BOOTH HIRE SWANSEA</h1>
                   <p className="home-hero-subtitle">
-                    Swansea&rsquo;s favourite photo booth for weddings, parties and corporate events across South Wales.
+                    All-inclusive photo booth hire for weddings, parties and corporate events across Swansea and South Wales.
                   </p>
                   <div className="hero-button-row">
                     <Link href="/packages" className="btn btn-primary hero-button">
