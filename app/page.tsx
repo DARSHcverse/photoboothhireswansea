@@ -5,7 +5,7 @@ import { JsonLd } from "./components/JsonLd";
 const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Photo Booth Hire Swansea | From £250 | PBH" },
+  title: { absolute: "Photo Booth Hire Swansea & South Wales | PBH" },
   description:
     "Professional photo booth hire in Swansea and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and corporate events. From £250. Now booking 2027.",
   alternates: { canonical: SITE_URL },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Hire Swansea | From £250 | PBH",
+    title: "Photo Booth Hire Swansea & South Wales | PBH",
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     url: SITE_URL,

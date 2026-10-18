@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Photo Booth Hire Swansea | From £250 | PBH",
+    default: "Photo Booth Hire Swansea & South Wales | PBH",
     template: "%s | Photo Booth Hire Swansea",
   },
   description:
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Hire Swansea | From £250 | PBH",
+    title: "Photo Booth Hire Swansea & South Wales | PBH",
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     url: SITE_URL,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@pbhswansea",
-    title: "Photo Booth Hire Swansea | From £250 | PBH",
+    title: "Photo Booth Hire Swansea & South Wales | PBH",
     description:
       "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     images: ["/og-image.png"],
