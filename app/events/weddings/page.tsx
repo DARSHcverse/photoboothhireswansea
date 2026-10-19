@@ -136,10 +136,10 @@ export default function WeddingsPage() {
               className="font-extrabold text-white my-4"
               style={{ fontSize: "clamp(2.4rem,6vw,3.4rem)", lineHeight: 1, letterSpacing: "-0.04em", fontFamily: "var(--font-plus-jakarta,'Plus Jakarta Sans',sans-serif)" }}
             >
-              From £300 for 2 hours
+              From £250 for 2 hours
             </div>
             <p className="mx-auto mb-6" style={{ maxWidth: "32rem" }}>
-              Glam Booth pricing for weddings. See the full package breakdown for 3, 4 and 5 hour wedding packages
+              Selfie Pod pricing for weddings; the Glam Booth starts at £300. See the full package breakdown for 3, 4 and 5 hour wedding packages
               including guest books and attendant choice.
             </p>
             <Link href="/packages" className="btn btn-primary">See Full Pricing</Link>
