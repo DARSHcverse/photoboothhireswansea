@@ -464,6 +464,17 @@
     opacity: 1;
     transform: scale(1);
   }
+  /* Slide 1 is an <img> rather than a background-image so the browser can
+     preload it. These rules reproduce the background-image appearance. */
+  .hero-slide--img {
+    filter: none;
+    overflow: hidden;
+  }
+  .hero-slide-image {
+    object-fit: cover;
+    object-position: 74% 60%;
+    filter: saturate(0.74) brightness(0.46);
+  }
   .hero-stage::before {
     content: "";
     position: absolute;
@@ -550,6 +561,16 @@
       inset 0 0 0 1px rgba(255,255,255,0.28),
       0 14px 30px rgba(0,0,0,0.2);
   }
+  .hero-dot::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+  }
+
   .hero-dots {
     position: absolute;
     left: clamp(1.75rem, 4vw, 3rem);
@@ -563,6 +584,9 @@
     width: 0.7rem;
     height: 0.7rem;
     padding: 0;
+    /* The dot stays 11px visually, but an invisible ::after gives it a 24px
+       tap area so it meets the minimum touch-target size. */
+    position: relative;
     border: 0;
     border-radius: 999px;
     background: rgba(255,255,255,0.18);

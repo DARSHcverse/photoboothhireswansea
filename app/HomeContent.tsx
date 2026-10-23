@@ -81,14 +81,29 @@ const faqs = [
 export default function HomePage() {
   const [slide, setSlide] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  // Slides 2-4 are decorative and not seen for at least 4.5s. Holding them
+  // back keeps ~330KB off the critical path so the LCP image gets the
+  // bandwidth to itself.
+  const [showExtraSlides, setShowExtraSlides] = useState(false);
 
   // Reveal animations
   useReveal([slide]);
 
-  // Hero slider interval
+  // Load the remaining slides once the browser is idle, then start rotating.
   useEffect(() => {
+    const idle =
+      typeof window !== "undefined" && "requestIdleCallback" in window
+        ? window.requestIdleCallback
+        : (cb: () => void) => window.setTimeout(cb, 1200);
+    const handle = idle(() => setShowExtraSlides(true));
+
     const t = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 4500);
-    return () => clearInterval(t);
+    return () => {
+      clearInterval(t);
+      if (typeof window !== "undefined" && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(handle as number);
+      }
+    };
   }, []);
 
   return (
@@ -99,13 +114,28 @@ export default function HomePage() {
         <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "100%" }}>
           <div className="hero-stage">
             <div className="hero-slides" aria-hidden="true">
-              {heroSlides.map((src, i) => (
-                <div
-                  key={src}
-                  className={`hero-slide${i === slide ? " is-active" : ""}`}
-                  style={{ backgroundImage: `url('${src}')` }}
+              {/* Slide 1 is the LCP element: a real <img> with priority so it
+                  is preloaded with fetchpriority="high". */}
+              <div className={`hero-slide hero-slide--img${slide === 0 ? " is-active" : ""}`}>
+                <Image
+                  src={heroSlides[0]}
+                  alt=""
+                  fill
+                  priority
+                  sizes="100vw"
+                  quality={74}
+                  className="hero-slide-image"
                 />
-              ))}
+              </div>
+
+              {showExtraSlides &&
+                heroSlides.slice(1).map((src, i) => (
+                  <div
+                    key={src}
+                    className={`hero-slide${i + 1 === slide ? " is-active" : ""}`}
+                    style={{ backgroundImage: `url('${src}')` }}
+                  />
+                ))}
             </div>
 
             <div className="hero-overlay">
@@ -272,7 +302,14 @@ export default function HomePage() {
                     {title}
                   </h3>
                   <p className="text-sm m-0">{desc}</p>
-                  <Link href={href} className="btn btn-secondary mt-auto text-[0.82rem] min-h-[44px]">
+                  {/* Visible text stays short, but the accessible name says
+                      where the link goes — Lighthouse flagged four identical
+                      "Learn More" links as non-descriptive. */}
+                  <Link
+                    href={href}
+                    aria-label={`Learn more about ${title}`}
+                    className="btn btn-secondary mt-auto text-[0.82rem] min-h-[44px]"
+                  >
                     Learn More
                   </Link>
                 </div>
