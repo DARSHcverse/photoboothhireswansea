@@ -9,6 +9,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/next";
 import CookieConsent from "./components/CookieConsent";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 
@@ -149,6 +150,19 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <CookieConsent />
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5QFL1GXNK8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5QFL1GXNK8');
+          `}
+        </Script>
       </body>
     </html>
   );
