@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FormInput } from "./FormCard";
+import { trackQuickDateCheckSubmit } from "@/lib/analytics";
 
 type Contact = "email" | "phone";
 
@@ -80,6 +81,8 @@ export default function QuickDateCheck({ open, onClose, summary }: Props) {
         throw new Error(body.error || "Something went wrong. Please try again.");
       }
 
+      // Track successful submission
+      trackQuickDateCheckSubmit(contactType);
       setStatus("sent");
     } catch (err) {
       setStatus("error");

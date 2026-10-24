@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./Logo";
+import { trackCtaClick, trackPhoneClick, trackEmailClick, trackSocialClick } from "@/lib/analytics";
 
 const navLinks = [
   { href: "/",             label: "Homepage" },
@@ -36,6 +39,7 @@ const socials = [
     href: "https://www.instagram.com/photoboothhireswansea/",
     aria: "Photo Booth Hire Swansea on Instagram",
     label: "Instagram",
+    platform: "instagram",
   },
 ];
 
@@ -91,8 +95,26 @@ export default function Footer() {
               All-inclusive photo booth hire for weddings, parties and events across Swansea and South Wales.
             </p>
             <div className="mt-4 grid gap-2 text-sm" style={{ color: "var(--color-fg-muted)" }}>
-              <div className="flex items-center gap-2"><span>📧</span><span>photoboothhireswansea@gmail.com</span></div>
-              <div className="flex items-center gap-2"><span>📱</span><span>+447544193175</span></div>
+              <div className="flex items-center gap-2">
+                <span>📧</span>
+                <a
+                  href="mailto:photoboothhireswansea@gmail.com"
+                  className="hover:text-white transition-colors duration-200"
+                  onClick={() => trackEmailClick("footer")}
+                >
+                  photoboothhireswansea@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>📱</span>
+                <a
+                  href="tel:+447544193175"
+                  className="hover:text-white transition-colors duration-200"
+                  onClick={() => trackPhoneClick("footer")}
+                >
+                  +447544193175
+                </a>
+              </div>
               <div className="flex items-center gap-2"><span>📍</span><span>Swansea, Wales, UK</span></div>
             </div>
           </div>
@@ -174,16 +196,24 @@ export default function Footer() {
               Use the navigation above for a quick quote, secure booking, backdrop choices, or direct payment.
             </p>
             <div className="flex flex-wrap gap-2">
-              <Link href="/quickquote" className="btn btn-primary text-[0.82rem] min-h-[44px] px-4">
+              <Link
+                href="/quickquote"
+                className="btn btn-primary text-[0.82rem] min-h-[44px] px-4"
+                onClick={() => trackCtaClick("Quick Quote", "footer")}
+              >
                 Quick Quote
               </Link>
-              <Link href="/booking" className="btn btn-secondary text-[0.82rem] min-h-[44px] px-4">
+              <Link
+                href="/booking"
+                className="btn btn-secondary text-[0.82rem] min-h-[44px] px-4"
+                onClick={() => trackCtaClick("Book Now", "footer")}
+              >
                 Book Now
               </Link>
             </div>
             {/* Socials */}
             <div className="flex flex-wrap gap-2 mt-4">
-              {socials.map(({ label, href, aria }) => (
+              {socials.map(({ label, href, aria, platform }) => (
                 <a
                   key={label}
                   href={href}
@@ -197,6 +227,7 @@ export default function Footer() {
                     background: "rgba(255,255,255,0.04)",
                     boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)",
                   }}
+                  onClick={() => trackSocialClick(platform, "footer")}
                 >
                   <InstagramIcon />
                   {label}

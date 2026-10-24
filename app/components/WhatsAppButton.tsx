@@ -1,3 +1,7 @@
+"use client";
+
+import { trackWhatsAppClick } from "@/lib/analytics";
+
 /**
  * The WhatsApp Business number, which is deliberately NOT the number used for
  * calls (+447544193175). A WhatsApp number can only be registered to one app
@@ -24,6 +28,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label="Message us on WhatsApp"
       className="whatsapp-fab"
+      onClick={() => trackWhatsAppClick("fab")}
     >
       <svg
         width="26"
