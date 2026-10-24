@@ -1153,3 +1153,63 @@
   .quick-check-overlay,
   .quick-check-dialog { animation: none; }
 }
+
+/* ---------- Cookie consent banner ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 95;
+  padding: 1rem;
+  background: rgba(16, 16, 16, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 -10px 40px rgba(0, 0, 0, 0.4);
+  animation: cookie-rise 0.25s ease-out;
+}
+.cookie-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.cookie-banner__text {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-fg-muted);
+}
+.cookie-banner__actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+/* Equal weight on both choices: the ICO treats "reject" being harder to
+   find or use than "accept" as non-compliant. */
+.cookie-banner__btn {
+  min-width: 116px;
+  justify-content: center;
+}
+
+@keyframes cookie-rise {
+  from { transform: translateY(100%); }
+  to   { transform: none; }
+}
+
+/* Keep the WhatsApp button clear of the banner while it is showing. */
+.cookie-banner ~ .whatsapp-fab { bottom: 6rem; }
+
+@media (max-width: 640px) {
+  .cookie-banner__inner { justify-content: stretch; }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__btn { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner { animation: none; }
+}
