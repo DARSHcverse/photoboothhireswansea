@@ -7,6 +7,7 @@ import RevealInit from "./components/RevealInit";
 import { JsonLd } from "./components/JsonLd";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const SITE_URL = "https://www.photoboothhireswansea.co.uk";
@@ -147,6 +148,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-5QFL1GXNK8" />
       </body>
     </html>
   );
