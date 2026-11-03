@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "Do you cover Cardiff for brand activations?",
-    a: "Yes, Cardiff Bay and city centre are covered as standard with no extra travel charge. Cardiff is one hour from our Swansea base and we cover activations there regularly.",
+    a: "Yes, we cover activations in Cardiff Bay and the city centre regularly. Travel is free within 25 miles of Swansea; Cardiff sits beyond that, so we confirm the travel cost with your quote, before you book.",
   },
   {
     q: "Can guests share photos digitally at the event?",

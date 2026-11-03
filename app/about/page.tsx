@@ -152,7 +152,7 @@ export default function AboutPage() {
           <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">Coverage</span>
             <h2 className="section-title">Swansea &amp; surrounding areas</h2>
-            <p>We cover all Swansea boroughs and surrounding counties including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book.</p>
+            <p>We cover all Swansea boroughs and surrounding counties including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is free within 25 miles of Swansea. For venues beyond that we work the cost out from your address and confirm it with your quote, before you book.</p>
             <Link href="/quickquote" className="btn btn-primary">Check Your Date</Link>
           </div>
         </div>

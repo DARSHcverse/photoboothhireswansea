@@ -140,9 +140,9 @@ export default function PriceCalculator() {
       </ul>
 
       <p className="text-sm" style={{ color: "var(--color-fg-muted)" }}>
-        Travel is included across Swansea, Cardiff, Bridgend, Neath, Port Talbot,
-        Llanelli and the Vale. Further afield we will confirm any travel cost
-        before you book.
+        Prices include VAT. Travel is free within 25 miles of Swansea. For
+        venues beyond that, including Cardiff, we work the travel cost out from
+        your address and confirm it with your quote &mdash; before you book.
       </p>
 
       <button

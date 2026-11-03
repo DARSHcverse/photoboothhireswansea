@@ -61,7 +61,7 @@ const packages = [
 const faqs = [
   {
     q: "Do you cover all of Swansea?",
-    a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book.",
+    a: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is free within 25 miles of Swansea. For venues beyond that we work the cost out from your address and confirm it with your quote, before you book.",
   },
   {
     q: "Are your attendants DBS checked?",
@@ -424,7 +424,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-6">
-            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea. Cardiff covered at no extra charge.</span>
+            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea; further afield we confirm any travel cost with your quote, before you book.</span>
           </div>
         </div>
       </section>

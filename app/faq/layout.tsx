@@ -27,7 +27,7 @@ const faqSchema = {
       name: "Do you cover all of Swansea?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is included across those areas; anywhere further afield we will confirm any travel cost before you book.",
+        text: "Yes, we cover all Swansea boroughs and surrounding areas including Cardiff, Bridgend, Neath, Port Talbot, Llanelli, Barry, Penarth and Caerphilly. Travel is free within 25 miles of Swansea. For venues beyond that we work the cost out from your address and confirm it with your quote, before you book.",
       },
     },
     {

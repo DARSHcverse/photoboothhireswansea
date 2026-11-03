@@ -59,7 +59,7 @@ const faqSchema = {
     {
       "@type": "Question",
       name: "Can you set up at Cardiff venues for corporate events?",
-      acceptedAnswer: { "@type": "Answer", text: "Absolutely. Cardiff is one hour from our Swansea base and falls within our standard service area with no extra travel charge. We regularly cover Cardiff Bay and city centre venues." },
+      acceptedAnswer: { "@type": "Answer", text: "Absolutely. Cardiff is about an hour from our Swansea base and we regularly cover Cardiff Bay and city centre venues. Travel is free within 25 miles of Swansea; Cardiff sits beyond that, so we confirm the travel cost with your quote, before you book." },
     },
     {
       "@type": "Question",

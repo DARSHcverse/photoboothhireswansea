@@ -32,7 +32,7 @@ const packages: Package[] = [
   { hours: "5 Hours", booth: "open",     price: "£470", desc: "The full all-inclusive package for events that want the booth running deep into the party.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
   // Glam Booth
   { hours: "2 Hours", booth: "glam",     price: "£300", desc: "Unlimited photos, postcard prints, event props, photostrip design, USB, an attendant, and a white backdrop.", items: ["Unlimited photos and postcard prints","Event props and photostrip design","USB and attendant","White backdrop"] },
-  { hours: "3 Hours", booth: "glam",     price: "£380", popular: true, desc: "Everything in the 2-hour package, plus extra prints.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints"] },
+  { hours: "3 Hours", booth: "glam",     price: "£380", popular: true, desc: "Everything in the 2-hour package, plus extra prints and an online gallery.", items: ["3 hours of booth hire","All 2-hour inclusions","Extra prints","Online gallery"] },
   { hours: "4 Hours", booth: "glam",     price: "£460", desc: "Everything in the 3-hour package, plus your choice of attendant and a guest book.", items: ["4 hours of booth hire","All 3-hour inclusions","Male or female attendant choice","Guest book"] },
   { hours: "5 Hours", booth: "glam",     price: "£530", desc: "The full all-inclusive package for premium events that want extra booth time.", items: ["5 hours of booth hire","All 4-hour inclusions","Full all-inclusive package"] },
   // Enclosed Booth
@@ -164,7 +164,7 @@ export default function PackagesPage() {
           </div>
 
           <div className="text-center mt-6">
-            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea. Cardiff covered at no extra charge.</span>
+            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea; further afield we confirm any travel cost with your quote, before you book.</span>
           </div>
         </div>
       </section>
@@ -223,7 +223,7 @@ export default function PackagesPage() {
               <ul className="bullet-list text-sm mb-6">
                 <li>Deposits secure your date and booth package</li>
                 <li>Custom quotes available for larger or branded events</li>
-                <li>Free travel within 25 miles of Swansea — Cardiff included</li>
+                <li>Free travel within 25 miles of Swansea; travel beyond that is quoted before you book</li>
                 <li>Package upgrades can be added as your plans develop</li>
               </ul>
               <Link href="/quickquote" className="btn btn-primary">Get a Custom Quote</Link>

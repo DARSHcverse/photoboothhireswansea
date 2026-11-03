@@ -35,7 +35,7 @@ const booths = [
 const pillars = [
   { icon: "📸", title: "Canon R100 image quality",  desc: "Mirrorless image quality and studio lighting deliver photos that look sharp, vibrant, and premium for every Cardiff event." },
   { icon: "🖨️", title: "Unlimited instant prints",  desc: "Every package includes unlimited instant prints, so guests leave with proper keepsakes on the night." },
-  { icon: "🚐", title: "Cardiff covered as standard",desc: "Cardiff is just one hour from our Swansea base — included within our standard service area at no extra travel charge." },
+  { icon: "🚐", title: "Cardiff covered regularly",desc: "Cardiff is about an hour from our Swansea base and we travel there often. Any travel cost is confirmed with your quote, before you book." },
   { icon: "👩‍💼", title: "Professional attendants", desc: "Every booking includes a DBS checked attendant who handles setup, hosting, and pack-down." },
 ];
 
@@ -51,7 +51,7 @@ const events = [
 const faqs = [
   {
     q: "Do you travel to Cardiff from Swansea?",
-    a: "Yes — Cardiff is just one hour from our Swansea base and falls within our standard service area. We cover Cardiff events regularly and there is no extra travel charge for Cardiff bookings.",
+    a: "Yes — Cardiff is about an hour from our Swansea base and we cover Cardiff events regularly. Travel within 25 miles of Swansea is free; Cardiff sits beyond that, so we work the travel cost out from your venue address and confirm it with your quote, before you book.",
   },
   {
     q: "What areas of Cardiff do you cover?",
@@ -113,11 +113,11 @@ export default function PhotoBoothHireCardiffPage() {
         <div className="mx-auto px-4 md:px-3" style={{ maxWidth: "1240px" }}>
           <div className="reveal p-5 md:p-8 rounded-[var(--radius-xl)]" style={cardStyle}>
             <span className="eyebrow">Cardiff &amp; South Wales</span>
-            <h2 className="section-title">Cardiff covered as standard from our Swansea base</h2>
+            <h2 className="section-title">Cardiff covered regularly from our Swansea base</h2>
             <p style={{ fontSize: "1.04rem" }}>
-              Based in Swansea, we cover Cardiff and the whole of South Wales for every type of event. Cardiff is just
-              one hour from our base — we travel there regularly and include it within our standard service area with
-              no extra travel charge.
+              Based in Swansea, we cover Cardiff and the whole of South Wales for every type of event. Cardiff is about
+              an hour from our base and we travel there regularly. Travel within 25 miles of Swansea is free; beyond
+              that we work out the cost from your venue address and confirm it with your quote, before you book.
             </p>
           </div>
         </div>
@@ -149,7 +149,7 @@ export default function PhotoBoothHireCardiffPage() {
             ))}
           </div>
           <div className="text-center mt-6">
-            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea. Cardiff covered at no extra charge.</span>
+            <span className="pill-note text-xs">Prices include VAT. Free travel within 25 miles of Swansea; further afield we confirm any travel cost with your quote, before you book.</span>
           </div>
         </div>
       </section>

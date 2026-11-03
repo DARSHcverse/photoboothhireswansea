@@ -63,7 +63,7 @@ const faqSchema = {
     {
       "@type": "Question",
       name: "Do you cover Cardiff for Christmas parties?",
-      acceptedAnswer: { "@type": "Answer", text: "Yes, Cardiff is one hour from our Swansea base and is covered as standard with no extra travel charge. We cover all Cardiff corporate venues and hotels for Christmas parties." },
+      acceptedAnswer: { "@type": "Answer", text: "Yes, we cover Cardiff corporate venues and hotels for Christmas parties. Travel is free within 25 miles of Swansea; Cardiff sits beyond that, so we confirm the travel cost with your quote, before you book." },
     },
   ],
 };
