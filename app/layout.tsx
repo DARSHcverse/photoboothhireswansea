@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s | Photo Booth Hire Swansea",
   },
   description:
-    "Professional photo booth hire in Swansea and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and corporate events. From £250. Now booking 2027.",
+    "All-inclusive photo booth hire in Swansea and South Wales. Selfie Pod, Glam and Enclosed booths with attendant and unlimited prints. Booking 2027 now.",
   keywords:
     "photo booth hire Swansea, photo booth Cardiff, wedding photo booth Swansea, prom photo booth South Wales, corporate event photo booth, Selfie Pod, Glam Booth, Enclosed Booth",
   alternates: {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Photo Booth Hire Swansea",
     title: "Photo Booth Hire Swansea & South Wales | PBH",
     description:
-      "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
+      "All-inclusive photo booth hire in Swansea and South Wales. Selfie Pod, Glam and Enclosed booths with attendant and unlimited prints. Booking 2027 now.",
     url: SITE_URL,
     images: [
       {
@@ -70,12 +70,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  // No `title` or `description` here on purpose: setting them at the root
+  // made every inner page inherit the homepage's Twitter card. Omitting them
+  // lets Next.js derive each card from that page's own title and description.
+  // `site` is omitted too — @pbhswansea does not exist.
   twitter: {
     card: "summary_large_image",
-    site: "@pbhswansea",
-    title: "Photo Booth Hire Swansea & South Wales | PBH",
-    description:
-      "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
     images: ["/og-image.png"],
   },
 };

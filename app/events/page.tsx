@@ -14,7 +14,7 @@ export const metadata = {
     siteName: "Photo Booth Hire Swansea",
     title: "Events We Cover | Photo Booth Hire Swansea",
     description:
-      "Photo booth hire for weddings, proms, corporate events, birthdays and Christmas parties.",
+      "Photo booth hire for weddings, proms, corporate events, birthdays and Christmas parties across Swansea and South Wales.",
     url: PAGE_URL,
   },
 };

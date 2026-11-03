@@ -4,17 +4,17 @@ import { JsonLd } from "../../components/JsonLd";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/events/birthdays";
 
 export const metadata: Metadata = {
-  title: { absolute: "Birthday Party Photo Booth Hire Swansea & South Wales" },
+  title: { absolute: "Birthday Party Photo Booth Hire Swansea" },
   description:
-    "Fun birthday party photo booth hire in Swansea. Props, instant prints and custom strip designs for milestone birthdays across South Wales.",
+    "Photo booth hire for 18th, 21st, 30th, 40th and 50th birthdays in Swansea and South Wales. Props, instant prints and attendant included. From £250.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Birthday Party Photo Booth Hire Swansea & South Wales",
+    title: "Birthday Party Photo Booth Hire Swansea",
     description:
-      "Fun birthday party photo booth hire in Swansea. Milestone birthdays across South Wales.",
+      "Photo booth hire for 18th, 21st, 30th, 40th and 50th birthdays in Swansea and South Wales. Props, instant prints and attendant included. From £250.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Birthday party photo booth hire Swansea" }],
   },

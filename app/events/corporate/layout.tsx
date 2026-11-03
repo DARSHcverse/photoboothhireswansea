@@ -5,17 +5,17 @@ const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 const PAGE_URL = `${SITE_URL}/events/corporate`;
 
 export const metadata: Metadata = {
-  title: { absolute: "Corporate Photo Booth Hire Swansea | Branded Prints" },
+  title: { absolute: "Corporate Photo Booth Hire South Wales | Branded" },
   description:
-    "Professional corporate photo booth hire in Swansea and Cardiff. Branded overlays, high capacity and polished presentation for your next event.",
+    "Branded photo booth hire for corporate events in Swansea and Cardiff. Custom overlays, professional attendant, one clear invoice. From £250 inc. VAT.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Corporate Photo Booth Hire Swansea | Branded Prints",
+    title: "Corporate Photo Booth Hire South Wales | Branded",
     description:
-      "Professional corporate photo booth hire in Swansea and Cardiff. Branded overlays for your next event.",
+      "Branded photo booth hire for corporate events in Swansea and Cardiff. Custom overlays, professional attendant, one clear invoice. From £250 inc. VAT.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Corporate photo booth hire Swansea Cardiff" }],
   },

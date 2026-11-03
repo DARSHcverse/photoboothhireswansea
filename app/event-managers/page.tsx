@@ -9,10 +9,10 @@ const PAGE_URL = `${SITE_URL}/event-managers`;
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Photo Booth Supplier for Event Managers | South Wales | Trade Rates",
+    absolute: "Photo Booth Supplier for Event Managers | S. Wales",
   },
   description:
-    "Trade photo booth supply for event managers, planners and agencies across Swansea, Cardiff and South Wales. Loyalty rates on multiple events, priority dates, one invoice and one point of contact.",
+    "One photo booth supplier for your whole South Wales calendar: block rates, priority dates, one invoice and a single contact. Ask about 2027 bookings.",
   keywords:
     "photo booth supplier event managers, trade photo booth hire wales, event planner photo booth swansea, agency photo booth cardiff, multi event photo booth discount",
   alternates: { canonical: PAGE_URL },
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Supplier for Event Managers | South Wales",
+    title: "Photo Booth Supplier for Event Managers | S. Wales",
     description:
-      "Loyalty rates on multiple events, priority dates and one point of contact for planners and agencies across South Wales.",
+      "One photo booth supplier for your whole South Wales calendar: block rates, priority dates, one invoice and a single contact. Ask about 2027 bookings.",
     url: PAGE_URL,
     images: [
       {

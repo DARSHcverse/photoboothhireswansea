@@ -4,17 +4,17 @@ import { JsonLd } from "../../components/JsonLd";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/events/brand-activations";
 
 export const metadata: Metadata = {
-  title: { absolute: "Brand Activation Photo Booth Swansea | Branded" },
+  title: { absolute: "Brand Activation Photo Booth Hire | South Wales" },
   description:
-    "Fully branded photo booth hire for brand activations and product launches in Swansea and Cardiff. Custom overlays and professional setup.",
+    "Branded photo booth activations for launches and pop-ups in South Wales. Custom overlays, start screens and print templates, with a pro attendant.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Brand Activation Photo Booth Swansea | Branded",
+    title: "Brand Activation Photo Booth Hire | South Wales",
     description:
-      "Fully branded photo booth hire for brand activations in Swansea and Cardiff.",
+      "Branded photo booth activations for launches and pop-ups in South Wales. Custom overlays, start screens and print templates, with a pro attendant.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Brand activation photo booth Swansea" }],
   },

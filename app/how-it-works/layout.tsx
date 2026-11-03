@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
     title: "How It Works | Photo Booth Hire Swansea",
-    description: "How to book a photo booth in Swansea. Simple three step process.",
+    description: "How to book a photo booth in Swansea. Simple three step process — enquire, confirm, enjoy. Photo Booth Hire Swansea.",
     url: PAGE_URL,
   },
 };

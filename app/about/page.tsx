@@ -4,17 +4,17 @@ import PageHero from "../components/PageHero";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/about";
 
 export const metadata = {
-  title: { absolute: "About Us | Photo Booth Hire Swansea | PBH" },
+  title: { absolute: "About Us | Founder-Led Photo Booth Hire Swansea" },
   description:
-    "The story behind Photo Booth Hire Swansea — from Melbourne Australia to South Wales. Experienced operator launching March 2027.",
+    "Meet Shan, founder of Photo Booth Hire Swansea and The Shan Booth, Melbourne. Founder-led, all-inclusive photo booth hire launching in March 2027.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "About Us | Photo Booth Hire Swansea | PBH",
+    title: "About Us | Founder-Led Photo Booth Hire Swansea",
     description:
-      "The story behind Photo Booth Hire Swansea — from Melbourne Australia to South Wales.",
+      "Meet Shan, founder of Photo Booth Hire Swansea and The Shan Booth, Melbourne. Founder-led, all-inclusive photo booth hire launching in March 2027.",
     url: PAGE_URL,
   },
 };

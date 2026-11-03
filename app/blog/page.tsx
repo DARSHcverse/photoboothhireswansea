@@ -7,17 +7,17 @@ import BlogIndex from "./BlogIndex";
 const PAGE_URL = `${SITE_URL}/blog`;
 
 export const metadata: Metadata = {
-  title: { absolute: "Photo Booth Hire Blog | Tips, Guides & News | Swansea" },
+  title: { absolute: "Photo Booth Tips, Guides & News | Swansea" },
   description:
-    "Planning guides, booth comparisons and news from the Photo Booth Hire Swansea team. Everything you need to plan a photo booth for your wedding, prom or corporate event in South Wales.",
+    "Honest guides to planning a photo booth in Swansea and South Wales: costs, booking timelines, booth comparisons and what to ask suppliers.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Hire Blog | Tips, Guides & News",
+    title: "Photo Booth Tips, Guides & News | Swansea",
     description:
-      "Planning guides, booth comparisons and news from the Photo Booth Hire Swansea team.",
+      "Honest guides to planning a photo booth in Swansea and South Wales: costs, booking timelines, booth comparisons and what to ask suppliers.",
     url: PAGE_URL,
     images: [
       {

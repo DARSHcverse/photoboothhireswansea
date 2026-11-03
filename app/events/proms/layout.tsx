@@ -5,17 +5,17 @@ const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 const PAGE_URL = `${SITE_URL}/events/proms`;
 
 export const metadata: Metadata = {
-  title: { absolute: "Prom Photo Booth Hire Swansea | DBS Checked" },
+  title: { absolute: "Prom Photo Booth Hire Swansea | DBS-Checked Staff" },
   description:
-    "Safe and fun prom photo booth hire in Swansea and South Wales. DBS-checked attendants, fast queues and premium prints for Year 11 and Sixth Form.",
+    "Prom and graduation photo booth hire for Swansea and South Wales schools. DBS-checked attendants, fast queues, fixed prices. Now booking 2027 proms.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Prom Photo Booth Hire Swansea | DBS Checked",
+    title: "Prom Photo Booth Hire Swansea | DBS-Checked Staff",
     description:
-      "Safe and fun prom photo booth hire in Swansea and South Wales. DBS-checked attendants.",
+      "Prom and graduation photo booth hire for Swansea and South Wales schools. DBS-checked attendants, fast queues, fixed prices. Now booking 2027 proms.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Prom photo booth hire Swansea Wales" }],
   },

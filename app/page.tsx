@@ -7,7 +7,7 @@ const SITE_URL = "https://www.photoboothhireswansea.co.uk";
 export const metadata: Metadata = {
   title: { absolute: "Photo Booth Hire Swansea & South Wales | PBH" },
   description:
-    "Professional photo booth hire in Swansea and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and corporate events. From £250. Now booking 2027.",
+    "All-inclusive photo booth hire in Swansea and South Wales. Selfie Pod, Glam and Enclosed booths with attendant and unlimited prints. Booking 2027 now.",
   alternates: { canonical: SITE_URL },
   openGraph: {
     type: "website",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Photo Booth Hire Swansea",
     title: "Photo Booth Hire Swansea & South Wales | PBH",
     description:
-      "Professional photo booth hire in Swansea and South Wales. Now booking for 2027.",
+      "All-inclusive photo booth hire in Swansea and South Wales. Selfie Pod, Glam and Enclosed booths with attendant and unlimited prints. Booking 2027 now.",
     url: SITE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Photo Booth Hire Swansea — PBH" }],
   },

@@ -4,17 +4,17 @@ import { JsonLd } from "../../components/JsonLd";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/events/christmas-parties";
 
 export const metadata: Metadata = {
-  title: { absolute: "Christmas Party Photo Booth Hire Swansea 2027" },
+  title: { absolute: "Christmas Party Photo Booth Hire Swansea & Cardiff" },
   description:
-    "Festive photo booth hire for Christmas parties in Swansea and South Wales. Book early — December 2027 dates are filling fast.",
+    "Christmas party photo booth hire across Swansea and Cardiff. Festive backdrops, props, branded prints and attendant. Book Christmas 2027 dates early.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Christmas Party Photo Booth Hire Swansea 2027",
+    title: "Christmas Party Photo Booth Hire Swansea & Cardiff",
     description:
-      "Festive photo booth hire for Christmas parties in Swansea and South Wales.",
+      "Christmas party photo booth hire across Swansea and Cardiff. Festive backdrops, props, branded prints and attendant. Book Christmas 2027 dates early.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Christmas party photo booth hire Swansea" }],
   },

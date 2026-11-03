@@ -14,7 +14,7 @@ export const metadata = {
     siteName: "Photo Booth Hire Swansea",
     title: "Our Services | Photo Booth Hire Swansea",
     description:
-      "Full photo booth hire services in Swansea and South Wales.",
+      "Full photo booth hire services in Swansea and South Wales. Unlimited prints, custom strip design, backdrops and professional attendant.",
     url: PAGE_URL,
   },
 };

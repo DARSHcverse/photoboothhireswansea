@@ -12,9 +12,9 @@ const CARDIFF_DOMAIN = "https://www.photoboothhirecardiff.co.uk";
 const PAGE_URL = CARDIFF_DOMAIN;
 
 export const metadata: Metadata = {
-  title: { absolute: "Photo Booth Hire Cardiff & South Wales | PBH" },
+  title: { absolute: "Photo Booth Hire Cardiff & the Vale | From £250" },
   description:
-    "Professional photo booth hire in Cardiff and South Wales. Selfie Pods, Glam Booths and Enclosed Booths for weddings, proms and events. From £250.",
+    "Photo booth hire in Cardiff, Penarth and the Vale. Selfie Pod, Glam and Enclosed booths, attendant included. From £250 inc. VAT, travel quoted upfront.",
   keywords:
     "photo booth hire Cardiff, Cardiff photo booth, wedding photo booth Cardiff, corporate photo booth Cardiff Bay, photo booth Penarth, photo booth Barry",
   alternates: {
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Hire Cardiff & South Wales | PBH",
+    title: "Photo Booth Hire Cardiff & the Vale | From £250",
     description:
-      "Professional photo booth hire in Cardiff and South Wales. From £250.",
+      "Photo booth hire in Cardiff, Penarth and the Vale. Selfie Pod, Glam and Enclosed booths, attendant included. From £250 inc. VAT, travel quoted upfront.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Photo Booth Hire Cardiff — PBH" }],
   },

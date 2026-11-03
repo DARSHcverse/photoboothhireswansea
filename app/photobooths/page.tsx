@@ -5,17 +5,17 @@ import PageHero from "../components/PageHero";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/photobooths";
 
 export const metadata = {
-  title: { absolute: "Photo Booths Swansea | Selfie Pod, Glam & Enclosed" },
+  title: { absolute: "Photo Booth Types for Hire in Swansea | PBH" },
   description:
-    "Choose from our Selfie Pod, Glam Booth or Enclosed Booth for your Swansea event. All booths include unlimited prints and a professional attendant.",
+    "Compare our Selfie Pod, Glam Booth and Enclosed Booth: looks, space, prices and best events. Swansea and South Wales photo booth hire from £250.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booths Swansea | Selfie Pod, Glam & Enclosed",
+    title: "Photo Booth Types for Hire in Swansea | PBH",
     description:
-      "Choose from our Selfie Pod, Glam Booth or Enclosed Booth for your Swansea event.",
+      "Compare our Selfie Pod, Glam Booth and Enclosed Booth: looks, space, prices and best events. Swansea and South Wales photo booth hire from £250.",
     url: PAGE_URL,
   },
 };

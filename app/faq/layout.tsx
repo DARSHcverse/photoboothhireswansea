@@ -4,16 +4,16 @@ import { JsonLd } from "../components/JsonLd";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/faq";
 
 export const metadata: Metadata = {
-  title: { absolute: "Photo Booth Hire FAQs | PBH Swansea" },
+  title: { absolute: "Photo Booth Hire FAQs | Swansea & South Wales" },
   description:
-    "Common questions about photo booth hire in Swansea. Pricing, setup, what is included and how to book answered clearly.",
+    "Answers on photo booth hire in Swansea: what's included, space needed, travel, deposits, DBS checks and timings. Still unsure? Get a free quote.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Photo Booth Hire FAQs | PBH Swansea",
-    description: "Common questions about photo booth hire in Swansea.",
+    title: "Photo Booth Hire FAQs | Swansea & South Wales",
+    description: "Answers on photo booth hire in Swansea: what's included, space needed, travel, deposits, DBS checks and timings. Still unsure? Get a free quote.",
     url: PAGE_URL,
   },
 };

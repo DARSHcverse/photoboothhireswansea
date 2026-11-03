@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 const PAGE_URL = "https://www.photoboothhireswansea.co.uk/contact";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact Photo Booth Hire Swansea | Get a Quote" },
+  title: { absolute: "Contact Photo Booth Hire Swansea | Call or WhatsApp" },
   description:
-    "Get in touch with Photo Booth Hire Swansea. We usually reply within minutes. Call, email, WhatsApp or fill in our quick quote form.",
+    "Call, WhatsApp or email Photo Booth Hire Swansea about your wedding, prom, party or corporate event. Fast replies on availability and pricing.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "en_GB",
     siteName: "Photo Booth Hire Swansea",
-    title: "Contact Photo Booth Hire Swansea | Get a Quote",
-    description: "Get in touch with Photo Booth Hire Swansea. We usually reply within minutes.",
+    title: "Contact Photo Booth Hire Swansea | Call or WhatsApp",
+    description: "Call, WhatsApp or email Photo Booth Hire Swansea about your wedding, prom, party or corporate event. Fast replies on availability and pricing.",
     url: PAGE_URL,
   },
 };

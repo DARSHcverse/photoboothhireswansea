@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Photo Booth Hire Swansea",
     title: "Wedding Photo Booth Hire Swansea & South Wales",
     description:
-      "Elegant wedding photo booth hire in Swansea and South Wales. Now booking summer 2027.",
+      "Elegant wedding photo booth hire in Swansea and South Wales. Custom strips, guest books and a professional attendant. Summer 2027 booking now.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Wedding photo booth hire Swansea South Wales" }],
   },
