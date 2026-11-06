@@ -62,7 +62,7 @@ they target — people search while planning, not on the day.
 | ~~Sep 2026~~ | ~~How Early Should You Book a Photo Booth?~~ ✅ published | Planning | how early to book a photo booth |
 | ~~Oct 2026~~ | ~~How Much Does Photo Booth Hire Cost in Swansea?~~ ✅ published | Planning | photo booth hire cost swansea |
 | Nov 2026 | Christmas Party Photo Booth Ideas for South Wales Businesses | News | christmas party photo booth swansea |
-| Dec 2026 | Photo Booth Backdrops: How to Match Your Venue | Booths | photo booth backdrop ideas |
+| ~~Dec 2026~~ | ~~Photo Booth Backdrops: How to Match Your Venue~~ ✅ published 6 Nov | Booths | photo booth backdrop ideas |
 | Jan 2027 | The 2027 Wedding Planning Timeline (and Where the Booth Fits) | Weddings | wedding planning timeline wales |
 | Feb 2027 | Questions to Ask Before Booking Any Photo Booth Supplier | Planning | questions to ask photo booth hire |
 | Mar 2027 | Prom Season: A Guide for Schools and Sixth Forms | Planning | prom photo booth hire south wales |
@@ -89,6 +89,15 @@ posts competing for one query rank worse than one. Current coverage:
 - **On-the-day expectations** → `what-to-expect-photo-booth-hire-swansea`
 - **Trade / agencies** → `photo-booth-hire-for-event-managers-south-wales`
 - **Pricing** → `photo-booth-hire-cost-swansea`
+- **Backdrops** → `photo-booth-backdrop-ideas`
+
+## Why the Dec post was brought forward
+
+Search Console (4 Nov 2026) showed /backdrop ranking at position 31 on 20
+impressions from a 274-word page — real demand the page was too thin to serve.
+/events/christmas-parties, at 707 words, had zero impressions, and Christmas
+2026 is past booking anyway with launch in March 2027. The backdrop post had
+evidence behind it; the Christmas one did not.
 
 ## What not to publish
 
